@@ -1,0 +1,796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+	金龙之家
+</title>
+<link rel="search" type="application/opensearchdescription+xml" title="金龙博客" />
+<link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
+<link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
+</head>
+<body>
+<div id="toolbar">
+	<div class="auto fixft" >
+	    <a href="/" class="home"><span>首页</span><img alt="logo" src="/styles/index/css/default/images/logo_small.gif" /></a>
+		
+		<!--<form id="loginFrom" name="loginFrom" onsubmit="return loginEncrypt();" action="/User/Login.aspx"  method="post" target="loginIfr">
+		    <input type="hidden" id="hdEncrypted" name="hdEncrypted" value="" />
+		    <div class="login">
+			    <span class="ico">用户名：</span>
+			    <input id="username" name="username" onfocus="loadEncryptScript()" class="text" type="text" />
+			    密码：<input id="password" name="password" onfocus="loadEncryptScript()" class="text" type="password" />
+			    <input id="btnLogin" class="btn" type="submit" value="登录" />
+			    
+			    <a href="#" onclick="location='https://localhost/Passport';" >安全登录</a>
+			    
+		    </div>
+		</form>
+		<iframe id="loginIfr" name="loginIfr" scrolling="no" frameborder="0" width="0" height="0"></iframe>
+        <script type="text/javascript">
+            function loadEncryptScript(){
+                if( typeof(encryptScript) == 'undefined') {
+                    
+                    document.getElementById('btnLogin').disabled = true;
+                    
+                    encryptScript = document.createElement('script');
+                    encryptScript.type = 'text/javascript';
+                    encryptScript.src = '/Ajax/RSAEncrypt.aspx?callback=loadEncryptScriptCallback';
+                    var currScriptElem = document.getElementsByTagName('script')[0];
+                    currScriptElem.parentNode.insertBefore(encryptScript, currScriptElem);
+                }
+            }
+            function loadEncryptScriptCallback(){
+                document.getElementById('btnLogin').disabled = false;
+            }
+            function loginEncrypt(){
+                
+                var pwdElem = document.getElementById('password');
+                var encryptedPassword = RSAEncrypt(pwdElem.value);
+                pwdElem.value = encryptedPassword;
+                document.getElementById('hdEncrypted').value = 'RSA';
+                return true;
+            }
+        </script>-->
+		
+		<div class="skin">
+			<ul id="skinlist">
+			    <li class="first">　切换风格：</li>
+			    <li id="temp2" class="on"><a class="green" href="javascript:toggleTemplate(2, '/styles/index/css/default/index.css', false);"  title="切换风格：大自然绿">大自然绿</a></li><li id="temp3" class=""><a class="blue" href="javascript:toggleTemplate(3, '/styles/index/css/blue/index.css', false);"  title="切换风格：深蓝海">深蓝海</a></li><li id="temp4" class=""><a class="red" href="javascript:toggleTemplate(4, '/styles/index/css/guoqing/index.css', false);"  title="切换风格：国庆专题">国庆专题</a></li><li id="temp6" class=""><a class="christmas" href="javascript:toggleTemplate(6, '/styles/index/css/christmas/index.css', false);"  title="切换风格：圣诞节">圣诞节</a></li><li id="temp7" class=""><a class="simple" href="javascript:toggleTemplate(7, '/styles/index/css/simple/index.css', false);"  title="切换风格：简单线条">简单线条</a></li>
+			</ul>
+		</div>
+		<div class="display">
+		    <ul>
+		        <li>　<!--版面：--></li>
+		        <!--<li><a href="#" onclick="location='?display=1';" class="">左-中</a> | </li>
+		        <li><a href="#" onclick="location='?display=2';" class="on">左-中-右</a> | </li>
+		        <li><a href="#" onclick="location='?display=3';" class="">中-右</a> | </li>
+		        <li><a href="#" onclick="location='?display=4';" class="">中</a></li>-->
+		    </ul>
+		</div>
+	</div>
+</div>
+<div class="auto" id="top" style="" >
+	<div class="title">
+	    <h3></h3>
+	    <h4></h4>
+	</div>
+</div>
+<div class="auto" id="nav" >
+	<ul id="navigation">
+		<li><a href="/">首页</a></li>
+
+<li><a href="/jonllen/work/"  >工作</a></li>
+		<li><a class="up" href="/album/">相册</a></li>
+		<li><a href="/leave/"><!--留言--></a></li>
+		<li class="preview"></li>
+	</ul>
+</div>
+<script type="text/javascript"> 
+(function (){
+    var select, navlist = document.getElementById('navigation').getElementsByTagName('li');
+    for(var i=0;i<navlist.length;i++)
+    {
+        if ( navlist[i].className=='preview') continue;
+        var link = navlist[i].getElementsByTagName('a')[0];
+        if ( link && window.location.href.toLowerCase().indexOf(link.href.toLowerCase())>-1 )
+        {
+            select = link;
+        }
+    }
+    if( select!=undefined )
+    {
+        select.parentNode.className = "on";
+    }
+})();
+function toggleTemplate(tempId, skinSrc, additionalHtml){
+    if( additionalHtml) {
+        location='?tempid='+tempId;
+        return true;
+    }
+    
+    var linkIndexElem = document.getElementById('linkIndex');
+    var linkIndexHref = '' + skinSrc;
+    linkIndexElem.href = '';
+    linkIndexElem.href = linkIndexHref;
+    
+    var linkTemplateElem = document.getElementById('linkTemplate');
+    var linkTemplateHref = linkIndexHref.substr(0, linkIndexHref.lastIndexOf('/') ) + linkTemplateElem.href.substr(linkTemplateElem.href.lastIndexOf('/'));
+    linkTemplateElem.href = '';
+    linkTemplateElem.href = linkTemplateHref;
+    
+    var skinName = 'Skin';
+    var skinValue = '0='+tempId;
+    var skinDate = new Date();
+    skinDate.setTime(skinDate.getTime() + 1000 * 60 * 120 );
+    document.cookie = skinName + '=' + skinValue + '; path=/; expires=' + skinDate.toGMTString();
+    
+    var templatelist = document.getElementById('skinlist').getElementsByTagName('li');
+    for(var i=0;i<templatelist.length;i++){
+        var templateli = templatelist[i];
+        if (templateli.className == 'on')
+            templateli.className = '';
+        if( templateli.id == 'temp' + tempId)
+            templateli.className = 'on';
+    }
+}
+</script>
+<script type="text/javascript" src="/styles/index/scripts/Topic.js"></script>
+<div id="main" class="auto container">
+    <div id="ctl00_panLeft" class="siderLeft column column1">
+	
+<div id="mod25" class="mod info">
+	<div class="head"><strong class="ico">个人档案</strong></div>
+	<div class="cont">
+		<dl>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
+			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
+			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事金融系统开发设计。
+</dd>
+		</dl>
+	</div>
+</div>
+<div id="mod26" class="mod calendar">
+	<div class="head"><strong class="ico">博客日历</strong></div>
+	<div id="calendar" class="cont"></div>
+	<script type="text/javascript" language="javascript" src="/styles/index/scripts/DatePicker/WdatePicker.js" ></script>
+    <script type="text/javascript" language="javascript">
+        function ePicked(dp)
+        {
+            for(var i=0;i<archive.length;i++)
+            {
+                //if(archive[i]==dp.cal.getDateStr())
+                    //window.location = '/archive/' + dp.cal.getDateStr() + '.aspx';
+            }
+        }
+        
+            function getArticleArchive()
+		    {
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=&colutype=";		        		        
+		        Ajax.send({
+		            type : "GET",
+		            url : url,
+		            fn : function (data){
+	                    var rs;
+	                    try{rs=eval("rs="+data);}catch(e){alert(e);return;}
+                        
+	                    if (rs.success)
+	                    {
+	                        var archive = [];
+	                        if(rs.data) archive = rs.data.split(',');
+	                        window.archive = archive;
+	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'' } );
+ 	                    }else
+	                    {
+	                        alert(rs.error);
+	                    }
+                            }
+		        });
+		    }
+        setTimeout(getArticleArchive,0);
+    </script>
+</div>
+<div id="mod27" class="mod category">
+	<div class="head"><strong class="ico">分类文档</strong></div>
+	<div class="cont">
+		<ul>
+
+			
+			        <li>
+			            
+			            <a href="/jonllen/" >
+			                jonllen<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/pengfenjun/" >
+			                pengfenjun<!-- (0)-->
+			            </a>
+			        </li>
+			
+		</ul>
+	</div>
+</div>
+ 
+<div id="mod28" class="mod links">
+	<div class="head"><strong class="ico">友情链接</strong></div>
+	<div class="cont">
+		<ul>
+                    
+		    <li><a href="http://www.thjy.org" title="天河部落教育博客" target="_blank">天河部落</a></li>
+                    
+		    <li><a href="http://weibo.com/zjj" title="时代财富张静君的微博" target="_blank">张静君</a></li>
+                    
+		</ul>
+	</div>
+</div>
+ 
+</div>
+
+	<div class="siderMiddle">
+	    <div class="content column column2">
+            
+            
+    
+    <div id="ctl00_cphContent_palArticle" class="article">
+	
+		<div class="position title">
+		    
+		    <strong>我的文章</strong>
+            
+		</div>
+		<div class="articlelist">
+		    <div id="articleitem" class="articleitem">
+                
+                    
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/work/800.aspx">2015年度工作总结</a></h2>
+			            <!--<div class="date"><a href="">2015-12-31</a></div>-->
+			            
+			            <div class="summary">
+			                今天是2015年的最后一天，时间过得真快，2016年马上向我们跑来。
+换工作
+2015年三月份，我离开了待了三年的南方城墙 。在离职的前一些时间，我领导提议我担任项目组长，后面担任开发主管，但主要还是会做一些开发任务，同时兼顾一些任务分配和部分管理工作。有一些同事还是说我做得好好的怎么会选择离职？的确在南方城墙我的领导对我特别的好，刚开始进入公司学到了不少的信息安全应用知识，在那里的三年里...
+			            </div>
+			            <div class="tags">标签：工作 年度总结
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2015-12-31 22:27:03</li>
+				            <li>阅读(1171)</li>
+				            <li><a class="comment" title="共1条评论" href="/jonllen/work/800.aspx#comment">评论(1)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/travel/801.aspx">靖港古镇游</a></h2>
+			            <!--<div class="date"><a href="">2015-11-29</a></div>-->
+			            
+			            <div class="summary">
+			                之前在长沙工作的同事，说过几次靖港古镇，周末时候，天气还好就跑去了靖港古镇看看。从汽车西站出发，走雷锋大道一路向北，到靖港西边的停车场刚一个小时车程。靖港古镇从西到东一条街旁边都是古建筑，还是有些特色味道，走到最东边已经到了湘江边，一路走走看看大约1个小时。
+			            </div>
+			            <div class="tags">标签：旅游 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2015-11-29 14:41:38</li>
+				            <li>阅读(561)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/travel/801.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/js/179.aspx">使用ECharts报表统计公司考勤加班，大家加班多吗？</a></h2>
+			            <!--<div class="date"><a href="">2015-06-05</a></div>-->
+			            
+			            <div class="summary">
+			                最近个项目已经加班连续加班1个月，因为公司经常有在外面客户现场或出差的情况，人事每个月初会把上个月的份考勤打卡记录全部发出来，让我们对自己的考勤，突然想到可根据大家打卡时间记录统计每天工作时间，看大家加班是否也多呢？然后使用我们现在项目用的ECharts报表来展示，做了个Web的柱状图和饼图分析...
+			            </div>
+			            <div class="tags">标签：JavaScript 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2015-06-05 23:00:00</li>
+				            <li>阅读(1721)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/js/179.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/js/178.aspx">JavaScript实现SM2算法加解密</a></h2>
+			            <!--<div class="date"><a href="">2014-10-28</a></div>-->
+			            
+			            <div class="summary">
+			                在前段时间，已用JavaScript实现SM2算法的签名验证，下面来讲下JS的SM2算法的非对称加解密。这个在客户端加密的应用场景可能会更多些，比如我们平时登录的网站的密码，如果没有使用SSL证书加密一般会是明文传输这样会很不安全，这时可以考虑结合使用非对称算法加密，将服务器端的公钥输出在客户端，客户端使用公钥加密，登录时密码以密文方式传给服务器端再由相应私钥解密得到明文数据。
+			            </div>
+			            <div class="tags">标签：JavaScript 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2014-10-28 22:46:13</li>
+				            <li>阅读(16027)</li>
+				            <li><a class="comment" title="共21条评论" href="/jonllen/js/178.aspx#comment">评论(21)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/breast/177.aspx">2014年国庆</a></h2>
+			            <!--<div class="date"><a href="">2014-10-04</a></div>-->
+			            
+			            <div class="summary">
+			                最近这段时间，感觉特么的不顺，国庆回湘潭家里打车，的士司机不打表记程，说好了价到了又乱加价，真的让我见识到湘潭的士真的很黑心，说他还要回句没人要你坐很不爽，以后不打表的士尽量不要坐了。国庆十一那天，本来准备去娄底参加个很好的朋友结婚的，结果只有当天下午的车了，准备好了的红包硬是没有送出去，感觉对不住人呀。
+十月三日，家里去喝喜酒，新人都是家附近的，新郎的家里条件虽然不是特别好，但这天都彼此洋溢着幸福。婚礼只是在家里简单的请了一位主婚人，很简单的结婚仪式，交换戒指求婚誓言，整个过程很轻松愉悦，主婚人诙谐幽默给大家带来了不少欢乐，新郎阳光腼腆脸上不时地微笑。也许就是这样简单的婚礼快乐也会简单些，一句很形象地玩笑话，一些家常问题大拷问，把在座的大家逗得哈哈大笑，我想新郎不单只是口头上同意，他之后也会这样来做。
+最近有些闹心，是家里装修的问题，基本上都是父母在主导在搞，他们说是帮我搞，可有些地方却不按我的来搞。父母老的这一辈大都是从耐用、方便维护、成本价格方面考虑，而我喜欢简约、美观和舒适的风格，当然我也会很考虑材料预算价格，尽可能的想要买到物廉价美的。因此我们在一些方面产生了不同分歧，比如在要不要贴台道瓷片，挑选瓷片的配色各方面等，关于整体装修色调由于刚开始没做设计效果图，所以我在选颜色的时候也没谱，在没有看到喜欢的情况下是想多看几种颜色再定，可爸妈总是比较急强调只要一般了，选铝合金护窗和门听信小区里别人的，而没有充分地了解后再去选择，我就怕搞得不好，因此就有些矛盾。
+其实，我的周末大都回湘潭家里，在我内心里家庭应该比工作更重要，可事实是除开每周回去可以见到家里人，其余的也没有特别的感受，只是在吵架时才会后知后觉，我确实喜欢在家里头，就想和父母娭毑一起吃个饭，看看电视
+			            </div>
+			            <div class="tags">标签：心情笔记 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2014-10-04 19:12:08</li>
+				            <li>阅读(1059)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/breast/177.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/breast/176.aspx">面对&逃避</a></h2>
+			            <!--<div class="date"><a href="">2014-08-04</a></div>-->
+			            
+			            <div class="summary">
+			                最近博客又有一段时间没更新了，其实也没有什么特别忙的工作，可能是天气燥热不想动，做什么都没有劲。最近工作也是索然无味，感觉是吃老本学不到新知识，有些自己认为意见不同的东西会直言不讳，真的不想再勉强接受，因此有时候会比较好强一点，但希望我只是想工作上更严谨，真的很理性的不带任何个人感情。
+人本能地会怕困难，遇到挫折容易逃避，但只有勇敢理智面对，不畏困难努力向前才是本事。
+感情是每个人都会遇到的事，这个世界上也有很多种爱。血浓于水的亲情的爱是无私的，朋友间的友情不曾常提起却在需要帮助时就在身边，而爱情是可遇不可求或许不经意间在身边。
+慢慢开始改变那些不好的地方吧，让自己可以越来越好，青春正在成长需要正能量，每天多做一些有意义的事情，让身边的亲人朋友快乐，让自己更加充实。
+			            </div>
+			            <div class="tags">标签：心情笔记 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2014-08-04 21:39:16</li>
+				            <li>阅读(1782)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/breast/176.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/js/175.aspx">JS版SM2国密算法的签名验证</a></h2>
+			            <!--<div class="date"><a href="">2014-06-17</a></div>-->
+			            
+			            <div class="summary">
+			                前段时间因工作需要，了解到在Github上已经有人实现了用JavaScript来写签名和验签，支持RSA、ECC、DSA等算法，还能解析X.509证书，一时觉得JavaScript是无比强大。后面就研究了下JavaScript版的ECC算法签名验证，自己再扩展实现了SM2国密算法的签名验证。
+
+基于现有已实现的C#版SM2国密算法的签名验证，再结合原来JavaScript的ECC算法，使用JavaScript实现SM2国密算法的签名验证相对简单，只需要将C#语言翻译成JavaScript语言实现。不过中间还是遇到了些问题，主要是在JavaScript计算SM3摘要值大数的运算上还是有些不同。
+			            </div>
+			            <div class="tags">标签：JavaScript 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2014-06-17 20:33:45</li>
+				            <li>阅读(15771)</li>
+				            <li><a class="comment" title="共25条评论" href="/jonllen/js/175.aspx#comment">评论(25)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/work/174.aspx">SM2国密算法证书解析</a></h2>
+			            <!--<div class="date"><a href="">2014-04-01</a></div>-->
+			            
+			            <div class="summary">
+			                一、数字证书的组成
+1）证书数据结构
+数字证书使用ASN.1编码，证书文件以二进制或Base64格式存放，数据格式使用TLV（Tag Length Value）形式，T代表类型标识符，L是长度值标识符，V代表值编码。数字证书中的每一项都有个对应的类型T。一个数字证书就是一个大的TLV序列，然后V又由多个TLV组合而成。
+SM2证书数据和RSA算法证书一样，包含证书版本、序列号、颁发者、使用者主体信息、使用者公钥、有效期、证书扩展项等，只不过SM2证书的公钥算法是使用ECC算法的Oid标识（1.2.840.10045.2.1），然后公钥参数使用SM2国密算法的Oid标识（1.2.156.10197.1.301）。
+			            </div>
+			            <div class="tags">标签：工作 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2014-04-01 19:57:04</li>
+				            <li>阅读(28317)</li>
+				            <li><a class="comment" title="共10条评论" href="/jonllen/work/174.aspx#comment">评论(10)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/work/173.aspx">来公司2年了</a></h2>
+			            <!--<div class="date"><a href="">2014-03-26</a></div>-->
+			            
+			            <div class="summary">
+			                今天，来公司2年了。时间过得真快，回来到这里一下子已经2年了，2年来身边来来往往的很多，只剩下原来那么几个熟悉的，我依然还在这。我一直感觉在这里和之前成长有点慢，我不知道这里有着什么魔力，吸引着我还停留在这里，或许是感性战胜了理性。
+			            </div>
+			            <div class="tags">标签：工作 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2014-03-26 22:36:29</li>
+				            <li>阅读(2602)</li>
+				            <li><a class="comment" title="共1条评论" href="/jonllen/work/173.aspx#comment">评论(1)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/breast/172.aspx">2013年公司年会</a></h2>
+			            <!--<div class="date"><a href="">2014-01-27</a></div>-->
+			            
+			            <div class="summary">
+			                今年是来南方城墙的第二年，今天公司最后一天开年会，和去年相比各部门表演的些节目给年会带来不少的欢乐。虽然有些排练准备得不足，但还是能感受得到年会的氛围。年会总体的议程主要是总结发言，然后就是团年饭和节目活动。
+			            </div>
+			            <div class="tags">标签：心情笔记 年会
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2014-01-27 23:07:27</li>
+				            <li>阅读(2692)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/breast/172.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/work/171.aspx">2013年度工作总结</a></h2>
+			            <!--<div class="date"><a href="">2013-12-31</a></div>-->
+			            
+			            <div class="summary">
+			                2013年转眼就快过完了，回首这一年走过来，好像做了很多，但还是停留在以前一些项目上，翻来覆去的很多还是重复的修改工作，感觉成效不明显。对于数字认证这块，还是新学到了些东西，自己也可以慢慢独立开发CA系统，对证书制作应用的了解更加深入了。从中国教育CA到新诚信CA，从华凯到社保CA证书应用，今年大部分的工作还是在CA数字证书应用上。
+			            </div>
+			            <div class="tags">标签：工作 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2013-12-31 22:40:43</li>
+				            <li>阅读(2455)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/work/171.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/js/170.aspx">数字证书的有效性验证</a></h2>
+			            <!--<div class="date"><a href="">2013-11-27</a></div>-->
+			            
+			            <div class="summary">
+			                最近在做数字证书有效性验证的接口，主要是从数字证书的有效期、颁发根证书和CRL进行验证，下面我就从这几个方面来说数字证书的有效性验证。
+			            </div>
+			            <div class="tags">标签：JavaScript 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2013-11-27 20:58:09</li>
+				            <li>阅读(10247)</li>
+				            <li><a class="comment" title="共1条评论" href="/jonllen/js/170.aspx#comment">评论(1)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/work/169.aspx">基于应用网关的业务系统安全设计</a></h2>
+			            <!--<div class="date"><a href="">2013-10-27</a></div>-->
+			            
+			            <div class="summary">
+			                目前，业务系统的安全已越来越重要，并有标准的安全协议，例如安全套接层（Secure Sockets Layer）协议，基于数字证书来认证服务器端，防钓鱼网站，保护客户端向服务器端的安全通信，不被窃取篡改。而在客户端，通常也相应的数字证书完成双向认证，如UKey个人证书。
+基于安全协议的业务系统设计，是在最底层通信的安全设计，粗细粒度无法针对某一具体业务，在做定制化的用户认证加解密需求上，仍需要一个能与客户端相对应能完成自定义的安全设计接口，于是便有了应用网关。应用网关基于安全设备和业务系统层中间，业务系统无需要再直接跟安全设备打交道，使业务系统可以和客户端搭建一座安全桥梁。应用网关提供了相关加解密接口，此外应用网关还可以提供数据证书业务的接口。
+			            </div>
+			            <div class="tags">标签：工作 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2013-10-27 13:49:35</li>
+				            <li>阅读(2696)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/work/169.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/breast/168.aspx">在这公司一年多了</a></h2>
+			            <!--<div class="date"><a href="">2013-10-19</a></div>-->
+			            
+			            <div class="summary">
+			                不知不觉，在这家公司待了一年多的时间了，在这里过得不坏不好。刚回来的时候，心里还只是想简单的找份工作，因为公司从事软件行业而来到了这里。刚进公司这个新环境，还是有很多不习惯，后来慢慢的熟悉了这里的人和事，开始融入公司这个大圈子。我在这里所从事的工作，仍然还是开发为主，只是这里是针对信息安全相关的，比如UsbKey和数字证书应用。刚开始搞加解密很头疼，对密钥密码设备加解密一头雾水，但心想既然在做信息安全这些东西就必须要学懂，后面经过我老大和王总的指导帮助，慢慢的对信息安全有了较多了解，对CA系统有了全面认识。
+			            </div>
+			            <div class="tags">标签：心情笔记 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2013-10-19 15:12:29</li>
+				            <li>阅读(1986)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/breast/168.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/js/167.aspx">网页图片延迟加载</a></h2>
+			            <!--<div class="date"><a href="">2013-09-16</a></div>-->
+			            
+			            <div class="summary">
+			                <p>看到很多大型的网站，都实现了图片延迟加载，即在浏览器的可视范围内才加载图片。这样最大的一个好处就是节约带宽提高用户体验，特别是对于访问量高的大型网站就显得尤为重要，往往大部分网站的流量都是图片大于文本内容，因此网站图片资源优化可以有很大的提升空间。</p>
+<p>在说网站图片延迟加载前，先说下网站图片上传的处理。一般网站上传图片会保存原图，如果网站有多个尺寸规格的需要显示，还要按需生成不同大小的缩略图，这样做的好处就是之后可以快速使用访问，缺点是难以管理这些缩略图，增加了存储成本，算是“以空间换时间”。另外还有一种做法是“以时间换空间”，网站图片上传只保存原图，缩略图按需根据原图动态生成，这样会增加程序处理的一些成本，但可以换取更多空间。具体采用那种方式就因网站需要综合考虑的，目前我网站上传图片采用了比较懒的做法都只保留了原图。</p>
+<p> </p>
+			            </div>
+			            <div class="tags">标签：JavaScript 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2013-09-16 23:06:20</li>
+				            <li>阅读(7109)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/js/167.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/breast/166.aspx">感性碎碎念</a></h2>
+			            <!--<div class="date"><a href="">2013-09-04</a></div>-->
+			            
+			            <div class="summary">
+			                最近心情有些不好，如果伤害到了身边的朋友，这里只能说对不起，希望不要在意！
+今天，我开始有点不听老大话了，希望也老大不要放在心里去。最近工作有些无聊，越是无趣越是没劲，根本就没有拿出100％精神去做事，有时候甚至很抵触。我到底是怎么了，怎么会一些小事都做不好了。现在变得有些好强，但是眼前的一些事都做不好，也没提出好的建议，要是我来做，我会怎么做，我就能做好吗？
+我希望自己可以反省下，自己以后能成熟些，有更宽阔的胸怀，能很冷静理 智地面对一切。
+			            </div>
+			            <div class="tags">标签：心情笔记 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2013-09-04 23:46:23</li>
+				            <li>阅读(1952)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/breast/166.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/breast/165.aspx">爷爷，您一路走好！</a></h2>
+			            <!--<div class="date"><a href="">2013-08-10</a></div>-->
+			            
+			            <div class="summary">
+			                八月1号，因为工作又开始北京之行。本来前几天就准备去的，结果因为一些工作还没有完成，所以就推迟了。在这次来之前，我心里一直彷徨，我知道每次出来总少不了加班，这样的项目翻来覆去让人有些反感，以至于我们都麻木得习以为常了。出发之前跟家里打了个电话，那时候爷爷还在医院，说准备出院了，那时候我在火车站，心里还没有想太多，还是过来了。
+			            </div>
+			            <div class="tags">标签：心情笔记 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2013-08-10 11:46:22</li>
+				            <li>阅读(2911)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/breast/165.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/work/164.aspx">SM2非对称算法加解密</a></h2>
+			            <!--<div class="date"><a href="">2013-07-28</a></div>-->
+			            
+			            <div class="summary">
+			                在前面文章我们已经可以制作SM2证书了，主要应用了SM2签名验证算法和SM3摘要算法，在本文中主要介绍SM2公钥加密算法。这里我们使用SM2数字证书来做SM2非对称加密，然后使用硬件加密设备做解密，比如加密文件只能由指定的智能密码钥匙UKey才能解开。
+			            </div>
+			            <div class="tags">标签：工作 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2013-07-28 23:20:41</li>
+				            <li>阅读(47354)</li>
+				            <li><a class="comment" title="共30条评论" href="/jonllen/work/164.aspx#comment">评论(30)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/aspnet/163.aspx">把网站搬到Linux上</a></h2>
+			            <!--<div class="date"><a href="">2013-06-29</a></div>-->
+			            
+			            <div class="summary">
+			                前段时间主机快过期了，最近又在研究SSL证书，因为原来用的虚拟主机不是独立的VPS，不支持自己到网站上配置SSL，心里就捣鼓着想换一台独立的虚拟主机，我网站原来的运行环境是Windows2003 + IIS6.0 + .Net2.0 + MS Access数据，而Windows主机都比较贵，所有后面就想着把网站搬到Linux上，移植到的Linux的运行环境是Ubuntu12 + Apache2 + mono + mysql，亲身实践使用mono在Linux运行.Net网站，于是便有出此文。
+			            </div>
+			            <div class="tags">标签：Asp.Net 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2013-06-29 17:43:43</li>
+				            <li>阅读(5151)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/aspnet/163.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/work/162.aspx">国密算法SM2证书制作</a></h2>
+			            <!--<div class="date"><a href="">2013-06-26</a></div>-->
+			            
+			            <div class="summary">
+			                前段时间将系统的RSA算法全部升级为SM2国密算法，密码机和UKey硬件设备大都同时支持RSA和SM2算法，只是应用系统的加解密签名验证需要修改，这个更改底层调用的加密动态库来，原来RSA用的对称加密算法DES（AES）和摘要MD5（SHA1）也相应改变，分别对应SM1、SM3算法，SM1算法基于硬件实现，SM2、SM3算法已公开。
+			            </div>
+			            <div class="tags">标签：工作 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2013-06-26 23:03:53</li>
+				            <li>阅读(40614)</li>
+				            <li><a class="comment" title="共108条评论" href="/jonllen/work/162.aspx#comment">评论(108)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+                
+            </div>
+            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
+	        <script type="text/javascript">new ImgLazy( { selector : 'articleitem', maxWidth : document.getElementById('articleitem').offsetWidth });</script>
+		</div>
+		<div class="pagination" id="ctl00_cphContent_Pager1">
+
+<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+                            <!--共154条记录-->
+                            <a disabled>首页</a>
+                            
+                            <font color='red'><strong>1</strong></font><a href='javascript:goToPage0(2)' title='转到第2页'>2</a><a href='javascript:goToPage0(3)' title='转到第3页'>3</a><a href='javascript:goToPage0(4)' title='转到第4页'>...</a>
+                            <a href='javascript:goToPage0(2)' title='转到第2页'>下一页</a>
+                            <a href='javascript:goToPage0(8)' title='转到第8页'>末页</a>
+                            <!--每页<input type='text' value='20' id='_pagersize0' style='width:25px'>条,转到第<input type='text' value='1' id='_pagerid0' style='width:25px'>页<input type='button' value='Go' onclick='javascript:goToPage0(document.getElementById("_pagerid0").value,"index__pid.aspx".replace("psize=20","psize=" + document.getElementById("_pagersize0").value));'>-->
+
+	</div>
+	
+</div>
+ 
+        </div>
+	</div>
+	<div id="ctl00_panRight" class="siderRight column column3">
+	
+<div id="mod29" class="mod recommend">
+    <h4 class="head">博文推荐</h4>
+    <div class="cont">
+	    <ul>
+                    
+		    <li><a href="/jonllen/work/162.aspx">国密算法SM2证书制作</a>(2013-06-26)</li>
+                    
+		    <li><a href="/jonllen/work/158.aspx">SSL的服务器客户端双向认证</a>(2013-04-20)</li>
+                    
+		    <li><a href="/jonllen/breast/120.aspx">时代财富10周年年庆</a>(2010-06-03)</li>
+                    
+		    <li><a href="/jonllen/js/107.aspx">博客个性化定制(2)-实现类似iGoogle首页功能</a>(2010-03-21)</li>
+                    
+
+	    </ul>
+    </div>
+</div>
+<div id="mod30" class="mod comment">
+    <h4 class="head">最新评论</h4>
+    <div class="cont">
+	    <ul>
+		    
+
+<li><a href="/jonllen/js/178.aspx#comment"><b>zlc</b>：你好，你https://github.com/lifesreason/SM2 这个库中除了一个test.html和test.aes-sm.html 的示例其他的 都没有 ，你方便挂上去吗？签名验签的这个我用https://www.npmjs.com/package/sm-crypto  这个库 后端无法签签，老的项目是用的你现在的这个库 可我并没有在你的例子中看到签名的方法，如果方便能提供一下嘛？</a></li>
+
+<li><a href="/jonllen/js/178.aspx#comment"><b>zlc</b>：你好，你https://github.com/lifesreason/SM2 这个库中除了一个test.html和test.aes-sm.html 的示例其他的 都没有 ，你方便挂上去吗？签名验签的这个我用https://www.npmjs.com/package/sm-crypto  这个库 后端无法签签，老的项目是用的你现在的这个库 可我并没有在你的例子中看到签名的方法，如果方便能提供一下嘛？</a></li>
+
+<li><a href="/jonllen/js/178.aspx#comment"><b>zlc</b>：你好，你https://github.com/lifesreason/SM2 这个库中除了一个test.html和test.aes-sm.html 的示例其他的 都没有 ，你方便挂上去吗？签名验签的这个我用https://www.npmjs.com/package/sm-crypto  这个库 后端无法签签，老的项目是用的你现在的这个库 可我并没有在你的例子中看到签名的方法，如果方便能提供一下嘛？</a></li>
+
+<li><a href="/jonllen/js/178.aspx#comment"><b>zlc</b>：你好，你https://github.com/lifesreason/SM2 这个库中除了一个test.html和test.aes-sm.html 的示例其他的 都没有 ，你方便挂上去吗？签名验签的这个我用https://www.npmjs.com/package/sm-crypto  这个库 后端无法签签，老的项目是用的你现在的这个库 可我并没有在你的例子中看到签名的方法，如果方便能提供一下嘛？</a></li>
+
+<li><a href="/jonllen/js/178.aspx#comment"><b>zlc</b>：你好，你https://github.com/lifesreason/SM2 这个库中除了一个test.html和test.aes-sm.html 的示例其他的 都没有 ，你方便挂上去吗？签名验签的这个我用https://www.npmjs.com/package/sm-crypto  这个库 后端无法签签，老的项目是用的你现在的这个库 可我并没有在你的例子中看到签名的方法，如果方便能提供一下嘛？</a></li>
+
+	    </ul>
+    </div>
+</div>
+ 
+<div id="mod31" class="mod recent">
+    <h4 class="head">最近发表</h4>
+    <div class="cont">
+	    <ul>
+
+                    
+		    <li><a href="/jonllen/work/800.aspx">2015年度工作总结</a>(2015-12-31)</li>
+                    
+		    <li><a href="/jonllen/travel/801.aspx">靖港古镇游</a>(2015-11-29)</li>
+                    
+		    <li><a href="/jonllen/js/179.aspx">使用ECharts报表统计公司考勤加班，大家加班多吗？</a>(2015-06-05)</li>
+                    
+		    <li><a href="/jonllen/js/178.aspx">JavaScript实现SM2算法加解密</a>(2014-10-28)</li>
+                    
+		    <li><a href="/jonllen/breast/177.aspx">2014年国庆</a>(2014-10-04)</li>
+                    
+	    </ul>
+    </div>
+</div>
+ 
+<div id="mod36" class="mod search">
+	<h4 class="head">搜索</h4>
+	<div class="cont">
+		<form action="/search/" method="get">
+	        <input type="text" name="key" class="text" value="" placeholder="输入搜索内容" />
+	        <input type="submit" class="btn" value="搜索" />
+	    </form>
+	</div>
+</div>
+ 
+<div id="mod32" class="mod click">
+    <h4 class="head">关注最多</h4>
+    <div class="cont">
+	    <ul>
+                    
+		    <li><a href="/jonllen/work/164.aspx">SM2非对称算法加解密</a>(47354)</li>
+                    
+		    <li><a href="/jonllen/work/162.aspx">国密算法SM2证书制作</a>(40614)</li>
+                    
+		    <li><a href="/jonllen/aspnet/tinymce.aspx">TinyMce在线编辑器完美打造成Asp.Net服务器自定义控件</a>(33064)</li>
+                    
+		    <li><a href="/jonllen/work/174.aspx">SM2国密算法证书解析</a>(28317)</li>
+                    
+		    <li><a href="/jonllen/js/js-popup.aspx">摆脱JQuery—之自定义模拟弹窗层功能。</a>(27067)</li>
+                    
+	    </ul>
+    </div>
+</div>
+ 
+</div>
+</div>
+ 
+<div class="auto" id="foot">
+    <div class="wrapper">
+	Powered By ：Jonllen  <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备10049366号</a>
+	</div>
+</div>
+ 
+<script type="text/javascript" src="/styles/index/scripts/Drag.js"></script>
+<script type="text/javascript" src="/styles/index/scripts/Tooltip.js" ></script>
+<div style="display:none"> 
+    <script type="text/javascript" src="/styles/index/scripts/statistics.js"></script>
+</div>
+
+</body>
+</html>
