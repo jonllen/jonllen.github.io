@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	搜索 - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,8 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>搜索</h3>
+	    <h4>文档检索</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -142,12 +142,12 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/search/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />搜索</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
+			<dd>妮称：搜索</dd>
 			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>简述：文档检索</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +167,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=715&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -196,20 +196,6 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="cont">
 		<ul>
 
-			
-			        <li>
-			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
-			            </a>
-			        </li>
-			
-			        <li>
-			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
-			            </a>
-			        </li>
 			
 		</ul>
 	</div>
@@ -243,93 +229,13 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	
 		<div class="position title">
 		    
-		    <strong>友情链接</strong>
+		    <strong>搜索</strong>
             
 		</div>
 		<div class="articlelist">
 		    <div id="articleitem" class="articleitem">
                 
                     
-
-<div class="item">
-			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.applezqp.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.thjy.org
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://weibo.com/zjj
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
                 
             </div>
             <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
@@ -337,7 +243,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 		</div>
 		<div class="pagination" id="ctl00_cphContent_Pager1">
 
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/search/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
 	</div>
 	
 </div>
@@ -361,6 +267,10 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	    <ul>
 		    
 
+<li><a href="/jonllen/work/162.aspx#comment"><b>yeson</b>：你好，请问有没有java版本的算法实现（生成+签名+加解密），主要是SM2CryptoServiceProvider和SM3Digest，
+如方便的话能否发到我的邮箱，十分感谢。
+huiwytx@163.com</a></li>
+
 <li><a href="/jonllen/work/164.aspx#comment"><b>oracle_cs</b>：您好，我最近也在研究国密这块，您上面的加密中用到了SM2CryptoServiceProvider，您能把这个实现发给我邮箱吗？ 1607418266@qq.com</a></li>
 
 <li><a href="/jonllen/work/164.aspx#comment"><b>oracle_cs</b>：您好，我最近也在研究国密这块，您上面的加密中用到了SM2CryptoServiceProvider，您能把这个实现发给我邮箱吗？ 1607418266@qq.com</a></li>
@@ -368,8 +278,6 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 <li><a href="/jonllen/js/175.aspx#comment"><b>cstomcat</b>：您好，请问用js可以实现sm3算法吗？改造的难度大吗？</a></li>
 
 <li><a href="/jonllen/js/175.aspx#comment"><b>cstomcat</b>：您好，请问用js可以实现sm3算法吗？改造的难度大吗？</a></li>
-
-<li><a href="/jonllen/work/174.aspx#comment"><b>王誉晓</b>：博主，膜拜您已经很久了，能加个qq号吗，有很多问题想请教您啊，qq：1261634218</a></li>
 
 	    </ul>
     </div>
@@ -381,6 +289,8 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	    <ul>
 
                     
+		    <li><a href="/jonllen/work/800.aspx">2015年度工作总结</a>(2015-12-31)</li>
+                    
 		    <li><a href="/jonllen/js/179.aspx">使用ECharts报表统计公司考勤加班，大家加班多吗？</a>(2015-06-05)</li>
                     
 		    <li><a href="/jonllen/js/178.aspx">JavaScript实现SM2算法加解密</a>(2014-10-28)</li>
@@ -389,8 +299,6 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
                     
 		    <li><a href="/jonllen/breast/176.aspx">面对&逃避</a>(2014-08-04)</li>
                     
-		    <li><a href="/jonllen/js/175.aspx">JS版SM2国密算法的签名验证</a>(2014-06-17)</li>
-                    
 	    </ul>
     </div>
 </div>
@@ -398,8 +306,8 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 <div id="mod36" class="mod search">
 	<h4 class="head">搜索</h4>
 	<div class="cont">
-		<form action="/" method="get">
-	        <input type="text" name="key" class="text" value="" />
+		<form action="/search/" method="get">
+	        <input type="text" name="key" class="text" value="" placeholder="输入搜索内容" />
 	        <input type="submit" class="btn" value="搜索" />
 	    </form>
 	</div>
@@ -410,15 +318,15 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
     <div class="cont">
 	    <ul>
                     
-		    <li><a href="/jonllen/aspnet/tinymce.aspx">TinyMce在线编辑器完美打造成Asp.Net服务器自定义控件</a>(31679)</li>
+		    <li><a href="/jonllen/aspnet/tinymce.aspx">TinyMce在线编辑器完美打造成Asp.Net服务器自定义控件</a>(31835)</li>
                     
-		    <li><a href="/jonllen/js/js-popup.aspx">摆脱JQuery—之自定义模拟弹窗层功能。</a>(25861)</li>
+		    <li><a href="/jonllen/js/js-popup.aspx">摆脱JQuery—之自定义模拟弹窗层功能。</a>(25951)</li>
                     
-		    <li><a href="/jonllen/aspnet/pd.aspx">使用PowerDesigner的物理模型创建升级管理数据库</a>(23039)</li>
+		    <li><a href="/jonllen/aspnet/pd.aspx">使用PowerDesigner的物理模型创建升级管理数据库</a>(23160)</li>
                     
-		    <li><a href="/jonllen/aspnet/24.aspx">二次开发WinWebMail邮件系统接口 - 企业邮件服务器解决方案</a>(20062)</li>
+		    <li><a href="/jonllen/aspnet/24.aspx">二次开发WinWebMail邮件系统接口 - 企业邮件服务器解决方案</a>(20332)</li>
                     
-		    <li><a href="/jonllen/java/struts.aspx">Struts增删改查实例及源代码下载</a>(19711)</li>
+		    <li><a href="/jonllen/java/struts.aspx">Struts增删改查实例及源代码下载</a>(19874)</li>
                     
 	    </ul>
     </div>

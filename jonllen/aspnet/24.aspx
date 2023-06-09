@@ -1,0 +1,617 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>二次开发WinWebMail邮件系统接口 - 企业邮件服务器解决方案 - Asp.Net - 金龙博客</title>
+<meta name="description" content="WinWebMail,是一个比较轻量级的邮件服务器系统,适用于中小型企业的邮件系统,功能也比较齐全,关于它的详细介绍可参见官网地址:http://www.winwebmail.com/.从网上去下载一个安装到机器上,我们公司服务器上安装的是WinWebMail 3.7.6.1 企业版,安装的时候它回自动生成网站文件目录,全部都是ASP的页面,在IIS里面创建一个虚拟目录指向该Web文件夹,按照他的一些说明配置好权限等,这样我们就在网页使用它的邮件服务了.
+它的Web客户端比较简洁,不过该有的功能还是都有.第一次用admin进去添加一个域,再添加到一个用户进去,我们就拥有该域名的邮箱.注意,如果你这台机器并没有独立网络IP地址或者域名没有解析到你这里你也能添加域,比如我添加一个microsoft.com的域,再到里面添加一个用户jonllen,那我登陆jonllen@microsoft.com用户,我也能以它的用户名发送出邮件,呵呵,不过对方看到的应该是在垃圾邮件里面,因为现在一般邮件服务器都会判断邮件域名和发送的来源是不是同一个地方,不是同一个地方就认为是伪造的垃圾邮件,而且对方回复你也不能收到,因为microsoft.com不是解析到你那里,先来看一张WinWebMail登陆后的截图.
+
+发送邮件就只能在Web页面里面操作是往往不够的.比如系统自动发" />
+<link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
+<link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
+</head>
+<body>
+<div id="toolbar">
+	<div class="auto fixft" >
+	    <a href="/" class="home"><span>首页</span><img alt="logo" src="/styles/index/css/default/images/logo_small.gif" /></a>
+		
+		<!--<form id="loginFrom" name="loginFrom" onsubmit="return loginEncrypt();" action="/User/Login.aspx"  method="post" target="loginIfr">
+		    <input type="hidden" id="hdEncrypted" name="hdEncrypted" value="" />
+		    <div class="login">
+			    <span class="ico">用户名：</span>
+			    <input id="username" name="username" onfocus="loadEncryptScript()" class="text" type="text" />
+			    密码：<input id="password" name="password" onfocus="loadEncryptScript()" class="text" type="password" />
+			    <input id="btnLogin" class="btn" type="submit" value="登录" />
+			    
+			    <a href="#" onclick="location='https://localhost/Passport';" >安全登录</a>
+			    
+		    </div>
+		</form>
+		<iframe id="loginIfr" name="loginIfr" scrolling="no" frameborder="0" width="0" height="0"></iframe>
+        <script type="text/javascript">
+            function loadEncryptScript(){
+                if( typeof(encryptScript) == 'undefined') {
+                    
+                    document.getElementById('btnLogin').disabled = true;
+                    
+                    encryptScript = document.createElement('script');
+                    encryptScript.type = 'text/javascript';
+                    encryptScript.src = '/Ajax/RSAEncrypt.aspx?callback=loadEncryptScriptCallback';
+                    var currScriptElem = document.getElementsByTagName('script')[0];
+                    currScriptElem.parentNode.insertBefore(encryptScript, currScriptElem);
+                }
+            }
+            function loadEncryptScriptCallback(){
+                document.getElementById('btnLogin').disabled = false;
+            }
+            function loginEncrypt(){
+                
+                var pwdElem = document.getElementById('password');
+                var encryptedPassword = RSAEncrypt(pwdElem.value);
+                pwdElem.value = encryptedPassword;
+                document.getElementById('hdEncrypted').value = 'RSA';
+                return true;
+            }
+        </script>-->
+		
+		<div class="skin">
+			<ul id="skinlist">
+			    <li class="first">　切换风格：</li>
+			    <li id="temp2" class="on"><a class="green" href="javascript:toggleTemplate(2, '/styles/index/css/default/index.css', false);"  title="切换风格：大自然绿">大自然绿</a></li><li id="temp3" class=""><a class="blue" href="javascript:toggleTemplate(3, '/styles/index/css/blue/index.css', false);"  title="切换风格：深蓝海">深蓝海</a></li><li id="temp4" class=""><a class="red" href="javascript:toggleTemplate(4, '/styles/index/css/guoqing/index.css', false);"  title="切换风格：国庆专题">国庆专题</a></li><li id="temp6" class=""><a class="christmas" href="javascript:toggleTemplate(6, '/styles/index/css/christmas/index.css', false);"  title="切换风格：圣诞节">圣诞节</a></li><li id="temp7" class=""><a class="simple" href="javascript:toggleTemplate(7, '/styles/index/css/simple/index.css', false);"  title="切换风格：简单线条">简单线条</a></li>
+			</ul>
+		</div>
+		<div class="display">
+		    <ul>
+		        <li>　<!--版面：--></li>
+		        <!--<li><a href="#" onclick="location='?display=1';" class="">左-中</a> | </li>
+		        <li><a href="#" onclick="location='?display=2';" class="on">左-中-右</a> | </li>
+		        <li><a href="#" onclick="location='?display=3';" class="">中-右</a> | </li>
+		        <li><a href="#" onclick="location='?display=4';" class="">中</a></li>-->
+		    </ul>
+		</div>
+	</div>
+</div>
+<div class="auto" id="top" style="" >
+	<div class="title">
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
+	</div>
+</div>
+<div class="auto" id="nav" >
+	<ul id="navigation">
+		<li><a href="/">首页</a></li>
+        <li><a href="/jonllen/aspnet/" class="up" >Asp.Net</a></li>
+<li><a href="/jonllen/work/"  >工作</a></li>
+		<li><a class="up" href="/album/">相册</a></li>
+		<li><a href="/leave/">留言</a></li>
+		<li class="preview"></li>
+	</ul>
+</div>
+<script type="text/javascript"> 
+(function (){
+    var select, navlist = document.getElementById('navigation').getElementsByTagName('li');
+    for(var i=0;i<navlist.length;i++)
+    {
+        if ( navlist[i].className=='preview') continue;
+        var link = navlist[i].getElementsByTagName('a')[0];
+        if ( link && window.location.href.toLowerCase().indexOf(link.href.toLowerCase())>-1 )
+        {
+            select = link;
+        }
+    }
+    if( select!=undefined )
+    {
+        select.parentNode.className = "on";
+    }
+})();
+function toggleTemplate(tempId, skinSrc, additionalHtml){
+    if( additionalHtml) {
+        location='?tempid='+tempId;
+        return true;
+    }
+    
+    var linkIndexElem = document.getElementById('linkIndex');
+    var linkIndexHref = '' + skinSrc;
+    linkIndexElem.href = '';
+    linkIndexElem.href = linkIndexHref;
+    
+    var linkTemplateElem = document.getElementById('linkTemplate');
+    var linkTemplateHref = linkIndexHref.substr(0, linkIndexHref.lastIndexOf('/') ) + linkTemplateElem.href.substr(linkTemplateElem.href.lastIndexOf('/'));
+    linkTemplateElem.href = '';
+    linkTemplateElem.href = linkTemplateHref;
+    
+    var skinName = 'Skin';
+    var skinValue = '0='+tempId;
+    var skinDate = new Date();
+    skinDate.setTime(skinDate.getTime() + 1000 * 60 * 120 );
+    document.cookie = skinName + '=' + skinValue + '; path=/; expires=' + skinDate.toGMTString();
+    
+    var templatelist = document.getElementById('skinlist').getElementsByTagName('li');
+    for(var i=0;i<templatelist.length;i++){
+        var templateli = templatelist[i];
+        if (templateli.className == 'on')
+            templateli.className = '';
+        if( templateli.id == 'temp' + tempId)
+            templateli.className = 'on';
+    }
+}
+</script>
+
+<div id="main" class="auto container">
+    <div id="ctl00_panLeft" class="siderLeft column column1">
+	
+<div id="mod25" class="mod info">
+	<div class="head"><strong class="ico">个人档案</strong></div>
+	<div class="cont">
+		<dl>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
+			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
+			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
+		</dl>
+	</div>
+</div>
+<div id="mod26" class="mod calendar">
+	<div class="head"><strong class="ico">博客日历</strong></div>
+	<div id="calendar" class="cont"></div>
+	<script type="text/javascript" language="javascript" src="/styles/index/scripts/DatePicker/WdatePicker.js" ></script>
+    <script type="text/javascript" language="javascript">
+        function ePicked(dp)
+        {
+            for(var i=0;i<archive.length;i++)
+            {
+                //if(archive[i]==dp.cal.getDateStr())
+                    //window.location = '/archive/' + dp.cal.getDateStr() + '.aspx';
+            }
+        }
+        
+            function getArticleArchive()
+		    {
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
+		        Ajax.send({
+		            type : "GET",
+		            url : url,
+		            fn : function (data){
+	                    var rs;
+	                    try{rs=eval("rs="+data);}catch(e){alert(e);return;}
+                        
+	                    if (rs.success)
+	                    {
+	                        var archive = [];
+	                        if(rs.data) archive = rs.data.split(',');
+	                        window.archive = archive;
+	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'2009-01-07' } );
+ 	                    }else
+	                    {
+	                        alert(rs.error);
+	                    }
+                            }
+		        });
+		    }
+        setTimeout(getArticleArchive,0);
+    </script>
+</div>
+<div id="mod27" class="mod category">
+	<div class="head"><strong class="ico">分类文档</strong></div>
+	<div class="cont">
+		<ul>
+
+			
+			        <li>
+			            
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
+			            </a>
+			        </li>
+			
+		</ul>
+	</div>
+</div>
+ 
+<!--<div id="mod28" class="mod links">
+	<div class="head"><strong class="ico">友情链接</strong></div>
+	<div class="cont">
+		<ul>
+                    
+		    <li><a href="http://www.applezqp.com" title="老平同志，高妹。" target="_blank">applezqp</a></li>
+                    
+		    <li><a href="http://www.thjy.org" title="天河部落教育博客" target="_blank">天河部落</a></li>
+                    
+		    <li><a href="http://weibo.com/zjj" title="时代财富张静君的微博" target="_blank">张静君</a></li>
+                    
+		    <li><a href="http://www.fortuneage.com" title="广州网站建设" target="_blank">时代财富</a></li>
+                    
+		</ul>
+	</div>
+</div>-->
+ 
+</div>
+
+	<div class="siderMiddle">
+	    <div class="content column column2">
+            
+
+    <div class="articlecont">
+        <div class="position">
+		    <strong>当前位置：</strong>
+		    <a href="http://www.jonllen.com">首页</a>
+		     > <a href="/jonllen/aspnet/">Asp.Net</a>
+		     > <a href="/jonllen/aspnet/24.aspx">二次开发WinWebMail邮件系统接口 - 企业邮件服务器解决方案</a>
+		</div>
+        <div class="article">
+			<div class="title"><h2>二次开发WinWebMail邮件系统接口 - 企业邮件服务器解决方案</h2></div>
+			<div class="category">分类：<a href="/jonllen/aspnet/">Asp.Net</a></div>
+			<div class="fontZoom"><a href="javascript:zoom(20);" style="font-size:large; font-weight:700">大</a><a href="javascript:zoom(14);" style="font-size:14px; font-weight:500;">中</a><a href="javascript:zoom(10);">小</a></div>
+			<div class="cont" id="content">
+				<div style="font-size: 14px; margin: 0px; font-family: Arial, Helvetica, sans-serif; line-height: 28px;">
+<p style="text-indent: 2em;">WinWebMail,是一个比较轻量级的邮件服务器系统,适用于中小型企业的邮件系统,功能也比较齐全,关于它的详细介绍可参见官网地址:<a href="http://www.winwebmail.com/" target="_blank">http://www.winwebmail.com/</a>.从网上去下载一个安装到机器上,我们公司服务器上安装的是WinWebMail 3.7.6.1 企业版,安装的时候它回自动生成网站文件目录,全部都是ASP的页面,在IIS里面创建一个虚拟目录指向该Web文件夹,按照他的一些说明配置好权限等,这样我们就在网页使用它的邮件服务了.</p>
+<p style="text-indent: 2em;">它的Web客户端比较简洁,不过该有的功能还是都有.第一次用admin进去添加一个域,再添加到一个用户进去,我们就拥有该域名的邮箱.注意,如果你这台机器并没有独立网络IP地址或者域名没有解析到你这里你也能添加域,比如我添加一个microsoft.com的域,再到里面添加一个用户jonllen,那我登陆jonllen@microsoft.com用户,我也能以它的用户名发送出邮件,呵呵,不过对方看到的应该是在垃圾邮件里面,因为现在一般邮件服务器都会判断邮件域名和发送的来源是不是同一个地方,不是同一个地方就认为是伪造的垃圾邮件,而且对方回复你也不能收到,因为microsoft.com不是解析到你那里,先来看一张WinWebMail登陆后的截图.</p>
+<div style="margin-left: 2em;"><img src="/upload/jonllen/upload/o_winwebmail.jpg" alt="WinWebMail" width="500" height="307" /></div>
+<p style="text-indent: 2em;">发送邮件就只能在Web页面里面操作是往往不够的.比如系统自动发送邮件、定时群发邮件等这些操作是不可能再跑到它的页面手工去发送,而应该要能在程序里调用他的接口进行发送邮件,而且最近可能会要开发一套OA,里面就要企业邮件,OA里注册一个帐户就需要开一个邮件帐户,并且建立企业员工通讯录,邮件信息为内部相互通讯,且也能直接发送到外部邮箱,不过WinWebMail好象就提供接口方式好象就是Web网页访问的形式而已,不过打开它里面的asp页面,我们能看到里面一些这样的代码.</p>
+<div style="margin-left: 2em;">
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; padding-bottom: 4px; width: 645px; word-break: break-all; padding-top: 4px; background-color: #efefef; border: #cdcdcd 1px solid;">
+<div><span style="color: #0000ff;">dim</span><span style="color: #000000;"> ei<br /></span><span style="color: #0000ff;">set</span><span style="color: #000000;"> ei </span><span style="color: #000000;">=</span><span style="color: #000000;"> server.createobject(</span><span style="color: #800000;">"</span><span style="color: #800000;">easymail.InfoList</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br />username </span><span style="color: #000000;">=</span><span style="color: #000000;"> Session(</span><span style="color: #800000;">"</span><span style="color: #800000;">wem</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br />ei.LoadMailBox username, </span><span style="color: #0000ff;">trim</span><span style="color: #000000;">(request(</span><span style="color: #800000;">"</span><span style="color: #800000;">mode</span><span style="color: #800000;">"</span><span style="color: #000000;">))<br /></span><span style="color: #008000;">'</span><span style="color: #008000;">-----------------------------------------</span></div>
+</div>
+</div>
+<p style="text-indent: 2em;">懂asp的朋友都知道,它里面使用server.createobject是创建一个对象,比如对数据的连接操作都是要用到server.createobject,而asp里面的变量是弱变量类型,变量无须声明就可以使用的,那么上面代码里面server.createobject("easymail.InfoList")创建的是什么对象呢?突然想起来,WinWebMail它还有个C/S的客户端界面,但是要到服务器上进去才能看到操作的,功能比较的简单,可以增加用户和配置域,还可以修改一些系统的设置,打开任务管理查看所有进程,可以看到它其实是就是一个程序,你也可以关闭,但是还有一个名为emsvr的进程,它便就是WebWinWeb邮件系统的<a href="/Jonllen/archive/2009/01/05/1368632.html" target="_blank" title="关于.NetC#写Windows后台服务">后台服务</a>,最核心的地方还是在这里!那么它们之间是怎么实现相互调用的呢?细心的程序员很快就会想到是用COM组件,因为COM组件通过接口能方便的实现相互调用通讯甚至为不同的语言,在VS里面添加引用,选择COM组件,果然有WinWebMail的组件,如下图.</p>
+<div style="margin-left: 2em;"><img src="/upload/jonllen/upload/o_com.jpg" alt="添加COM引用" width="482" height="342" /></div>
+<p style="text-indent: 2em;">那么,上面server.createobject的就可以解释为创建调用的COM组件对象了.既然有COM组件接口可以调用,那么就好办了.因为COM组件接口能跨任何语言调用,如果为标准的DLL组件的话,我们还可以使用非托管动态链接库的方法进行引用,不过那好象你必须都要知道它的一些方法名和参数等.难道我去它的那些asp页面里一个个找出来不成?而且你没有相关文档还先得要搞清它的整个页面逻辑,就算你都找到了那也不一定就是你要的方法名,那改如何是好呢?上面不是用VS来引用COM吗?没错!我们在项目里面添加WebEasyMail的COM组件,VS会帮我们自动生成一个Interop.EASYMAILLib.dll文件到Bin目录,我们使用对象浏览器打开,它里面的接口属性类一览如余.</p>
+<div style="margin-left: 2em;"><img src="/upload/jonllen/upload/o_ObjectView.jpg" alt="COM对象浏览器" width="363" height="325" /></div>
+<p style="text-indent: 2em;">我们要操作调用COM接口,那我们调用它生成的类即是,就是这么的简单,非常的方便.写代码的话我们先实例化它里面的类,我们能看到类里面有很多的方法和属性.刚开始你可能会对它里面的一些属性和方法是干什么的不太明白.但是你可以打开它的asp页面里的代码,先看下它调用的整个步骤,也许你就有一些思绪了.我为了做得通用,把一些常见的操作都用C#写成了WebService方法.我这里贴出一个返回用户邮件夹信息(包括名称、总数量大小和新邮件数)的方法.</p>
+<div style="margin-left: 2em;">
+<div style="padding-right: 5.4pt; padding-left: 5.4pt; padding-bottom: 4px; width: 645px; word-break: break-all; padding-top: 4px; background-color: #efefef; border: #cdcdcd 1px solid;">
+<div><span style="color: #000000;">[WebMethod(Description </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #800000;">"</span><span style="color: #800000;">返回邮件箱 包含名称、邮件数和大小等信息</span><span style="color: #800000;">"</span><span style="color: #000000;">)]<br />[System.Xml.Serialization.XmlInclude(</span><span style="color: #0000ff;">typeof</span><span style="color: #000000;">(MailBox))]<br />[SoapHeader(</span><span style="color: #800000;">"</span><span style="color: #800000;">Usheader</span><span style="color: #800000;">"</span><span style="color: #000000;">, Direction </span><span style="color: #000000;">=</span><span style="color: #000000;"> SoapHeaderDirection.In)]<br /></span><span style="color: #0000ff;">public</span><span style="color: #000000;"> MailBox[] GetMailBoxes(</span><span style="color: #0000ff;">string</span><span style="color: #000000;"> username)<br />{<br /><br />InfoListClass infos </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #0000ff;">new</span><span style="color: #000000;"> InfoListClass();<br /></span><span style="color: #0000ff;">if</span><span style="color: #000000;"> (</span><span style="color: #000000;">!</span><span style="color: #000000;">username.Contains(</span><span style="color: #800000;">"</span><span style="color: #800000;">@</span><span style="color: #800000;">"</span><span style="color: #000000;">))<br />username </span><span style="color: #000000;">+=</span><span style="color: #000000;"> System.Configuration.ConfigurationManager.AppSettings[</span><span style="color: #800000;">"</span><span style="color: #800000;">EmailPostfix</span><span style="color: #800000;">"</span><span style="color: #000000;">];<br />infos.LoadSizeInfo(username);<br />System.Collections.Generic.List</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">MailBox</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"> list </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #0000ff;">new</span><span style="color: #000000;"> System.Collections.Generic.List</span><span style="color: #000000;">&lt;</span><span style="color: #000000;">MailBox</span><span style="color: #000000;">&gt;</span><span style="color: #000000;">();<br />list.Add(</span><span style="color: #0000ff;">new</span><span style="color: #000000;"> MailBox(</span><span style="color: #800000;">"</span><span style="color: #800000;">收件箱</span><span style="color: #800000;">"</span><span style="color: #000000;">, </span><span style="color: #800000;">"</span><span style="color: #800000;">in</span><span style="color: #800000;">"</span><span style="color: #000000;">, infos.inboxMailCount, infos.newInBoxMailCount, infos.inboxMailSize));<br />list.Add(</span><span style="color: #0000ff;">new</span><span style="color: #000000;"> MailBox(</span><span style="color: #800000;">"</span><span style="color: #800000;">草稿箱</span><span style="color: #800000;">"</span><span style="color: #000000;">, </span><span style="color: #800000;">"</span><span style="color: #800000;">out</span><span style="color: #800000;">"</span><span style="color: #000000;">, infos.outboxMailCount, infos.newOutBoxMailCount, infos.outboxMailSize));<br />list.Add(</span><span style="color: #0000ff;">new</span><span style="color: #000000;"> MailBox(</span><span style="color: #800000;">"</span><span style="color: #800000;">发件箱</span><span style="color: #800000;">"</span><span style="color: #000000;">, </span><span style="color: #800000;">"</span><span style="color: #800000;">sed</span><span style="color: #800000;">"</span><span style="color: #000000;">, infos.sendboxMailCount, infos.newSendBoxMailCount, infos.sendboxMailSize));<br />list.Add(</span><span style="color: #0000ff;">new</span><span style="color: #000000;"> MailBox(</span><span style="color: #800000;">"</span><span style="color: #800000;">垃圾箱</span><span style="color: #800000;">"</span><span style="color: #000000;">, </span><span style="color: #800000;">"</span><span style="color: #800000;">del</span><span style="color: #800000;">"</span><span style="color: #000000;">, infos.delboxMailCount, infos.newDelBoxMailCount, infos.delboxMailSize));<br /></span><span style="color: #0000ff;">for</span><span style="color: #000000;"> (</span><span style="color: #0000ff;">int</span><span style="color: #000000;"> i </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #800080;">0</span><span style="color: #000000;">; i </span><span style="color: #000000;">&lt;</span><span style="color: #000000;"> infos.PerFolderCount; i</span><span style="color: #000000;">++</span><span style="color: #000000;">)<br />{<br />MailBox box </span><span style="color: #000000;">=</span><span style="color: #000000;"> </span><span style="color: #0000ff;">new</span><span style="color: #000000;"> MailBox();<br />infos.GetPerFolderInfo(i, </span><span style="color: #0000ff;">ref</span><span style="color: #000000;"> box.name, </span><span style="color: #0000ff;">ref</span><span style="color: #000000;"> box.mailcount, </span><span style="color: #0000ff;">ref</span><span style="color: #000000;"> box.size, </span><span style="color: #0000ff;">ref</span><span style="color: #000000;"> box.newmailcount);<br />box.code </span><span style="color: #000000;">=</span><span style="color: #000000;"> box.name.ToString();<br />list.Add(box);<br /><br />}<br />list.Add(</span><span style="color: #0000ff;">new</span><span style="color: #000000;"> MailBox(</span><span style="color: #800000;">"</span><span style="color: #800000;">合计</span><span style="color: #800000;">"</span><span style="color: #000000;">, </span><span style="color: #800000;">"</span><span style="color: #800000;">all</span><span style="color: #800000;">"</span><span style="color: #000000;">, infos.allMailCount, infos.allNewMailCount, infos.allMailSize));<br /></span><span style="color: #0000ff;">return</span><span style="color: #000000;"> list.ToArray();<br /><br />}</span></div>
+</div>
+</div>
+<p style="text-indent: 2em;">其他添加域、用户、收发邮件也能以次类推写出来,只不过你可能要参考它asp页面的一些方法,调用正确才能返回结果.注意:它接口里面没有一个实体对象模型,里面所有的结果都是使用ref来赋值的,取多条结果则是通过for循环,它asp页面里调用好象也都是这样做的.我的做的时候调试也是比较的郁闷.因为是本地在公司的一个局域网,我用上面写的那些方法竟然都调用不了,也没有报错,就是没有结果返回,但是进它的asp网站里面操作又都行!害得我郁闷了好久.后来把代码传到服务器上,直接用WebService访问,竟然又行.那证明我写的那些方法是没有错,那到底是那里有问题了呢?我现在还是不太明白.</p>
+<div style="margin-left: 2em;"><img src="/upload/jonllen/upload/o_webservice.jpg" alt="WebService方法" width="500" height="442" /></div>
+<p style="text-indent: 2em;">不过既然能在服务器上运行就OK了,因为邮件服务器最终都将是要部署在服务器上的,这样我们就也能把添加用户、企业通讯录、收发邮件的这样方法以WebService的方式提供出来,如果公司还有OA、ERP、人力资源管理系统等都可以方便的调用,而且能统一域下用户管理,实现企业用户员工的邮件通讯.有需要使用邮件系统的朋友可以考虑使用WinWebMail.我这里提供一个WinWebMailv3.7.6.1 企业版的破解版下载,仅供非商业用途学习测试使用,感兴趣的朋友可以来下载,正式使用请到官网购买付费版本.</p>
+<p style="text-indent: 2em;"><a href="http://files.cnblogs.com/Jonllen/WinWebMail.rar" target="_blank"><strong><span style="font-size: medium;">WinWebMailv3.7.6.1 企业破解版下载</span></strong></a></p>
+</div>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
+	        <script type="text/javascript">new ImgLazy( { selector : 'content', maxWidth : document.getElementById('content').offsetWidth, 'loadSrc' : '/styles/index/css/default/images/lazyloading.gif' });</script>
+
+			<div class="tags">标签：<a href="/jonllen/aspnet/">Asp.Net</a> 
+			    
+			    
+			</div>
+
+			<div class="desc">
+			  <ul>
+				<li>posted@ 2009-01-07 01:08</li>
+				<li>update@ 2010-02-11 17:21:27</li>
+				<li>阅读(<span id="articleClick">20062</span>)</li>
+				<li>评论(0)</li>
+				
+			  </ul>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ad.js"></script>
+
+		</div>
+<div class="context">
+			<ul>
+				<li>上一篇：<a href="/jonllen/aspnet/23.aspx">asp项目 — 报价订购系统</a></li>
+<li>下一篇：<a href="/jonllen/aspnet/21.aspx">.Net版(C#)的CMP模式(存储过程ORM)</a></li></ul>
+		</div>
+		
+
+<div class="correlative">
+	
+		    <h4>相关文章</h4>
+			<ul>
+
+
+
+			</ul>
+		
+</div>
+
+		
+		<div class="comment">
+			<div class="title">评论</div>
+			<div class="commentlist" id="commentContent">
+				
+
+				<div id="commentNothing" class="nothing">
+	暂无任何评论。
+</div>
+			</div>
+		</div>
+		<div class="postcomment">
+	        <div class="title">发表评论<a id="comment"></a></div>
+	        <div class="box">
+		        <div class="fi"><label>用户名</label><input id="txtUserName" type="text" value="" class="text" title="请输入显示用户名称" /><span class="note">*必填</span></div>
+		        
+		        
+		        <div class="fi"><label>网站链接</label><input id="txtWebsite" type="text" class="text" title="请输入您的网站链接地址以便回访（非必填）" /></div>
+		        
+		        <div class="fi"><label>邮箱地址</label><input id="txtEmail" type="text" class="text" title="请输入您的邮箱地址以便回复（非必填）" /><input id="chkEmailNotify" type="checkbox" title="当博主回复时以邮件通知我" />回复通知我</div>
+		        <div class="fi"><label>内容</label><textarea id="txtContent" class="textarea"></textarea><span class="note">*必填</span></div>
+		        <div class="btn"><input type="button" class="submit" onclick="postComment()" value="提交" /></div>
+	        </div>
+        </div>
+        <script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
+        <script type="text/javascript">
+            function postComment()
+		    {
+		        var url = "/plugin/web/doSaveComment.do?sourcetype=1&sourceid=24&siteId=1";
+		        var data = "username="+encodeURIComponent(document.getElementById("txtUserName").value);
+		        data += '&sourceurl=/jonllen/aspnet/24.aspx';
+		        data += "&content="+ encodeURIComponent(document.getElementById("txtContent").value);
+		        var pwd = document.getElementById("txtPassword");
+		        if (pwd!=null)
+		        {
+		            data += "&pwd="+ pwd.value;
+		        }
+		        var website = document.getElementById("txtWebsite");
+		        if (website!=null)
+		        {
+		            data += "&website="+ website.value;
+		        }
+		        data += "&email="+ encodeURIComponent(document.getElementById("txtEmail").value);
+		        data += "&emailNotify="+ encodeURIComponent(document.getElementById("chkEmailNotify").checked);
+		        Ajax.send({
+		            type : "POST",
+		            url : url,
+		            data : data,
+		            fn : function (data){
+	                    var rs;
+	                    try{rs=eval("rs="+data);}catch(e){alert(e);return;}
+                        
+	                    if (rs.success)
+	                    {
+	                        appendComment();
+	                        if(document.getElementById('commentNothing')!=null){ 
+	                          document.getElementById('commentNothing').style.display = 'none';
+	                        }
+	                        document.getElementById("txtContent").value = "";
+	                        alert("提交评论成功！");
+	                    }else
+	                    {
+	                        alert(rs.error);
+	                    }
+                            }
+		        });
+		    }
+
+function appendComment()
+		    {
+var itemComment = document.createElement('div');
+itemComment.className = 'item';
+var username = document.getElementById("txtUserName").value;
+var index = document.getElementById('commentContent').getElementsByTagName('ul').length + 1;
+var content =  document.getElementById("txtContent").value;
+itemComment.innerHTML = '<div class="desc"><ul class="options"><li><a href="javascript:;" onclick="quote(this,\''+username+'\')">引用</a></li></ul><a>'+index+'楼</a> '+username+'</div><div class="cont">'+content+'</div>';
+document.getElementById('commentContent').appendChild(itemComment);
+}
+
+            function addClick()
+		    {
+		        var url = "/plugin/web/doAddClick.do?columnType=1&documentId=24";
+		        Ajax.send({
+		            type : "GET",
+		            url : url,
+		            fn : function (data){
+		                 var clickElem = document.getElementById('articleClick');
+		                 if(clickElem !=null) clickElem.innerHTML = data; 
+		            }
+		        });
+
+		    }
+            addClick();
+        </script>
+		
+	</div>
+	<script type="text/javascript">
+	    function zoom(size)
+	    {
+	        var content = document.getElementById("content");
+	        content.style.fontSize = size+"px";
+	        for(var i=0;i<content.childNodes.length;i++)
+	        {
+	            if(content.childNodes[i].nodeType==1)
+	                content.childNodes[i].style.fontSize = size+"px";
+	        }
+	    }
+	    
+	    function quote(target,name)
+	    {
+	        var content = name+"："+target.parentNode.parentNode.parentNode.nextSibling.innerHTML;
+	        var reply = document.getElementById("txtContent");
+	        if (reply==null) return;
+	        reply.value += "[quote]"+content.replace(/<br>/ig,'\n\r')+"[/quote]\n";
+	        reply.focus();
+	        
+            var r = reply.createTextRange();
+            r.moveStart('character',reply.innerHTML.length);
+            r.collapse(true);
+            r.select();
+            
+            //replace <fieldset(\S|\s)+?legend>(\S|\s)+</fieldset> to [quote]$2[/quote]
+	    }
+	</script>
+ 
+
+
+        </div>
+	</div>
+	<div id="ctl00_panRight" class="siderRight column column3">
+	
+<div id="mod29" class="mod recommend">
+    <h4 class="head">博文推荐</h4>
+    <div class="cont">
+	    <ul>
+                    
+
+	    </ul>
+    </div>
+</div>
+<div id="mod30" class="mod comment">
+    <h4 class="head">最新评论</h4>
+    <div class="cont">
+	    <ul>
+		    
+
+<li><a href="/jonllen/work/164.aspx#comment"><b>oracle_cs</b>：您好，我最近也在研究国密这块，您上面的加密中用到了SM2CryptoServiceProvider，您能把这个实现发给我邮箱吗？ 1607418266@qq.com</a></li>
+
+<li><a href="/jonllen/work/164.aspx#comment"><b>oracle_cs</b>：您好，我最近也在研究国密这块，您上面的加密中用到了SM2CryptoServiceProvider，您能把这个实现发给我邮箱吗？ 1607418266@qq.com</a></li>
+
+<li><a href="/jonllen/js/175.aspx#comment"><b>cstomcat</b>：您好，请问用js可以实现sm3算法吗？改造的难度大吗？</a></li>
+
+<li><a href="/jonllen/js/175.aspx#comment"><b>cstomcat</b>：您好，请问用js可以实现sm3算法吗？改造的难度大吗？</a></li>
+
+<li><a href="/jonllen/work/174.aspx#comment"><b>王誉晓</b>：博主，膜拜您已经很久了，能加个qq号吗，有很多问题想请教您啊，qq：1261634218</a></li>
+
+	    </ul>
+    </div>
+</div>
+ 
+<div id="mod31" class="mod recent">
+    <h4 class="head">最近发表</h4>
+    <div class="cont">
+	    <ul>
+
+                    
+		    <li><a href="/jonllen/js/179.aspx">使用ECharts报表统计公司考勤加班，大家加班多吗？</a>(2015-06-05)</li>
+                    
+		    <li><a href="/jonllen/js/178.aspx">JavaScript实现SM2算法加解密</a>(2014-10-28)</li>
+                    
+		    <li><a href="/jonllen/breast/177.aspx">2014年国庆</a>(2014-10-04)</li>
+                    
+		    <li><a href="/jonllen/breast/176.aspx">面对&逃避</a>(2014-08-04)</li>
+                    
+		    <li><a href="/jonllen/js/175.aspx">JS版SM2国密算法的签名验证</a>(2014-06-17)</li>
+                    
+	    </ul>
+    </div>
+</div>
+ 
+<div id="mod36" class="mod search">
+	<h4 class="head">搜索</h4>
+	<div class="cont">
+		<form action="/" method="get">
+	        <input type="text" name="key" class="text" value="" />
+	        <input type="submit" class="btn" value="搜索" />
+	    </form>
+	</div>
+</div>
+ 
+<div id="mod32" class="mod click">
+    <h4 class="head">关注最多</h4>
+    <div class="cont">
+	    <ul>
+                    
+		    <li><a href="/jonllen/aspnet/tinymce.aspx">TinyMce在线编辑器完美打造成Asp.Net服务器自定义控件</a>(31679)</li>
+                    
+		    <li><a href="/jonllen/js/js-popup.aspx">摆脱JQuery—之自定义模拟弹窗层功能。</a>(25861)</li>
+                    
+		    <li><a href="/jonllen/aspnet/pd.aspx">使用PowerDesigner的物理模型创建升级管理数据库</a>(23039)</li>
+                    
+		    <li><a href="/jonllen/aspnet/24.aspx">二次开发WinWebMail邮件系统接口 - 企业邮件服务器解决方案</a>(20062)</li>
+                    
+		    <li><a href="/jonllen/java/struts.aspx">Struts增删改查实例及源代码下载</a>(19711)</li>
+                    
+	    </ul>
+    </div>
+</div>
+ 
+</div>
+</div>
+
+<div class="auto" id="foot">
+    <div class="wrapper">
+	Powered By ：Jonllen  <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备10049366号</a>
+	</div>
+</div>
+ 
+<script type="text/javascript" src="/styles/index/scripts/Drag.js"></script>
+<script type="text/javascript" src="/styles/index/scripts/Tooltip.js" ></script>
+<div style="display:none"> 
+    <script type="text/javascript" src="/styles/index/scripts/statistics.js"></script>
+</div>
+</body>
+</html>

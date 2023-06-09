@@ -1,0 +1,9 @@
+﻿
+/* -- 左栏 -- */
+.container .siderLeft{ display:block;overflow:hidden;}
+
+/* -- 中栏 -- */
+.container .siderMiddle{ display:block; width:480px; margin-right:10px; overflow:hidden;}
+
+/* -- 右栏 -- */
+.container .siderRight{ display:block;width:260px; float:left;overflow:hidden;}

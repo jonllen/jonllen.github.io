@@ -1,0 +1,11 @@
+﻿.container{ width:100%;}
+
+/* -- 左栏 -- */
+.container .siderLeft{ }
+
+/* -- 中栏 -- */
+.container .siderMiddle{width:100%;margin-bottom:10px;float:none;}
+.container .siderMiddle .content{ margin-left:30px; margin-right:300px;}
+
+/* -- 右栏 -- */
+.container .siderRight{ width:260px; float:none;position:absolute; right:30px; top:0;}

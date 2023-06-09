@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	数据库 - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -142,12 +143,13 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +169,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -199,15 +201,85 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -243,7 +315,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	
 		<div class="position title">
 		    
-		    <strong>友情链接</strong>
+		    <strong>数据库</strong>
             
 		</div>
 		<div class="articlelist">
@@ -253,19 +325,19 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/jonllen/db/150.aspx">Oracle流同步使用总结</a></h2>
+			            <!--<div class="date"><a href="">2012-12-02</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.applezqp.com
+			                因为工作关系，最近使用Oracle数据库，前段时间用了Oracle数据库自带的流同步功能，做数据库的热备，功能还是挺强大的，直接可以在登录控制台向导进行配置，下面我就来说下Oracle流同步配置和使用问题总结。
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：数据库 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2012-12-02 14:03:28.0</li>
+				            <li>阅读(4155)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/db/150.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -273,19 +345,19 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/jonllen/db/124.aspx">SQL性能优化</a></h2>
+			            <!--<div class="date"><a href="">2010-06-27</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.thjy.org
+			                在做天河部落博客系统的时候，遇到了一个这样的SQL问题，博客首页处于列表模式的时候，需要显示博主每个栏目的前十篇文章，之前是根据栏目ID一个个查询出来，由于栏目可能还有子栏目，因此使用多个栏目OR的方式，在程序里拼接好再执行，然而这些SQL语句却存在效率问题...
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：数据库 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
+				            <li title="">posted@ 2010-06-27 17:32:42.0</li>
+				            <li>阅读(7544)</li>
+				            <li><a class="comment" title="共1条评论" href="/jonllen/db/124.aspx#comment">评论(1)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -293,19 +365,21 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
+			            <h2><a href="/jonllen/db/oracle-notes.aspx">oracle学习小记</a></h2>
+			            <!--<div class="date"><a href="">2009-11-27</a></div>-->
 			            
 			            <div class="summary">
-			                http://weibo.com/zjj
+			                最近忙完iKnow，难得忙里偷闲，打开N久没有打开过的NetBeans工程，继续开始Java的学习，之前已经有用Struts访问mysql、mssqlserver、derby数据库的实现，前几天正好把oracle数据库装好了，正好把jdbc连oracle数据库的功能实现一下。昨日感恩节，收到两位同学的祝福短信，心怀着感恩的心，我也感谢大家一路有你们，晚上听着欧阳菲菲感恩的心好几遍。
+段今日一大早，终于解决了java读取Oracle数据库timestamp类型的问题，至此，oracle数据库的创建程序读取告一段段落，让我来记录每一步遇到的一些问题。
+oracle数据库基本语法--创建表空间dbTestCREATE TABLESPACE dbTest    LOGGING     DATAFILE 'D:\J2ee\NetBeansProjects\JavaWeb\PowerDesigner\sql\dbTest.ora' SIZE 2M EXTENT    MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;--创建用户blogadmin,默认表空间dbTest；CREATE USER blogadmin IDENTIFIED BY blogadmin DEFAULT TABLESPACE dbTest;--授予其三个权限:DBA,CONNECT,RESOURCEGRANT DBA, CONNECT, RESOURCE TO blogadmin;--查看用户角色...
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：数据库 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-11-27 11:08:35.0</li>
+				            <li>阅读(12335)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/db/oracle-notes.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -313,19 +387,63 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
+			            <h2><a href="/jonllen/db/75.aspx">Asp.Net访问Access数据库注意事项</a></h2>
+			            <!--<div class="date"><a href="">2009-10-11</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.fortuneage.com
+			                博客上线了这么久，一直还是用的Access数据库，不过程序是采用了工厂模式，预定义好了业务接口，方便以后移植到其它数据库上来，不过以前还是使用sqlserver数据库多一点，这次使用Access数据库还是会碰到一些小问题，总体用起来还是很方便，每次备份数据库就直接从ftp上拉下来就是，感觉性能还行，不过这些可能都是建立在小数据量的范围下。Q1：Access连接字符怎么写？A1：Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|blog.mdb。说明：从.Net2.0开始MS开始有App_Data目录来专门存放数据文件，而对于连接字符串数据库的文件位置可以使用DataDirectory关键来表示它的物理路径，从而在获取连接字符串的时候不再需要使用Server.MapPath()转换。Q2：时间类型的字段如何处理？
+A2：使用Convert.ToDateTime()进行显示的转换一次即可。说明：Access数据库的时间类型字段需要进行特殊的处理，不然会报错。对于使用OleDbParameter传递参数的时候应该这样来写：parms.Add(new OleDbParameter("postDate", Convert.ToDateTime(article.PostDate.ToString())));先把PostDate的日期类型ToString()再Convert成DateTime类型。 而对于使用sql语句的日期类型...
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：数据库 Access
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-10-11 20:57:25.0</li>
+				            <li>阅读(12256)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/db/75.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/db/20.aspx">mysql存储过程 在动态SQL内获取返回值</a></h2>
+			            <!--<div class="date"><a href="">2009-06-28</a></div>-->
+			            
+			            <div class="summary">
+			                很简单，不需要使用游标循环来读取，直接select * into @变量就OK了，还可以传递参数来执行(附MySql通用分页存储过程)。
+#拼接查询总记录的SQL语句 
+setv_sqlcounts=concat('selectcount(*)into@recordcountfrom',v_tables,v_where); 
+set@sqlcounts:=v_sqlcounts; 
+#预处理动态SQL 
+preparestmtfrom@sqlcounts; 
+#传递动态SQL内参数 
+set@s1=categoryid; 
+executestmtusing@s1; 
+deallocatepreparestmt; 
+#获取动态SQL语句返回值 
+setrecordcount=@recordcount;#拼接查询总记录的SQL语句
+set v_sqlcounts = concat('select count(*) into @recordcount from ',v_tables,v_where);
+set @sqlcounts := v_sqlcounts;
+#预处理动态SQL
+prepare stmt from @sqlcounts;
+#传递动态SQL内参数
+set @s1= categoryid;
+execute stmt using @s1;
+deallocate prepare stmt;
+#获取动态SQL语句返回值
+set recordcount = @recordcount;
+以上我上再做存储过程分页里用到动态SQL里将查询到的count记录条数通过变量@recordcount放到recordcount里面了。
+
+			            </div>
+			            <div class="tags">标签：数据库 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2009-06-28 14:59:41.0</li>
+				            <li>阅读(17008)</li>
+				            <li><a class="comment" title="共1条评论" href="/jonllen/db/20.aspx#comment">评论(1)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -337,7 +455,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 		</div>
 		<div class="pagination" id="ctl00_cphContent_Pager1">
 
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/jonllen/db/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
 	</div>
 	
 </div>

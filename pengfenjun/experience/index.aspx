@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	经历 - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,8 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>pengfenjun</h3>
+	    <h4>不经呖风雨哪能经咖彩虹``````!!!</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -142,12 +142,12 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/pengfenjun/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />pengfenjun</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：pengfenjun</dd>
+			<dd>来自：湖南湘潭</dd>
+			<dd>简述：不经呖风雨哪能经咖彩虹``````!!!</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +167,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=600&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -199,15 +199,29 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/pengfenjun/experience/" >
+			                经历<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/pengfenjun/dishcentrifuge/" >
+			                碟式分离机<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/pengfenjun/xinqingyulu/" >
+			                心情语录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/pengfenjun/centrifuge/" >
+			                离心机<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -243,7 +257,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	
 		<div class="position title">
 		    
-		    <strong>友情链接</strong>
+		    <strong>经历</strong>
             
 		</div>
 		<div class="articlelist">
@@ -253,19 +267,21 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/pengfenjun/experience/84.aspx">“长痘门”</a></h2>
+			            <!--<div class="date"><a href="">2009-11-21</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.applezqp.com
+			                纪念已去的长痘门 
+ 那段日子长驻我的心底...... 
+ 这是发生在今年6月的事。6月初，本来是我出差湖北的好日子，高高兴兴的出差，高高兴兴的回家，多好啊！因为我从未出过湖南省，也未坐过车火。这回一次性的圆了我二个梦，心中的喜悦可想而知，我对自己说：在高兴之余也不忘努力。正当我从湖北办完事回家的火车上时，我接到一个不幸的电话，我一个同学不幸的卷入车祸门了，车祸造成一死一重伤，我同学幸运的留下小命，而另一同志不幸身故。有人说，这就叫命！而正在我为他们不幸之际，灾难随即降临，我深深的陷入了长痘门，记得那是20号的早上，我刚刚醒来，感觉到脸上刺痛，拿起镜子一看，我呆了~~~好大的痘啊！而且还不止一个，一夜的巨变，让我有点措手不及，我还傻傻的安慰自己说：没关系，过二天就好了，但我这心里可不这么想的，还要去上班，别人笑话我怎么办？比平常多带了份伤心的我照常上班，可到了公司，正如我心里所想的，大家都笑话我，我能怎么说呢？最有利的攻击就是沉默；下班后我马上去看医生了，医生说是体内有毒素，他给我开了中药，我每天中午晚上都去他那吃中药，希望不管是那里出了问题，我的痘痘能很快好起来。就这样，一天天过去了，面对别人的指点
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：经历 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-11-21 00:01:04.0</li>
+				            <li>阅读(9173)</li>
+				            <li><a class="comment" title="共0条评论" href="/pengfenjun/experience/84.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -273,59 +289,21 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/pengfenjun/experience/81.aspx">“无线”坎坷之旅</a></h2>
+			            <!--<div class="date"><a href="">2009-11-09</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.thjy.org
+			                 现在的我基本就不喜欢呆在车间里，因为呆在车间里要做一些没有一点技术含量的事，并且还会弄得一身脏；本来自己工资就很低了，没办法生存，这可好了，逼的我跟老总摊牌，这可能也是我必然要做的事，总是呆在车间里对我来说是不可能的事。我鼓起勇气跟老总谈了我的想法，没想到老总竟然答应了我这几天去跑业务，当时心里有说不出的高兴，我想我这次一定要努力工作，不能辜负了他们对我的希望。就这样，下午带着愉悦的心情回家了。　　哈哈．．．．．．
+ 第二天，我一大早就起来了，因为今天我要去解决阻碍我销售的事。是这样的，在这个信息世界里，做我们这一行，如果没有一台可以联网的电脑，感觉就象是井底之蛙，使终不知道外面的世界，如何下手?信息从何而来，客户从何而来？其实早在几周前，我为了联网的时，已经搞得满头包了，我们家这边联不上宽带，有人把家门前的电缆线给偷了，去了几次电信公司，还把他们那边的技术人员请来了，就是联不了宽带，说什么要做工程，重新接电缆线，就这样，宽带泡汤了。
+ 今天的我，已经是下了决心的，要联网，联无线。抱着这份坚持，我再次来到电信公司营业大厅，在工作人员的帮助下，我成功办理了3G无线宽带，买了一张网卡418元，交
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：经历 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://weibo.com/zjj
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-11-09 21:50:06.0</li>
+				            <li>阅读(9019)</li>
+				            <li><a class="comment" title="共1条评论" href="/pengfenjun/experience/81.aspx#comment">评论(1)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -337,7 +315,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 		</div>
 		<div class="pagination" id="ctl00_cphContent_Pager1">
 
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/pengfenjun/experience/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
 	</div>
 	
 </div>

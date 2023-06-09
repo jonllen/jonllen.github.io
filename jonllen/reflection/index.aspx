@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	三日必省吾身 - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -142,12 +143,13 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +169,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -199,15 +201,85 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -243,7 +315,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	
 		<div class="position title">
 		    
-		    <strong>友情链接</strong>
+		    <strong>三日必省吾身</strong>
             
 		</div>
 		<div class="articlelist">
@@ -253,19 +325,19 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/jonllen/reflection/79.aspx">审计署，这次让我感觉那么的无能为力。</a></h2>
+			            <!--<div class="date"><a href="">2009-11-05</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.applezqp.com
+			                昨天，进时代财富第二次出差，下午两点多就跑到审计署，去解决那个留言的Bug，本以为很容易就能解决马上回来，但是没想到晚上十点多才回来，面对那些问题觉得自己很无能为力，找到问题的切入口错误，需要自己检讨检讨。事情的原委其实是这样的，之前我的同事光仔已经去过客户那边把IBOX系统部署好了，就剩下一个留言插件的功能还没有解决，由于这块功能是我开发的，所以就派我过去解决这个BUG。其实外网里一模一样的功能没有问题，把那些置标原封不动拷过来在客户内网运行就报错，我就是要去解决客户内网里IBOX系统里的留言插件问题。button的onclick脚本函数不触发。这是一个很奇怪的问题，我在IE里面用DeveloperToolbar看提交留言的按钮，明明就指定了onclick="leaveadd()"脚本函数，点击按钮却怎么也没有反映，只报一个未找到对象的错误。但是js的leaveadd函数明明是有的啊，我是放在显示提交留言页面一起的。但是我这个提交留言页面有点特殊，因为它是作为一种置标动态输出js代码，然后js在使用ajax动态获取提交留言页面的html显示出来的，所以那个提交留言页面的html包括提交留言的文本输入框、按钮、leaveadd的javascript函数都是被动态加载到当前页面实现的..
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：三日必省吾身 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-11-05 10:35:22.0</li>
+				            <li>阅读(9687)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/reflection/79.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -273,19 +345,19 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/jonllen/reflection/68.aspx">关于IE6的老掉牙select问题</a></h2>
+			            <!--<div class="date"><a href="">2009-09-14</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.thjy.org
+			                今天真的很'瞎'也，整整一个下午都没能解决一个问题，而且是一开始都没有明白需求，幸好做到半路上发现个问题问了下Earth，发现原来自己一直都没有明白要做什么？哎，悲哀！为什么我的沟通和理解能力这么差呢？怪不得现在还是一个人。。。其实是一个很小问题拉，算是css样式问题，在IE6里面select会覆盖遮挡在所有元素之上，现在有一个select，想要把它做成可选值又可手动输入值的，但是它又没有一个属性来标识可输入的功能，所有只能新加个text文本输入框，控制显示和隐藏，模拟可输入的select功能，但是这个功能竟然搞了我一下午，白拿工资了。。。需要实现的效果如下：自己输入 a项 b项   请选择选择值:代码如下...
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：三日必省吾身 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-09-14 22:36:58.0</li>
+				            <li>阅读(11801)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/reflection/68.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -293,39 +365,20 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
+			            <h2><a href="/jonllen/reflection/44.aspx">项目里面至关重要的东西—细节</a></h2>
+			            <!--<div class="date"><a href="">2009-07-17</a></div>-->
 			            
 			            <div class="summary">
-			                http://weibo.com/zjj
+			                今天不知道为什么，感觉好象很浮躁，早上一来Earth就重新发布我昨天修改完成的广佛都市网积分等级的功能，问题一大推，他先后叫我2次到他那边去问话，跟我说一些问题...
+
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：三日必省吾身 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-07-17 14:48:45.0</li>
+				            <li>阅读(9575)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/reflection/44.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -337,7 +390,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 		</div>
 		<div class="pagination" id="ctl00_cphContent_Pager1">
 
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/jonllen/reflection/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
 	</div>
 	
 </div>

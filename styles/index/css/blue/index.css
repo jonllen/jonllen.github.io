@@ -1,0 +1,97 @@
+﻿@charset "utf-8";
+@import url(../default/index.css);
+
+/* --页面背景-- */
+body{ background:url(images/bg_body.jpg) center top repeat-x; color:#414042;}
+body a{ color:#004054;}
+body a:hover{ text-decoration:none}
+
+/* --母板页 顶部工具条--（修改为absolute布局） */
+#toolbar{overflow:hidden; position:absolute; top:0; left:0;z-index:99;color:#d5dce0; background:none; border:none;}
+#toolbar a{color:#d5dce0;}
+#toolbar .home span{ display:inline-block;}
+#toolbar .home img{ display:none;}
+
+/* --母板页 顶部banner--（修改，不显示图片） */
+#top{margin-top:0px; margin-bottom:1px;overflow:hidden;height:255px;background:url(images/bg_top.png) center top no-repeat !important;background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/style/blue/images/bg_top.png',sizingMethod='image');}
+#top .title{color:#fff; margin-top:55px; margin-left:110px;}
+
+/* --母板页 顶部导航条--（修改背景图片）!important; */
+#nav {height:58px; margin-top:-12px;background:url(images/bg_nav.png) !important;background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/style/blue/images/bg_nav.png',sizingMethod='image');}
+#nav ul{ background:none; padding-left:30px;padding-top:28px;}
+#nav ul li{width:110px;float:left; font-weight:700;}
+#nav ul li a{display:block; text-align:center; color:#838173; text-decoration:none;height:26px;line-height:26px;position:relative;}
+#nav ul li.on a,
+#nav ul li a:hover{color:#d5dce0;background:url(images/bg_nav_down.gif) center bottom no-repeat; }
+#nav ul li.on a.up,
+#nav ul li a:hover.up{ background:url(images/bg_nav_up.gif) center top no-repeat;}
+#nav ul li.preview{ float:right;padding-top:3px; padding-right:2px;padding-left:20px; color:#d5dce0;width:auto;line-height:normal;}
+#nav ul li.preview a{display:inline;padding:2px;}
+#nav ul li.preview a.on,
+#nav ul li.preview a:hover{ border:dashed 1px #8a8675;background:none;}
+
+/* --通用mod模块-- */
+.mod{ border:none;}
+.mod .head{height:28px; line-height:28px; font-size:14px; border-bottom:none; background:none;}
+
+/* --母板页 主部分 -- */
+.container { }
+
+/* --母板页 底部(网站声明) --*/
+#foot{margin-top:10px;text-align:center; width:100%; background:url(images/bg_foot.jpg) center top repeat-x; border-top:none; padding-bottom:0; line-height:normal;}
+#foot .wrapper{ background:url(images/bg_foot_wrapper.jpg) left top no-repeat;width:960px; margin:0 auto; padding:148px 0;}
+
+/* --首页 文章列表页 --*/
+.article{ border:solid 0px #bddca7; }
+.article .title{border-bottom:dashed 1px #8a8675; height:28px; line-height:28px; padding-left:5px; background:none;}
+.article .articlelist{ }
+.article .articlelist .date{ }
+.article .articlelist .item{ border-bottom:none; }
+.article .articlelist .item h4{ padding-left:0; margin:0;}
+.article .articlelist .item h4 a{ color:#004054;padding-left:0px}
+.article .articlelist .item .summary{ }
+.article .articlelist .item .tags{ background:none;padding-left:0; margin-bottom:5px;}
+.article .articlelist .item .desc{ color:#999999; background:url(images/bg_plane.gif) no-repeat right bottom;}
+.article .articlelist .item .desc ul{ padding-right:20px; line-height:24px; height:24px;padding-bottom:24px;}
+.article .articlelist .item .desc ul li{margin-right:8px; float:right;}
+.article .articlelist .item .desc ul li a{color:#999999; display:block;}
+.article .articlelist .item .desc ul li a.comment{background:url(images/bg_comment8.png) no-repeat 0 1px; height:24px; width:31px; margin-top:0; text-indent:1.0em;overflow:hidden; text-align:left;}
+.article .pagination { }
+.article .pagination span,
+.article .pagination a{border:solid 1px #ccc; color:#004054;}
+.article .pagination .current,
+.article .pagination a:hover{border:#004054 1px solid; background-color:#d5dce0; color:#004054;}
+.article .pagination .disabled{color:#cccccc;background-color:#ffffff;}
+.article .empty{ }
+
+/* --首页 文章列表页 列表模式 --*/
+.listmode { }
+
+/* --文章内容页 --*/
+.articlecont .article{ }
+.articlecont .article .tags{ background:none; padding-left:0;}
+
+/* --相册列表页 --*/
+.album{ border: solid 0px #97d0ee;}
+.album .title{ height:24px; line-height:24px; background:none; border-bottom:dashed 1px #8a8675;}
+.album .title strong{ margin-left:0px;}
+
+/* --相片页 --*/
+.photo{ border: solid 0px #97d0ee;}
+.photo .title{ height:24px; line-height:24px; background:none;border-bottom:dashed 1px #8a8675;}
+.photo .title strong{ margin-left:0px;}
+
+/* --个人档案--*/
+.profile{ border:none;}
+.profile .crossband{ height:28px; line-height:28px; padding-left:5px;border-bottom: dashed 1px #8a8675; background:none;}
+.profile .crossband span{ font-weight:700;}
+.profile .input{}
+.profile .input .fi{ padding:5px;}
+.profile .input .even{ border-top:dashed 1px #e0e0e0; border-bottom:dashed 1px #e0e0e0;}
+.profile .input label.name{width:8em; float:left; padding-top:3px;}
+.profile .border{ border-top:solid 0px #1e79b9; }
+
+/* --留言页 --*/
+.leavecont .leave{ margin-top:0;border:none;}
+.leavecont .leave .title{ background:none; padding-left:5px;font-size:14px; color:#414042;border-bottom:dashed 1px #8a8675; }
+.leavecont .leave .leavelist{ border:none;}

@@ -1,9 +1,9 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>
-	友情链接 - 金龙博客
-</title>
+<title>2012年度工作总结 - 工作 - 金龙博客</title>
+<meta name="description" content="2012年因为我换了工作，我的工作重心从Web互联网转移到信息安全应用系统开发上来。涉及到内容有CA、数字证书、数子签名认证加解密应用，主要项目有中国教育CA和东方新诚信数字认证中心。" />
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -72,8 +72,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -135,6 +136,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
     }
 }
 </script>
+
 <div id="main" class="auto container">
     <div id="ctl00_panLeft" class="siderLeft column column1">
 	
@@ -142,12 +144,13 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +170,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -180,7 +183,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	                        var archive = [];
 	                        if(rs.data) archive = rs.data.split(',');
 	                        window.archive = archive;
-	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'' } );
+	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'2013-01-07' } );
  	                    }else
 	                    {
 	                        alert(rs.error);
@@ -199,15 +202,85 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -237,111 +310,195 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="siderMiddle">
 	    <div class="content column column2">
             
-            
-    
-    <div id="ctl00_cphContent_palArticle" class="article">
-	
-		<div class="position title">
-		    
-		    <strong>友情链接</strong>
-            
+
+    <div class="articlecont">
+        <div class="position">
+		    <strong>当前位置：</strong>
+		    <a href="http://www.jonllen.com">首页</a>
+		     > <a href="/jonllen/work/">工作</a>
+		     > <a href="/jonllen/work/154.aspx">2012年度工作总结</a>
 		</div>
-		<div class="articlelist">
-		    <div id="articleitem" class="articleitem">
-                
-                    
+        <div class="article">
+			<div class="title"><h2>2012年度工作总结</h2></div>
+			<div class="category">分类：<a href="/jonllen/work/">工作</a></div>
+			<div class="fontZoom"><a href="javascript:zoom(20);" style="font-size:large; font-weight:700">大</a><a href="javascript:zoom(14);" style="font-size:14px; font-weight:500;">中</a><a href="javascript:zoom(10);">小</a></div>
+			<div class="cont" id="content">
+				<p>2012年因为我换了工作，我的工作重心从Web互联网转移到信息安全应用系统开发上来。涉及到内容有CA、数字证书、数子签名认证相关的加解密应用，主要项目有中国教育CA和东方新诚信数字认证中心。</p>
+<p><strong>一、中国教育CA</strong></p>
+<p>类　　型：CA</p>
+<p>项目说明：中国教育CA是为教育部提供电子认证服务的CA认证机构，为教育部门、学校机构等提供在线证书申请、证书制作激活、证书发放等服务。项目子系统分为：RA（二级门户网站、一级后台管理）、CA（证书管理系统、证书发布服务）、KMC（密钥管理系统），系统采用Oracle数据库，使用加密机做加解密运算，&nbsp;数据证书以UsbKey为载体应用。</p>
+<p>参与工作：RSA和SM2证书的制作、冻结、解冻、撤销、更新、续费申请，证书批量申请提交，证书模板配置管理，二级门户网站初始化安装模块，证书业务传输工具及通信加密签名，一级后台接口开发，证书制作工具RPC服务调用，证书激活功能，UsbKey登录认证应用开发，以及系统打包安装部署上线。</p>
+<p><strong>二、东方新诚信数字认证中心</strong></p>
+<p>类　　型：CA</p>
+<p>项目说明：东方新诚信数字认证中心是通过工信部审查的获得《电子认证服务许可证》资质的电子认证服务机构，采用了密码主管部门批准的新算法与密码产品，通过了国密局的安全性审查。</p>
+<p>参与工作：负责CA系统管理和运维管理，包括对门户网站、证书管理签发密钥服务的管理，配置系统操作人员分配权限，系统日常巡检故障排除，CA系统初始化安装配置，建立备份系统和更新测试，LDAP发布更新，保障系统的正常运行。</p>
+<p>2012年主要学习到了一些PKI的基础知识，了解CA数字证书应用的业务流程，参与了CA数字证书生成激活应用和RA系统开发，同时也接触了些ActiveX、C++动态链接库的调用。而对于.Net本身的些新框架、HTML新特性的使用少了，对项目管理的实践经验少了。</p>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
+	        <script type="text/javascript">new ImgLazy( { selector : 'content', maxWidth : document.getElementById('content').offsetWidth, 'loadSrc' : '/styles/index/css/default/images/lazyloading.gif' });</script>
 
-<div class="item">
-			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.applezqp.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
+			<div class="tags">标签：<a href="/jonllen/work/">工作</a> 
+			    
+			    
+			</div>
 
+			<div class="desc">
+			  <ul>
+				<li>posted@ 2013-01-07 23:38</li>
+				<li>update@ </li>
+				<li>阅读(<span id="articleClick">4598</span>)</li>
+				<li>评论(0)</li>
+				
+			  </ul>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ad.js"></script>
 
-<div class="item">
-			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.thjy.org
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://weibo.com/zjj
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-                
-            </div>
-            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
-	        <script type="text/javascript">new ImgLazy( { selector : 'articleitem', maxWidth : document.getElementById('articleitem').offsetWidth });</script>
 		</div>
-		<div class="pagination" id="ctl00_cphContent_Pager1">
+<div class="context">
+			<ul>
+				<li>上一篇：<a href="/jonllen/work/152.aspx">C#下Hessian接口使用</a></li>
+<li>下一篇：<a href="/jonllen/work/158.aspx">SSL的服务器客户端双向认证</a></li></ul>
+		</div>
+		
 
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
-	</div>
+<div class="correlative">
 	
+		    <h4>相关文章</h4>
+			<ul>
+
+
+
+			</ul>
+		
 </div>
+
+		
+		<div class="comment">
+			<div class="title">评论</div>
+			<div class="commentlist" id="commentContent">
+				
+
+				<div id="commentNothing" class="nothing">
+	暂无任何评论。
+</div>
+			</div>
+		</div>
+		<div class="postcomment">
+	        <div class="title">发表评论<a id="comment"></a></div>
+	        <div class="box">
+		        <div class="fi"><label>用户名</label><input id="txtUserName" type="text" value="" class="text" title="请输入显示用户名称" /><span class="note">*必填</span></div>
+		        
+		        
+		        <div class="fi"><label>网站链接</label><input id="txtWebsite" type="text" class="text" title="请输入您的网站链接地址以便回访（非必填）" /></div>
+		        
+		        <div class="fi"><label>邮箱地址</label><input id="txtEmail" type="text" class="text" title="请输入您的邮箱地址以便回复（非必填）" /><input id="chkEmailNotify" type="checkbox" title="当博主回复时以邮件通知我" />回复通知我</div>
+		        <div class="fi"><label>内容</label><textarea id="txtContent" class="textarea"></textarea><span class="note">*必填</span></div>
+		        <div class="btn"><input type="button" class="submit" onclick="postComment()" value="提交" /></div>
+	        </div>
+        </div>
+        <script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
+        <script type="text/javascript">
+            function postComment()
+		    {
+		        var url = "/plugin/web/doSaveComment.do?sourcetype=1&sourceid=154&siteId=1";
+		        var data = "username="+encodeURIComponent(document.getElementById("txtUserName").value);
+		        data += '&sourceurl=/jonllen/work/154.aspx';
+		        data += "&content="+ encodeURIComponent(document.getElementById("txtContent").value);
+		        var pwd = document.getElementById("txtPassword");
+		        if (pwd!=null)
+		        {
+		            data += "&pwd="+ pwd.value;
+		        }
+		        var website = document.getElementById("txtWebsite");
+		        if (website!=null)
+		        {
+		            data += "&website="+ website.value;
+		        }
+		        data += "&email="+ encodeURIComponent(document.getElementById("txtEmail").value);
+		        data += "&emailNotify="+ encodeURIComponent(document.getElementById("chkEmailNotify").checked);
+		        Ajax.send({
+		            type : "POST",
+		            url : url,
+		            data : data,
+		            fn : function (data){
+	                    var rs;
+	                    try{rs=eval("rs="+data);}catch(e){alert(e);return;}
+                        
+	                    if (rs.success)
+	                    {
+	                        appendComment();
+	                        if(document.getElementById('commentNothing')!=null){ 
+	                          document.getElementById('commentNothing').style.display = 'none';
+	                        }
+	                        document.getElementById("txtContent").value = "";
+	                        alert("提交评论成功！");
+	                    }else
+	                    {
+	                        alert(rs.error);
+	                    }
+                            }
+		        });
+		    }
+
+function appendComment()
+		    {
+var itemComment = document.createElement('div');
+itemComment.className = 'item';
+var username = document.getElementById("txtUserName").value;
+var index = document.getElementById('commentContent').getElementsByTagName('ul').length + 1;
+var content =  document.getElementById("txtContent").value;
+itemComment.innerHTML = '<div class="desc"><ul class="options"><li><a href="javascript:;" onclick="quote(this,\''+username+'\')">引用</a></li></ul><a>'+index+'楼</a> '+username+'</div><div class="cont">'+content+'</div>';
+document.getElementById('commentContent').appendChild(itemComment);
+}
+
+            function addClick()
+		    {
+		        var url = "/plugin/web/doAddClick.do?columnType=1&documentId=154";
+		        Ajax.send({
+		            type : "GET",
+		            url : url,
+		            fn : function (data){
+		                 var clickElem = document.getElementById('articleClick');
+		                 if(clickElem !=null) clickElem.innerHTML = data; 
+		            }
+		        });
+
+		    }
+            addClick();
+        </script>
+		
+	</div>
+	<script type="text/javascript">
+	    function zoom(size)
+	    {
+	        var content = document.getElementById("content");
+	        content.style.fontSize = size+"px";
+	        for(var i=0;i<content.childNodes.length;i++)
+	        {
+	            if(content.childNodes[i].nodeType==1)
+	                content.childNodes[i].style.fontSize = size+"px";
+	        }
+	    }
+	    
+	    function quote(target,name)
+	    {
+	        var content = name+"："+target.parentNode.parentNode.parentNode.nextSibling.innerHTML;
+	        var reply = document.getElementById("txtContent");
+	        if (reply==null) return;
+	        reply.value += "[quote]"+content.replace(/<br>/ig,'\n\r')+"[/quote]\n";
+	        reply.focus();
+	        
+            var r = reply.createTextRange();
+            r.moveStart('character',reply.innerHTML.length);
+            r.collapse(true);
+            r.select();
+            
+            //replace <fieldset(\S|\s)+?legend>(\S|\s)+</fieldset> to [quote]$2[/quote]
+	    }
+	</script>
  
+
+
         </div>
 	</div>
 	<div id="ctl00_panRight" class="siderRight column column3">
@@ -350,6 +507,10 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
     <h4 class="head">博文推荐</h4>
     <div class="cont">
 	    <ul>
+                    
+		    <li><a href="/jonllen/work/162.aspx">国密算法SM2证书制作</a>(2013-06-26)</li>
+                    
+		    <li><a href="/jonllen/work/158.aspx">SSL的服务器客户端双向认证</a>(2013-04-20)</li>
                     
 
 	    </ul>
@@ -426,7 +587,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
  
 </div>
 </div>
- 
+
 <div class="auto" id="foot">
     <div class="wrapper">
 	Powered By ：Jonllen  <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备10049366号</a>
@@ -438,6 +599,5 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 <div style="display:none"> 
     <script type="text/javascript" src="/styles/index/scripts/statistics.js"></script>
 </div>
-
 </body>
 </html>

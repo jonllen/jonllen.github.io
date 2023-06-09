@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	离心机 - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,8 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>pengfenjun</h3>
+	    <h4>不经呖风雨哪能经咖彩虹``````!!!</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -142,12 +142,12 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/pengfenjun/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />pengfenjun</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：pengfenjun</dd>
+			<dd>来自：湖南湘潭</dd>
+			<dd>简述：不经呖风雨哪能经咖彩虹``````!!!</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +167,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=600&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -199,15 +199,29 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/pengfenjun/experience/" >
+			                经历<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/pengfenjun/dishcentrifuge/" >
+			                碟式分离机<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/pengfenjun/xinqingyulu/" >
+			                心情语录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/pengfenjun/centrifuge/" >
+			                离心机<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -243,93 +257,13 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	
 		<div class="position title">
 		    
-		    <strong>友情链接</strong>
+		    <strong>离心机</strong>
             
 		</div>
 		<div class="articlelist">
 		    <div id="articleitem" class="articleitem">
                 
                     
-
-<div class="item">
-			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.applezqp.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.thjy.org
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://weibo.com/zjj
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
                 
             </div>
             <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
@@ -337,7 +271,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 		</div>
 		<div class="pagination" id="ctl00_cphContent_Pager1">
 
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/pengfenjun/centrifuge/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
 	</div>
 	
 </div>

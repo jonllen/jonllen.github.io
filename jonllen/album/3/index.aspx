@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	游戏照片 - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -136,18 +137,19 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 }
 </script>
 <div id="main" class="auto container">
-    <div id="ctl00_panLeft" class="siderLeft column column1">
+	<div id="ctl00_panLeft" class="siderLeft column column1">
 	
 <div id="mod25" class="mod info">
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +169,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -199,15 +201,43 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/album/4/" >
+			                天河公园<!-- (7)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/album/8/" >
+			                网络收藏<!-- (12)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/10/" >
+			                科韵路<!-- (7)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/3/" >
+			                游戏照片<!-- (16)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/11/" >
+			                海派甜心<!-- (10)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/7/" >
+			                喜洋洋与灰太狼<!-- (19)-->
 			            </a>
 			        </li>
 			
@@ -237,112 +267,227 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="siderMiddle">
 	    <div class="content column column2">
             
+    <script type="text/javascript">
+        function imgZoom(target) {
             
-    
-    <div id="ctl00_cphContent_palArticle" class="article">
-	
-		<div class="position title">
-		    
-		    <strong>友情链接</strong>
+            var maxWidth = target.width, maxHeight = target.height;
             
-		</div>
-		<div class="articlelist">
-		    <div id="articleitem" class="articleitem">
-                
+            var img = new Image();
+            img.src = target.src;
+            
+            var originalWidth = img.width, originalHeight = img.height;
+            var width = originalWidth, height = originalHeight;
+            
+            if( height > maxHeight) {
+                height = maxHeight;
+                width = originalWidth * height / originalHeight;
+            }
+            if( width > maxWidth){
+                width = maxWidth;
+                height = originalHeight * width / originalWidth;
+            }
+
+            target.style.width = width + 'px';
+            target.style.height = height + 'px';
+        }
+    </script>
+    <div class="album">
+		<div class="title">
+		    <strong>当前位置：</strong>
+		    <a href="/">首页</a>
+		    > <a href="../">我的相册</a>
+		    > <a href=".">游戏照片</a>
+		 </div>
+		<div class="cont">
+			<div class="guide"></div>
+			<div class="list">
+	            <ul class="fixft" id="albumlist">
                     
-
-<div class="item">
-			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.applezqp.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.thjy.org
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://weibo.com/zjj
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-                
-            </div>
-            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
-	        <script type="text/javascript">new ImgLazy( { selector : 'articleitem', maxWidth : document.getElementById('articleitem').offsetWidth });</script>
+                            <li>
+                                <a href="/jonllen/album/3/14.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824080048906250_4人照.jpg?width=140&height=108" width="140" height="108" title="4人照" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    4人照
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/23.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824330817187500_飞驰的翅膀.jpg?width=140&height=108" width="140" height="108" title="飞驰的翅膀" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    飞驰的翅膀
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/24.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824330817656250_飞起的蝙蝠.jpg?width=140&height=108" width="140" height="108" title="飞起的蝙蝠" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    飞起的蝙蝠
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/25.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824330818125000_挂了，哈~`暴神.jpg?width=140&height=108" width="140" height="108" title="挂了，哈~`暴神" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    挂了，哈~`暴神
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/26.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824330818593750_和弟弟一起玩哈，开心!.jpg?width=140&height=108" width="140" height="108" title="和弟弟一起玩哈，开心!" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    和弟弟一起玩哈，开心!
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/27.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824330819062500_化身蝙蝠.jpg?width=140&height=108" width="140" height="108" title="化身蝙蝠" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    化身蝙蝠
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/28.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824330819531250_美丽的沙城.jpg?width=140&height=108" width="140" height="108" title="美丽的沙城" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    美丽的沙城
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/29.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824330819843750_帅气道~`.jpg?width=140&height=108" width="140" height="108" title="帅气道~`" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    帅气道~`
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/30.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824331327187500_我的合影.jpg?width=140&height=108" width="140" height="108" title="我的合影" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    我的合影
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/31.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824331327968750_我是猪队长,哈哈.jpg?width=140&height=108" width="140" height="108" title="我是猪队长,哈哈" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    我是猪队长,哈哈
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/32.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824331328437500_仙台修炼 - 惟美画面.jpg?width=140&height=108" width="140" height="108" title="仙台修炼 - 惟美画面" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    仙台修炼 - 惟美画面
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/33.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824331328750000_兄弟排排站.jpg?width=140&height=108" width="140" height="108" title="兄弟排排站" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    兄弟排排站
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/34.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/633824331329218750_真人.jpg?width=140&height=108" width="140" height="108" title="真人" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    真人
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/99.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/元道散人.JPG?width=140&height=108" width="140" height="108" title="元道散人" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    元道散人
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/100.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/元神长翅膀拉~`.JPG?width=140&height=108" width="140" height="108" title="元神长翅膀拉~`" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    元神长翅膀拉~`
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/3/101.aspx" >
+                                    <img src="/upload/jonllen/album/游戏照片/哥们俩.JPG?width=140&height=108" width="140" height="108" title="哥们俩" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    哥们俩
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+	            </ul>
+	            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
+	            <script type="text/javascript">new ImgLazy();</script>
+	        </div>
 		</div>
-		<div class="pagination" id="ctl00_cphContent_Pager1">
-
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
-	</div>
-	
-</div>
- 
-        </div>
+	</div>            
+    
+     
+	    </div>
 	</div>
 	<div id="ctl00_panRight" class="siderRight column column3">
 	

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>My97 DatePicker日历控件</title>
+</head>
+
+<body>
+<div class="cont" id="calendar" style="height:180px; padding-top:5px;">
+			  
+</div>
+<script type="text/javascript" src="WdatePicker.js"></script>
+<script type="text/javascript">
+	var archive = new Array();
+	archive.push('2008-04-16');
+	archive.push('2009-02-28');
+	archive.push('2009-03-16');
+	archive.push('2009-05-15');
+	archive.push('2009-06-21');
+	archive.push('2009-07-01');
+	function ePicked(dp)
+	{
+		for(var i=0;i<archive.length;i++)
+		{
+			if(archive[i]==dp.cal.getDateStr())
+				alert('您选择的是特殊日期:'+dp.cal.getDateStr());
+		}
+	}
+	WdatePicker({eCont:'calendar',firstDayOfWeek:1,specialDates:archive,onpicked:ePicked})
+</script>
+<input type="text" onFocus="WdatePicker({firstDayOfWeek:1,specialDates:archive})" />
+</body>
+</html>

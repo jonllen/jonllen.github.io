@@ -1,9 +1,8 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>
-	友情链接 - 金龙博客
-</title>
+<title>chapter2-300x200 - 海派甜心 - 金龙博客</title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -72,8 +71,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -135,6 +135,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
     }
 }
 </script>
+
 <div id="main" class="auto container">
     <div id="ctl00_panLeft" class="siderLeft column column1">
 	
@@ -142,12 +143,13 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +169,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -180,7 +182,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	                        var archive = [];
 	                        if(rs.data) archive = rs.data.split(',');
 	                        window.archive = archive;
-	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'' } );
+	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'2010-02-07' } );
  	                    }else
 	                    {
 	                        alert(rs.error);
@@ -199,15 +201,43 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/album/4/" >
+			                天河公园<!-- (7)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/album/8/" >
+			                网络收藏<!-- (12)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/10/" >
+			                科韵路<!-- (7)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/3/" >
+			                游戏照片<!-- (16)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/11/" >
+			                海派甜心<!-- (10)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/7/" >
+			                喜洋洋与灰太狼<!-- (19)-->
 			            </a>
 			        </li>
 			
@@ -237,111 +267,218 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="siderMiddle">
 	    <div class="content column column2">
             
-            
-    
-    <div id="ctl00_cphContent_palArticle" class="article">
-	
-		<div class="position title">
-		    
-		    <strong>友情链接</strong>
-            
+
+    <div class="photo">
+		<div class="title">
+		    <strong>当前位置：</strong>
+			    <a href="/">首页</a>
+			     > <a href="../">我的相册</a>
+			     > <a href="/jonllen/album/11/">海派甜心</a>
+			     > <a id='currentLink' href='/jonllen/album/11/103.aspx'>chapter2-300x200</a>
 		</div>
-		<div class="articlelist">
-		    <div id="articleitem" class="articleitem">
-                
-                    
-
-<div class="item">
-			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.applezqp.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.thjy.org
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://weibo.com/zjj
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-                
-            </div>
-            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
-	        <script type="text/javascript">new ImgLazy( { selector : 'articleitem', maxWidth : document.getElementById('articleitem').offsetWidth });</script>
+		<div class="cont">
+		    <div class="fixfloat">
+		        <div class="miniature" id="miniaturebox"></div>
+		    </div>
+			<div id="miniaturebody">
+			    <div class="pic"><img id="imgCurrent" src="/upload/jonllen/album/海派甜心/chapter2-300x200.jpg" /></div>
+			    <div class="name"><strong id="currentName">chapter2-300x200</strong><a href="/upload/jonllen/album/海派甜心/chapter2-300x200.jpg" id="imgOriginality" target="_blank" class="originality">原图</a></div>
+			    <div class="detail">
+				    <dl>
+					    <dd>名　　称：<span id="spanName">chapter2-300x200</span></dd>
+					    <dd>上传时间：<span id="spanTime">2010-02-07 19:36:41.0</span></dd>
+					    <dd>浏览次数：<span id="spanClick">162</span></dd>
+					    <dd>评论次数：<span id="spanReviewCount">0</span></dd>
+				    </dl>
+		        </div>
+		    </div>
 		</div>
-		<div class="pagination" id="ctl00_cphContent_Pager1">
-
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
 	</div>
 	
+	<div class="comment">
+		<div class="title">评论</div>
+
+<div class="commentlist" id="commentContent">
+				
+
+				<div id="commentNothing" class="nothing">
+	暂无任何评论。
 </div>
- 
+
+		</div>
+	</div>
+	<div class="postcomment">
+		<div class="title">发表评论<a id="comment"></a></div>
+		<div class="box">
+			<div class="fi"><label>用户名</label><input id="txtUserName" type="text" value="" class="text" title="请输入显示用户名称" /><span class="note">*必填</span></div>
+		        <div class="fi"><label>网站链接</label><input id="txtWebsite" type="text" class="text" title="请输入您的网站链接地址以便回访（非必填）" /></div>
+			<div class="fi"><label>内容</label><textarea id="txtContent" class="text" style=" width:320px; height:150px" ></textarea><span class="note">*必填</span></div>
+			<div class="btn"><input type="button" class="submit" onclick="postComment()" value="提交" /></div>
+		</div>
+	</div>
+    
+	<script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
+	<script type="text/javascript" src="/styles/index/scripts/photo.js"></script>
+	<script type="text/javascript">
+		
+		var photo = new Photo( { containerId : "miniaturebox", imgLoading : "/styles/index/style/default/images/loading.gif", itemWidth : 78 });
+		
+		var photoClick = photo.eClick;
+		photo.eClick = function (img){
+		    //base.eClick
+		    photoClick.call(photo, img);
+		    if(img.id!='103'){location=img.link;}
+		    document.getElementById("imgOriginality").href = img.rawSrc;
+		    document.getElementById("currentName").innerHTML = img.name;
+		    document.getElementById("spanName").innerHTML = img.name;
+		    document.getElementById("spanTime").innerHTML = img.time;
+		    document.getElementById("spanClick").innerHTML = img.click;
+		    document.getElementById("spanReviewCount").innerHTML = img.reviewCount;
+		    
+		    var currentLinkElem = document.getElementById("currentLink");
+		    if (currentLinkElem) {
+		        currentLinkElem.href = img.link;
+		        currentLinkElem.innerHTML = img.name;
+		    }
+		    
+		    
+		    var imgElem = document.getElementById("imgCurrent");
+		    
+		    var maxWidth = imgElem.parentNode.clientWidth - 4, maxHeight =  imgElem.parentNode.clientHeight;
+		    imgElem.style.marginTop = (maxHeight-32)/2+"px";
+		    imgElem.style.width = "32px";
+		    imgElem.style.height = "32px";
+		    imgElem.src = photo.settings.imgLoading;
+		    
+		    function loadImgCallback (src,width,height,imgElem,maxWidth,maxHeight){
+		        imgElem.style.width = width+"px";
+		        imgElem.style.height = height+"px";
+		        imgElem.src = src;
+		        var imgMarginTop = 0;
+		        if ( height < maxHeight ) imgMarginTop = (maxHeight-height)/2;
+		        imgElem.style.marginTop = imgMarginTop + "px";
+                    }
+                    photo.loadImg(img.rawSrc,maxWidth,maxHeight,loadImgCallback,imgElem);
+		};
+		
+		
+		function postComment()
+		{
+		    var url = "/plugin/web/doSaveComment.do?sourcetype=2&sourceid=103&siteId=1";
+		        var data = "username="+encodeURIComponent(document.getElementById("txtUserName").value);
+		        data += '&sourceurl=/jonllen/album/11/103.aspx';
+		        data += "&content="+ encodeURIComponent(document.getElementById("txtContent").value);
+		        var pwd = document.getElementById("txtPassword");
+		        if (pwd!=null)
+		        {
+		            data += "&pwd="+ pwd.value;
+		        }
+		        var website = document.getElementById("txtWebsite");
+		        if (website!=null)
+		        {
+		            data += "&website="+ website.value;
+		        }
+		        if (document.getElementById("txtEmail")!=null)
+		        {
+		            data += "&email="+ encodeURIComponent(document.getElementById("txtEmail").value);
+		        }
+		        if (document.getElementById("chkEmailNotify")!=null)
+		        {
+		            data += "&emailNotify="+ encodeURIComponent(document.getElementById("chkEmailNotify").checked);
+		        }
+		        Ajax.send({
+		            type : "POST",
+		            url : url,
+		            data : data,
+		            fn : function (data){
+	                    var rs;
+	                    try{rs=eval("rs="+data);}catch(e){alert(e);return;}
+                        
+	                    if (rs.success)
+	                    {
+	                        appendComment();
+	                        if(document.getElementById('commentNothing')!=null){ 
+	                           document.getElementById('commentNothing').style.display = 'none';
+	                        }
+	                        document.getElementById("txtContent").value = "";
+	                        alert("提交评论成功！");
+	                    }else
+	                    {
+	                        alert(rs.error);
+	                    }
+                            }
+		        });
+		}
+		
+		function quote(target,name)
+	    {
+	        var content = name+"："+target.parentNode.parentNode.parentNode.nextSibling.innerHTML;
+	        var reply = document.getElementById("txtContent");
+	        if (reply==null) return;
+	        reply.value += "[quote]" + content.replace(/<[^>].*?>/g,"") + "[/quote]\n";
+	        reply.focus();
+	        
+            var r = reply.createTextRange();
+            r.moveStart('character',reply.innerHTML.length);
+            r.collapse(true);
+            r.select();
+
+	    }
+
+
+function appendComment()
+		    {
+var itemComment = document.createElement('div');
+itemComment.className = 'item';
+var username = document.getElementById("txtUserName").value;
+var index = document.getElementById('commentContent').getElementsByTagName('ul').length + 1;
+var content =  document.getElementById("txtContent").value;
+itemComment.innerHTML = '<div class="desc"><ul class="options"><li><a href="javascript:;" onclick="quote(this,\''+username+'\')">引用</a></li></ul><a>'+index+'楼</a> '+username+'</div><div class="cont">'+content+'</div>';
+document.getElementById('commentContent').appendChild(itemComment);
+}
+
+
+            function addClick()
+		    {
+		        var url = "/plugin/web/doAddClick.do?columnType=2&documentId=103";
+		        Ajax.send({
+		            type : "GET",
+		            url : url,
+		            fn : function (data){
+		                 var clickElem = document.getElementById('spanClick');
+		                 if(clickElem !=null) clickElem.innerHTML = data; 
+		            }
+		        });
+
+		    }
+            addClick();
+    </script> 
+
+<script>
+
+photo.push( { id : 102, name : 'chapter1-300x212', title : 'chapter1-300x212', time : '2010-02-07 19:36:41.0', click : 117, reviewCount : 0, src : '/upload/jonllen/album/海派甜心/chapter1-300x212.jpg?width=74', rawSrc : '/upload/jonllen/album/海派甜心/chapter1-300x212.jpg', 'link' : '/jonllen/album/11/102.aspx' } );
+
+photo.push( { id : 103, name : 'chapter2-300x200', title : 'chapter2-300x200', time : '2010-02-07 19:36:41.0', click : 162, reviewCount : 0, src : '/upload/jonllen/album/海派甜心/chapter2-300x200.jpg?width=74', rawSrc : '/upload/jonllen/album/海派甜心/chapter2-300x200.jpg', 'link' : '/jonllen/album/11/103.aspx' } );
+
+photo.push( { id : 104, name : 'chapter3-300x199', title : 'chapter3-300x199', time : '2010-02-07 19:36:41.0', click : 156, reviewCount : 0, src : '/upload/jonllen/album/海派甜心/chapter3-300x199.jpg?width=74', rawSrc : '/upload/jonllen/album/海派甜心/chapter3-300x199.jpg', 'link' : '/jonllen/album/11/104.aspx' } );
+
+photo.push( { id : 105, name : 'fix6-300x199', title : 'fix6-300x199', time : '2010-02-07 19:36:41.0', click : 131, reviewCount : 0, src : '/upload/jonllen/album/海派甜心/fix6-300x199.jpg?width=74', rawSrc : '/upload/jonllen/album/海派甜心/fix6-300x199.jpg', 'link' : '/jonllen/album/11/105.aspx' } );
+
+photo.push( { id : 106, name : 'Part-04-300x199', title : 'Part-04-300x199', time : '2010-02-07 19:36:41.0', click : 142, reviewCount : 0, src : '/upload/jonllen/album/海派甜心/Part-04-300x199.jpg?width=74', rawSrc : '/upload/jonllen/album/海派甜心/Part-04-300x199.jpg', 'link' : '/jonllen/album/11/106.aspx' } );
+
+photo.push( { id : 107, name : 'Part-05-沒有豬鼻子-300x200', title : 'Part-05-沒有豬鼻子-300x200', time : '2010-02-07 19:36:41.0', click : 148, reviewCount : 0, src : '/upload/jonllen/album/海派甜心/Part-05-沒有豬鼻子-300x200.jpg?width=74', rawSrc : '/upload/jonllen/album/海派甜心/Part-05-沒有豬鼻子-300x200.jpg', 'link' : '/jonllen/album/11/107.aspx' } );
+
+photo.push( { id : 108, name : '插圖07-300x200', title : '插圖07-300x200', time : '2010-02-07 19:36:41.0', click : 151, reviewCount : 0, src : '/upload/jonllen/album/海派甜心/插圖07-300x200.jpg?width=74', rawSrc : '/upload/jonllen/album/海派甜心/插圖07-300x200.jpg', 'link' : '/jonllen/album/11/108.aspx' } );
+
+photo.push( { id : 109, name : '海派漫畫第9集-300x199', title : '海派漫畫第9集-300x199', time : '2010-02-07 19:36:41.0', click : 146, reviewCount : 0, src : '/upload/jonllen/album/海派甜心/海派漫畫第9集-300x199.jpg?width=74', rawSrc : '/upload/jonllen/album/海派甜心/海派漫畫第9集-300x199.jpg', 'link' : '/jonllen/album/11/109.aspx' } );
+
+photo.push( { id : 110, name : '海派漫畫第10集-300x199', title : '海派漫畫第10集-300x199', time : '2010-02-07 19:36:41.0', click : 156, reviewCount : 0, src : '/upload/jonllen/album/海派甜心/海派漫畫第10集-300x199.jpg?width=74', rawSrc : '/upload/jonllen/album/海派甜心/海派漫畫第10集-300x199.jpg', 'link' : '/jonllen/album/11/110.aspx' } );
+
+photo.push( { id : 111, name : '海派漫畫第11集-300x200', title : '海派漫畫第11集-300x200', time : '2010-02-07 19:36:41.0', click : 155, reviewCount : 0, src : '/upload/jonllen/album/海派甜心/海派漫畫第11集-300x200.jpg?width=74', rawSrc : '/upload/jonllen/album/海派甜心/海派漫畫第11集-300x200.jpg', 'link' : '/jonllen/album/11/111.aspx' } );
+		
+photo.init(103);
+</script>
+
         </div>
 	</div>
 	<div id="ctl00_panRight" class="siderRight column column3">
@@ -426,7 +563,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
  
 </div>
 </div>
- 
+
 <div class="auto" id="foot">
     <div class="wrapper">
 	Powered By ：Jonllen  <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备10049366号</a>
@@ -438,6 +575,5 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 <div style="display:none"> 
     <script type="text/javascript" src="/styles/index/scripts/statistics.js"></script>
 </div>
-
 </body>
 </html>

@@ -1,9 +1,14 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>
-	友情链接 - 金龙博客
-</title>
+<title>2012年公司年会 - 心情笔记 - 金龙博客</title>
+<meta name="description" content="来到公司快一年了，第一次参加公司的年会。分公司还有些同事没来参加，我还有很多同事还都叫不出名字，公司平时就很少有活动，今年年会也没有节目表演，所以也没有太多的期待。
+总结发言
+年会从早上10点开始，首先是领导的总结规划，2012年总体是打基础具有里程碑的一年，全面开展了项目和产品的开发工作并获批重要资质，2013年公司计划要完成股份制改革和上市，大力进行重点产品升级推广和项目运营。
+颁发奖励
+公司这次评选了年度的总裁奖、优秀团队奖、优秀新人奖、优秀员工奖，还对些管理层奖励了股份。会上还表扬很多先进个人，看了别人很多介绍还是觉得自己还不够，身边有太多努力优秀的榜样学习。一位同事的发言很是深刻：能被金钱所能买到的能被更高价格买到。我想这个世界上是有些东西不能用金钱来衡量的。
+马上就要过年了，又是新的一年快开始了。真的很敬畏的时间的力量，眼看着岁月催人长大却自己做事还是那么不成熟。周围的些朋友真的很好，有很多我学习的榜样，希望明年大家还能够在一起，一起成长。" />
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -72,8 +77,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -135,6 +141,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
     }
 }
 </script>
+
 <div id="main" class="auto container">
     <div id="ctl00_panLeft" class="siderLeft column column1">
 	
@@ -142,12 +149,13 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +175,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -180,7 +188,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	                        var archive = [];
 	                        if(rs.data) archive = rs.data.split(',');
 	                        window.archive = archive;
-	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'' } );
+	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'2013-02-07' } );
  	                    }else
 	                    {
 	                        alert(rs.error);
@@ -199,15 +207,85 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -237,111 +315,193 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="siderMiddle">
 	    <div class="content column column2">
             
-            
-    
-    <div id="ctl00_cphContent_palArticle" class="article">
-	
-		<div class="position title">
-		    
-		    <strong>友情链接</strong>
-            
+
+    <div class="articlecont">
+        <div class="position">
+		    <strong>当前位置：</strong>
+		    <a href="http://www.jonllen.com">首页</a>
+		     > <a href="/jonllen/breast/">心情笔记</a>
+		     > <a href="/jonllen/breast/156.aspx">2012年公司年会</a>
 		</div>
-		<div class="articlelist">
-		    <div id="articleitem" class="articleitem">
-                
-                    
+        <div class="article">
+			<div class="title"><h2>2012年公司年会</h2></div>
+			<div class="category">分类：<a href="/jonllen/breast/">心情笔记</a></div>
+			<div class="fontZoom"><a href="javascript:zoom(20);" style="font-size:large; font-weight:700">大</a><a href="javascript:zoom(14);" style="font-size:14px; font-weight:500;">中</a><a href="javascript:zoom(10);">小</a></div>
+			<div class="cont" id="content">
+				<p>来到公司快一年了，第一次参加公司的年会。分公司还有些同事没来参加，我还有很多同事还都叫不出名字，公司平时就很少有活动，今年年会也没有节目表演，和以往相比没有太多的期待。</p>
+<p><strong>总结发言</strong></p>
+<p>年会从早上10点开始，首先是领导的总结规划发言。2012年总体是打基础具有里程碑的一年，全面开展了项目和产品的开发工作并获批重要资质，2013年公司计划要完成股份制改革和上市，大力进行重点产品升级推广和项目运营。</p>
+<p><strong>颁发奖励</strong></p>
+<p>公司这次评选了年度的总裁奖、优秀团队奖、优秀新人奖、优秀员工奖，还对些管理层奖励了股份。会上还表扬很多先进个人，看了别人很多介绍还是觉得自己还不够，身边有太多努力优秀的榜样学习。一位同事的发言很是深刻：能被金钱所能买到的能被更高价格买到。我想这个世界上是有些东西不能用金钱来衡量的。</p>
+<p><strong>酒会聚餐</strong></p>
+<p>开完年会后已是12点多，公司安排到附近的饭店中午聚餐。没想到这次我还喝了点红酒，但我还是一喝酒就脸红，头还真的有点晕晕的。中午又没吃点米饭，后面回公司喝了些白开水，感觉好多了。在公司清醒了会，就坐车回家了。</p>
+<p>马上就要过年了，又是新的一年快开始了。真的很敬畏的时间的力量，眼看着岁月催人长大却自己做事还是那么不成熟。周围的些朋友真的很好，有很多我学习的榜样，希望明年大家还能够在一起，一起成长。</p>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
+	        <script type="text/javascript">new ImgLazy( { selector : 'content', maxWidth : document.getElementById('content').offsetWidth, 'loadSrc' : '/styles/index/css/default/images/lazyloading.gif' });</script>
 
-<div class="item">
-			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.applezqp.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
+			<div class="tags">标签：<a href="/jonllen/breast/">心情笔记</a> 年会
+			    
+			    
+			</div>
 
+			<div class="desc">
+			  <ul>
+				<li>posted@ 2013-02-07 14:35</li>
+				<li>update@ 2013-02-08 14:36:42</li>
+				<li>阅读(<span id="articleClick">3896</span>)</li>
+				<li>评论(0)</li>
+				
+			  </ul>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ad.js"></script>
 
-<div class="item">
-			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.thjy.org
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://weibo.com/zjj
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-                
-            </div>
-            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
-	        <script type="text/javascript">new ImgLazy( { selector : 'articleitem', maxWidth : document.getElementById('articleitem').offsetWidth });</script>
 		</div>
-		<div class="pagination" id="ctl00_cphContent_Pager1">
+<div class="context">
+			<ul>
+				<li>上一篇：<a href="/jonllen/breast/153.aspx">回顾2012</a></li>
+<li>下一篇：<a href="/jonllen/breast/161.aspx">最近发生的些事</a></li></ul>
+		</div>
+		
 
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
-	</div>
+<div class="correlative">
 	
+		    <h4>相关文章</h4>
+			<ul>
+
+
+
+			</ul>
+		
 </div>
+
+		
+		<div class="comment">
+			<div class="title">评论</div>
+			<div class="commentlist" id="commentContent">
+				
+
+				<div id="commentNothing" class="nothing">
+	暂无任何评论。
+</div>
+			</div>
+		</div>
+		<div class="postcomment">
+	        <div class="title">发表评论<a id="comment"></a></div>
+	        <div class="box">
+		        <div class="fi"><label>用户名</label><input id="txtUserName" type="text" value="" class="text" title="请输入显示用户名称" /><span class="note">*必填</span></div>
+		        
+		        
+		        <div class="fi"><label>网站链接</label><input id="txtWebsite" type="text" class="text" title="请输入您的网站链接地址以便回访（非必填）" /></div>
+		        
+		        <div class="fi"><label>邮箱地址</label><input id="txtEmail" type="text" class="text" title="请输入您的邮箱地址以便回复（非必填）" /><input id="chkEmailNotify" type="checkbox" title="当博主回复时以邮件通知我" />回复通知我</div>
+		        <div class="fi"><label>内容</label><textarea id="txtContent" class="textarea"></textarea><span class="note">*必填</span></div>
+		        <div class="btn"><input type="button" class="submit" onclick="postComment()" value="提交" /></div>
+	        </div>
+        </div>
+        <script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
+        <script type="text/javascript">
+            function postComment()
+		    {
+		        var url = "/plugin/web/doSaveComment.do?sourcetype=1&sourceid=156&siteId=1";
+		        var data = "username="+encodeURIComponent(document.getElementById("txtUserName").value);
+		        data += '&sourceurl=/jonllen/breast/156.aspx';
+		        data += "&content="+ encodeURIComponent(document.getElementById("txtContent").value);
+		        var pwd = document.getElementById("txtPassword");
+		        if (pwd!=null)
+		        {
+		            data += "&pwd="+ pwd.value;
+		        }
+		        var website = document.getElementById("txtWebsite");
+		        if (website!=null)
+		        {
+		            data += "&website="+ website.value;
+		        }
+		        data += "&email="+ encodeURIComponent(document.getElementById("txtEmail").value);
+		        data += "&emailNotify="+ encodeURIComponent(document.getElementById("chkEmailNotify").checked);
+		        Ajax.send({
+		            type : "POST",
+		            url : url,
+		            data : data,
+		            fn : function (data){
+	                    var rs;
+	                    try{rs=eval("rs="+data);}catch(e){alert(e);return;}
+                        
+	                    if (rs.success)
+	                    {
+	                        appendComment();
+	                        if(document.getElementById('commentNothing')!=null){ 
+	                          document.getElementById('commentNothing').style.display = 'none';
+	                        }
+	                        document.getElementById("txtContent").value = "";
+	                        alert("提交评论成功！");
+	                    }else
+	                    {
+	                        alert(rs.error);
+	                    }
+                            }
+		        });
+		    }
+
+function appendComment()
+		    {
+var itemComment = document.createElement('div');
+itemComment.className = 'item';
+var username = document.getElementById("txtUserName").value;
+var index = document.getElementById('commentContent').getElementsByTagName('ul').length + 1;
+var content =  document.getElementById("txtContent").value;
+itemComment.innerHTML = '<div class="desc"><ul class="options"><li><a href="javascript:;" onclick="quote(this,\''+username+'\')">引用</a></li></ul><a>'+index+'楼</a> '+username+'</div><div class="cont">'+content+'</div>';
+document.getElementById('commentContent').appendChild(itemComment);
+}
+
+            function addClick()
+		    {
+		        var url = "/plugin/web/doAddClick.do?columnType=1&documentId=156";
+		        Ajax.send({
+		            type : "GET",
+		            url : url,
+		            fn : function (data){
+		                 var clickElem = document.getElementById('articleClick');
+		                 if(clickElem !=null) clickElem.innerHTML = data; 
+		            }
+		        });
+
+		    }
+            addClick();
+        </script>
+		
+	</div>
+	<script type="text/javascript">
+	    function zoom(size)
+	    {
+	        var content = document.getElementById("content");
+	        content.style.fontSize = size+"px";
+	        for(var i=0;i<content.childNodes.length;i++)
+	        {
+	            if(content.childNodes[i].nodeType==1)
+	                content.childNodes[i].style.fontSize = size+"px";
+	        }
+	    }
+	    
+	    function quote(target,name)
+	    {
+	        var content = name+"："+target.parentNode.parentNode.parentNode.nextSibling.innerHTML;
+	        var reply = document.getElementById("txtContent");
+	        if (reply==null) return;
+	        reply.value += "[quote]"+content.replace(/<br>/ig,'\n\r')+"[/quote]\n";
+	        reply.focus();
+	        
+            var r = reply.createTextRange();
+            r.moveStart('character',reply.innerHTML.length);
+            r.collapse(true);
+            r.select();
+            
+            //replace <fieldset(\S|\s)+?legend>(\S|\s)+</fieldset> to [quote]$2[/quote]
+	    }
+	</script>
  
+
+
         </div>
 	</div>
 	<div id="ctl00_panRight" class="siderRight column column3">
@@ -350,6 +510,8 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
     <h4 class="head">博文推荐</h4>
     <div class="cont">
 	    <ul>
+                    
+		    <li><a href="/jonllen/breast/120.aspx">时代财富10周年年庆</a>(2010-06-03)</li>
                     
 
 	    </ul>
@@ -426,7 +588,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
  
 </div>
 </div>
- 
+
 <div class="auto" id="foot">
     <div class="wrapper">
 	Powered By ：Jonllen  <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备10049366号</a>
@@ -438,6 +600,5 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 <div style="display:none"> 
     <script type="text/javascript" src="/styles/index/scripts/statistics.js"></script>
 </div>
-
 </body>
 </html>

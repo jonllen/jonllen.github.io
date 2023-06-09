@@ -1,9 +1,10 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>
-	友情链接 - 金龙博客
-</title>
+<title>写在2010.10.10 - 心情笔记 - 金龙博客</title>
+<meta name="description" content="国庆7天长假一晃就过去了，由于这次回家预定了武广高铁的车票，一路来回都很轻松，不再感觉到奔波劳累之苦。这次回家选择了沉默，没有主动去约朋友玩，而是大部分时间待在家里，感受家里的温馨，留意着身旁的一草一木，听爸妈、爷爷奶奶她们述说着家乡的人和事的变化。
+今天是2010-10-10，很值得纪念的一天，希望也能成为我真正长大跨越的一天。改变未来，从当前开始，从足下行动！" />
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -72,8 +73,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -135,6 +137,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
     }
 }
 </script>
+
 <div id="main" class="auto container">
     <div id="ctl00_panLeft" class="siderLeft column column1">
 	
@@ -142,12 +145,13 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +171,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -180,7 +184,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	                        var archive = [];
 	                        if(rs.data) archive = rs.data.split(',');
 	                        window.archive = archive;
-	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'' } );
+	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'2010-10-10' } );
  	                    }else
 	                    {
 	                        alert(rs.error);
@@ -199,15 +203,85 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -237,111 +311,207 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="siderMiddle">
 	    <div class="content column column2">
             
-            
-    
-    <div id="ctl00_cphContent_palArticle" class="article">
-	
-		<div class="position title">
-		    
-		    <strong>友情链接</strong>
-            
+
+    <div class="articlecont">
+        <div class="position">
+		    <strong>当前位置：</strong>
+		    <a href="http://www.jonllen.com">首页</a>
+		     > <a href="/jonllen/breast/">心情笔记</a>
+		     > <a href="/jonllen/breast/129.aspx">写在2010.10.10</a>
 		</div>
-		<div class="articlelist">
-		    <div id="articleitem" class="articleitem">
-                
-                    
-
-<div class="item">
-			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.applezqp.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.thjy.org
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://weibo.com/zjj
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-                
-            </div>
-            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
-	        <script type="text/javascript">new ImgLazy( { selector : 'articleitem', maxWidth : document.getElementById('articleitem').offsetWidth });</script>
-		</div>
-		<div class="pagination" id="ctl00_cphContent_Pager1">
-
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
-	</div>
-	
+        <div class="article">
+			<div class="title"><h2>写在2010.10.10</h2></div>
+			<div class="category">分类：<a href="/jonllen/breast/">心情笔记</a></div>
+			<div class="fontZoom"><a href="javascript:zoom(20);" style="font-size:large; font-weight:700">大</a><a href="javascript:zoom(14);" style="font-size:14px; font-weight:500;">中</a><a href="javascript:zoom(10);">小</a></div>
+			<div class="cont" id="content">
+				<p>国庆7天长假一晃就过去了，由于这次回家预定了武广高铁的车票，一路来回都很轻松，不再感觉到奔波劳累之苦。这次回家选择了沉默，没有主动去约朋友玩，而是大部分时间待在家里，感受家里的温馨，留意着身旁的一草一木，听爸妈、爷爷奶奶她们述说着家乡的人和事的变化。</p>
+<p><strong>人生大事</strong></p>
+<p>虽然自己认为我还没有长大，但这次回家第一次觉得自己可以做点事情了，也许自己真的是大人了，但内心还有点不太接受这个事实。国庆当天，是我叔叔结婚的日子，之所以叫叔叔只是因为他的辈分大，但他的年纪只比我大几岁而已。我也借这个机会去学习学习经验，发现现在结婚真的很不容易，除开八字还没一撇的原因外，我还想都不敢想。但家里好象盼望着我能早点结婚，说今年不去相亲明年就要去，无耐~</p>
+<p><strong>变化</strong></p>
+<p>今年回家，家里的电脑终于已经连上了宽带网，好几个晚上躺在床上看弟弟玩游戏，不亦乐乎？读书的时候就沉迷上了游戏，那时候希望家里有2台电脑能和弟弟一起玩游戏多好啊，现在看来那时候的愿望不再是愿望。弟弟今年在老家换了份工作，跳槽到了湘潭一汽大众健车行从事汽车销售的工作，工资已和我在广州的相当了，为他高兴的同时，也感觉自己的&ldquo;鸭梨&rdquo;越大了。</p>
+<div style="display: none;">
+<p><strong>时间</strong></p>
+<p>以前对时间没什么概念，只知道时间就是金钱，但并不理解时间的真正含义。长大了才知道，为了工作效率需要抓紧时间，为了赶项目需要时间，当时间还在静静流逝着的时候，我们的亲人都在不知不觉的老去，而自己又长进了多少呢？</p>
 </div>
+<p>今天是2010-10-10，很值得纪念的一天，希望也能成为我真正长大跨越的一天。改变未来，从当前开始，从足下行动！</p>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
+	        <script type="text/javascript">new ImgLazy( { selector : 'content', maxWidth : document.getElementById('content').offsetWidth, 'loadSrc' : '/styles/index/css/default/images/lazyloading.gif' });</script>
+
+			<div class="tags">标签：<a href="/jonllen/breast/">心情笔记</a> 
+			    
+			    
+			</div>
+
+			<div class="desc">
+			  <ul>
+				<li>posted@ 2010-10-10 10:10</li>
+				<li>update@ 2010-10-10 18:29:29</li>
+				<li>阅读(<span id="articleClick">6734</span>)</li>
+				<li>评论(1)</li>
+				
+			  </ul>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ad.js"></script>
+
+		</div>
+<div class="context">
+			<ul>
+				<li>上一篇：<a href="/jonllen/breast/128.aspx">又是一年中秋国庆时</a></li>
+<li>下一篇：<a href="/jonllen/breast/132.aspx">忙碌的工作</a></li></ul>
+		</div>
+		
+
+<div class="correlative">
+	
+		    <h4>相关文章</h4>
+			<ul>
+
+
+
+			</ul>
+		
+</div>
+
+		
+		<div class="comment">
+			<div class="title">评论</div>
+			<div class="commentlist" id="commentContent">
+				
+
+
+
+				        <div class="item">
+					        <div class="desc">
+						        <ul class="options">
+							        <li><a href="javascript:;" onclick="quote(this,'公羊皮鞋')">引用</a></li>
+
+						        </ul>
+						        <a>1楼</a> 公羊皮鞋 2010-10-14 14:25:38
+					        </div><div class="cont">和博主一样，我的鸭梨也越来越大了，加油吧</div>
+					        <div class="reply" ><span>回复：</span>:）（2010-10-14 14:28:34）</div>
+				        </div>
+
+
+				
+			</div>
+		</div>
+		<div class="postcomment">
+	        <div class="title">发表评论<a id="comment"></a></div>
+	        <div class="box">
+		        <div class="fi"><label>用户名</label><input id="txtUserName" type="text" value="" class="text" title="请输入显示用户名称" /><span class="note">*必填</span></div>
+		        
+		        
+		        <div class="fi"><label>网站链接</label><input id="txtWebsite" type="text" class="text" title="请输入您的网站链接地址以便回访（非必填）" /></div>
+		        
+		        <div class="fi"><label>邮箱地址</label><input id="txtEmail" type="text" class="text" title="请输入您的邮箱地址以便回复（非必填）" /><input id="chkEmailNotify" type="checkbox" title="当博主回复时以邮件通知我" />回复通知我</div>
+		        <div class="fi"><label>内容</label><textarea id="txtContent" class="textarea"></textarea><span class="note">*必填</span></div>
+		        <div class="btn"><input type="button" class="submit" onclick="postComment()" value="提交" /></div>
+	        </div>
+        </div>
+        <script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
+        <script type="text/javascript">
+            function postComment()
+		    {
+		        var url = "/plugin/web/doSaveComment.do?sourcetype=1&sourceid=129&siteId=1";
+		        var data = "username="+encodeURIComponent(document.getElementById("txtUserName").value);
+		        data += '&sourceurl=/jonllen/breast/129.aspx';
+		        data += "&content="+ encodeURIComponent(document.getElementById("txtContent").value);
+		        var pwd = document.getElementById("txtPassword");
+		        if (pwd!=null)
+		        {
+		            data += "&pwd="+ pwd.value;
+		        }
+		        var website = document.getElementById("txtWebsite");
+		        if (website!=null)
+		        {
+		            data += "&website="+ website.value;
+		        }
+		        data += "&email="+ encodeURIComponent(document.getElementById("txtEmail").value);
+		        data += "&emailNotify="+ encodeURIComponent(document.getElementById("chkEmailNotify").checked);
+		        Ajax.send({
+		            type : "POST",
+		            url : url,
+		            data : data,
+		            fn : function (data){
+	                    var rs;
+	                    try{rs=eval("rs="+data);}catch(e){alert(e);return;}
+                        
+	                    if (rs.success)
+	                    {
+	                        appendComment();
+	                        if(document.getElementById('commentNothing')!=null){ 
+	                          document.getElementById('commentNothing').style.display = 'none';
+	                        }
+	                        document.getElementById("txtContent").value = "";
+	                        alert("提交评论成功！");
+	                    }else
+	                    {
+	                        alert(rs.error);
+	                    }
+                            }
+		        });
+		    }
+
+function appendComment()
+		    {
+var itemComment = document.createElement('div');
+itemComment.className = 'item';
+var username = document.getElementById("txtUserName").value;
+var index = document.getElementById('commentContent').getElementsByTagName('ul').length + 1;
+var content =  document.getElementById("txtContent").value;
+itemComment.innerHTML = '<div class="desc"><ul class="options"><li><a href="javascript:;" onclick="quote(this,\''+username+'\')">引用</a></li></ul><a>'+index+'楼</a> '+username+'</div><div class="cont">'+content+'</div>';
+document.getElementById('commentContent').appendChild(itemComment);
+}
+
+            function addClick()
+		    {
+		        var url = "/plugin/web/doAddClick.do?columnType=1&documentId=129";
+		        Ajax.send({
+		            type : "GET",
+		            url : url,
+		            fn : function (data){
+		                 var clickElem = document.getElementById('articleClick');
+		                 if(clickElem !=null) clickElem.innerHTML = data; 
+		            }
+		        });
+
+		    }
+            addClick();
+        </script>
+		
+	</div>
+	<script type="text/javascript">
+	    function zoom(size)
+	    {
+	        var content = document.getElementById("content");
+	        content.style.fontSize = size+"px";
+	        for(var i=0;i<content.childNodes.length;i++)
+	        {
+	            if(content.childNodes[i].nodeType==1)
+	                content.childNodes[i].style.fontSize = size+"px";
+	        }
+	    }
+	    
+	    function quote(target,name)
+	    {
+	        var content = name+"："+target.parentNode.parentNode.parentNode.nextSibling.innerHTML;
+	        var reply = document.getElementById("txtContent");
+	        if (reply==null) return;
+	        reply.value += "[quote]"+content.replace(/<br>/ig,'\n\r')+"[/quote]\n";
+	        reply.focus();
+	        
+            var r = reply.createTextRange();
+            r.moveStart('character',reply.innerHTML.length);
+            r.collapse(true);
+            r.select();
+            
+            //replace <fieldset(\S|\s)+?legend>(\S|\s)+</fieldset> to [quote]$2[/quote]
+	    }
+	</script>
  
+
+
         </div>
 	</div>
 	<div id="ctl00_panRight" class="siderRight column column3">
@@ -350,6 +520,8 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
     <h4 class="head">博文推荐</h4>
     <div class="cont">
 	    <ul>
+                    
+		    <li><a href="/jonllen/breast/120.aspx">时代财富10周年年庆</a>(2010-06-03)</li>
                     
 
 	    </ul>
@@ -426,7 +598,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
  
 </div>
 </div>
- 
+
 <div class="auto" id="foot">
     <div class="wrapper">
 	Powered By ：Jonllen  <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备10049366号</a>
@@ -438,6 +610,5 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 <div style="display:none"> 
     <script type="text/javascript" src="/styles/index/scripts/statistics.js"></script>
 </div>
-
 </body>
 </html>

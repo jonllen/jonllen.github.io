@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	碟式分离机 - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,8 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>pengfenjun</h3>
+	    <h4>不经呖风雨哪能经咖彩虹``````!!!</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -142,12 +142,12 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/pengfenjun/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />pengfenjun</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：pengfenjun</dd>
+			<dd>来自：湖南湘潭</dd>
+			<dd>简述：不经呖风雨哪能经咖彩虹``````!!!</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +167,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=600&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -199,15 +199,29 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/pengfenjun/experience/" >
+			                经历<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/pengfenjun/dishcentrifuge/" >
+			                碟式分离机<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/pengfenjun/xinqingyulu/" >
+			                心情语录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/pengfenjun/centrifuge/" >
+			                离心机<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -243,7 +257,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	
 		<div class="position title">
 		    
-		    <strong>友情链接</strong>
+		    <strong>碟式分离机</strong>
             
 		</div>
 		<div class="articlelist">
@@ -253,79 +267,19 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/pengfenjun/dishcentrifuge/90.aspx">湘潭碟式分离机有限公司</a></h2>
+			            <!--<div class="date"><a href="">2009-12-07</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.applezqp.com
+			                湖南省湘潭碟式分离机有限公司，是原湘潭离心机有限公司直属子公司，在分离机械行业内享有极高的声誉，是中国通用机械协会分离机械协会副理事长单位。公司总部座落于中国湖南湘潭湘江生态风景区，环境优雅，交通便利。 湘潭碟式分离机有限公司是专业从事分离领域成套设备和成套系统的科技型企业，技术力量雄厚，加工装备精良，检测手段完善，内部管理规范，是目前国内处具现代化规模，拥有较强科研能力和综合加工能力的分离机械研制与生产的骨干企业。经过近10年的发展，湘潭碟式分离机有限公司拥有的分离技术，已经在船舶工业、石油化工、食品工业、医药、生化工程等许多领域和环保工程中实现工业化应用。产品畅销全国各地，并远销欧洲、东南亚国家和地区，拥有较高的市场份额，深得用户好评。 公司任借经验丰富的中高级工程师和售后工程师，专业的市场分析策划及市场营销人员，完善的财务管理和售后服务体系，坚持您说，我做，诚实为本，互利双赢的经营宗旨，以优质的产品质量、极具竞争力的价格、及时完善的服务和高度的信誉为所有的客户创造更高价值。公司全体员工热忱恭候您的光临、同您一起共同开创更加美好的明天！
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：碟式分离机 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.thjy.org
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://weibo.com/zjj
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-12-07 15:29:41.0</li>
+				            <li>阅读(6578)</li>
+				            <li><a class="comment" title="共0条评论" href="/pengfenjun/dishcentrifuge/90.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -337,7 +291,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 		</div>
 		<div class="pagination" id="ctl00_cphContent_Pager1">
 
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/pengfenjun/dishcentrifuge/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
 	</div>
 	
 </div>

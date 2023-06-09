@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	JavaScript - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -142,12 +143,13 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +169,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -199,15 +201,85 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -243,7 +315,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	
 		<div class="position title">
 		    
-		    <strong>友情链接</strong>
+		    <strong>JavaScript</strong>
             
 		</div>
 		<div class="articlelist">
@@ -253,19 +325,19 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/jonllen/js/32.aspx">不间断向左滚动代码</a></h2>
+			            <!--<div class="date"><a href="">2009-07-01</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.applezqp.com
+			                不间断向左滚动代码...
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：JavaScript 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-07-01 00:39:12.0</li>
+				            <li>阅读(11136)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/js/32.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -273,19 +345,20 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/jonllen/js/16.aspx">tiny_mce在线编辑器内JavaScript实现Ctrl+S无刷新保存。</a></h2>
+			            <!--<div class="date"><a href="">2009-06-26</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.thjy.org
+			                以前也用过几个编辑器拉，如FCK，CUTEDTOR等，它们大都实现了很不错了的功能，也有丰富的插件使用。不过我还是觉得TinyMCE在线编辑器好用，它是采用纯JS客户端脚本技术构建，是一个轻量级加载速度非常快的WEB的文本编辑控件，并且TinyMCE是一个根据LGPL license发布的自由软件，你可以把它用于商业应用。
+由于最进在做一个博客系统需要有在线编辑器，于是便找了TinyMCE在线编辑器，以前用过Google的GMail，里面就有一个按Ctrl+S的快捷键保存邮件的功能，因为当时还不太清楚那些编辑器的一些功能实现，对编辑器结构不清楚，也不知道用IE Developer Toolbar和Firebug等调试工具来看，所以那时候感觉Google特别牛B，而且Ctrl+S保存那个功能在FF里面运行，而FF浏览器按下Ctrl+S默认是弹出修改网页的对话框的，这让我更好奇了，难道JavaScript还能阻止浏览器里面Ctrl+S保存网页的快捷键，真的太神气了！下面我们就使用TinyMCE编辑器来实现一个按Ctrl+S使用Ajax异步保存文章的功能吧，这也是我的博客系统的需要...
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：JavaScript TinyMCE编辑器,JavaScript实现Ctrl+S保存
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-06-26 21:51:10.0</li>
+				            <li>阅读(13665)</li>
+				            <li><a class="comment" title="共1条评论" href="/jonllen/js/16.aspx#comment">评论(1)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -293,39 +366,19 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
+			            <h2><a href="/jonllen/js/19.aspx">JavaScript无限级Select下拉列表联动</a></h2>
+			            <!--<div class="date"><a href="">2009-06-28</a></div>-->
 			            
 			            <div class="summary">
-			                http://weibo.com/zjj
+			                使用数组，支持无限级别，一次性从服务器输出所有数据，最好的例子就是省市select联动，代码如下...
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：JavaScript 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-06-28 14:46:08.0</li>
+				            <li>阅读(13073)</li>
+				            <li><a class="comment" title="共3条评论" href="/jonllen/js/19.aspx#comment">评论(3)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -337,7 +390,15 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 		</div>
 		<div class="pagination" id="ctl00_cphContent_Pager1">
 
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/jonllen/js/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+                            <!--共23条记录-->
+                            <a href='javascript:goToPage0(1)' title='转到第1页'>首页</a>
+                            <a href='javascript:goToPage0(1)' title='转到第1页'>上一页</a>
+                            <a href='javascript:goToPage0(1)' title='转到第1页'>1</a><font color='red'><strong>2</strong></font>
+                            
+                            <a disabled>末页</a>
+                            <!--每页<input type='text' value='20' id='_pagersize0' style='width:25px'>条,转到第<input type='text' value='2' id='_pagerid0' style='width:25px'>页<input type='button' value='Go' onclick='javascript:goToPage0(document.getElementById("_pagerid0").value,"/jonllen/js/index__pid.aspx".replace("psize=20","psize=" + document.getElementById("_pagersize0").value));'>-->
+
 	</div>
 	
 </div>

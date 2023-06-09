@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	天河公园 - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -136,18 +137,19 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 }
 </script>
 <div id="main" class="auto container">
-    <div id="ctl00_panLeft" class="siderLeft column column1">
+	<div id="ctl00_panLeft" class="siderLeft column column1">
 	
 <div id="mod25" class="mod info">
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +169,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -199,15 +201,43 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/album/4/" >
+			                天河公园<!-- (7)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/album/8/" >
+			                网络收藏<!-- (12)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/10/" >
+			                科韵路<!-- (7)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/3/" >
+			                游戏照片<!-- (16)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/11/" >
+			                海派甜心<!-- (10)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/7/" >
+			                喜洋洋与灰太狼<!-- (19)-->
 			            </a>
 			        </li>
 			
@@ -237,112 +267,117 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="siderMiddle">
 	    <div class="content column column2">
             
+    <script type="text/javascript">
+        function imgZoom(target) {
             
-    
-    <div id="ctl00_cphContent_palArticle" class="article">
-	
-		<div class="position title">
-		    
-		    <strong>友情链接</strong>
+            var maxWidth = target.width, maxHeight = target.height;
             
-		</div>
-		<div class="articlelist">
-		    <div id="articleitem" class="articleitem">
-                
+            var img = new Image();
+            img.src = target.src;
+            
+            var originalWidth = img.width, originalHeight = img.height;
+            var width = originalWidth, height = originalHeight;
+            
+            if( height > maxHeight) {
+                height = maxHeight;
+                width = originalWidth * height / originalHeight;
+            }
+            if( width > maxWidth){
+                width = maxWidth;
+                height = originalHeight * width / originalWidth;
+            }
+
+            target.style.width = width + 'px';
+            target.style.height = height + 'px';
+        }
+    </script>
+    <div class="album">
+		<div class="title">
+		    <strong>当前位置：</strong>
+		    <a href="/">首页</a>
+		    > <a href="../">我的相册</a>
+		    > <a href=".">天河公园</a>
+		 </div>
+		<div class="cont">
+			<div class="guide"></div>
+			<div class="list">
+	            <ul class="fixft" id="albumlist">
                     
-
-<div class="item">
-			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.applezqp.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.thjy.org
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://weibo.com/zjj
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-                
-            </div>
-            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
-	        <script type="text/javascript">new ImgLazy( { selector : 'articleitem', maxWidth : document.getElementById('articleitem').offsetWidth });</script>
+                            <li>
+                                <a href="/jonllen/album/4/16.aspx" >
+                                    <img src="/upload/jonllen/album/天河公园/633824089066718750_长廊.jpg?width=140&height=108" width="140" height="108" title="长廊" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    长廊
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/4/18.aspx" >
+                                    <img src="/upload/jonllen/album/天河公园/633824089067656250_湖面.jpg?width=140&height=108" width="140" height="108" title="湖面" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    湖面
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/4/19.aspx" >
+                                    <img src="/upload/jonllen/album/天河公园/633824089068125000_阶梯.jpg?width=140&height=108" width="140" height="108" title="阶梯" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    阶梯
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/4/20.aspx" >
+                                    <img src="/upload/jonllen/album/天河公园/633824089068593750_绿幽.jpg?width=140&height=108" width="140" height="108" title="绿幽" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    绿幽
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/4/21.aspx" >
+                                    <img src="/upload/jonllen/album/天河公园/633824089069062500_貌似海南.jpg?width=140&height=108" width="140" height="108" title="貌似海南" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    貌似海南
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/4/22.aspx" >
+                                    <img src="/upload/jonllen/album/天河公园/633824089069531250_全景.jpg?width=140&height=108" width="140" height="108" title="全景" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    全景
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+	            </ul>
+	            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
+	            <script type="text/javascript">new ImgLazy({loadSrc : '/styles/index/css/default/images/lazyloading.gif'});</script>
+	        </div>
 		</div>
-		<div class="pagination" id="ctl00_cphContent_Pager1">
-
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
-	</div>
-	
-</div>
- 
-        </div>
+	</div>            
+    
+     
+	    </div>
 	</div>
 	<div id="ctl00_panRight" class="siderRight column column3">
 	
@@ -361,6 +396,10 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	    <ul>
 		    
 
+<li><a href="/jonllen/work/162.aspx#comment"><b>yeson</b>：你好，请问有没有java版本的算法实现（生成+签名+加解密），主要是SM2CryptoServiceProvider和SM3Digest，
+如方便的话能否发到我的邮箱，十分感谢。
+huiwytx@163.com</a></li>
+
 <li><a href="/jonllen/work/164.aspx#comment"><b>oracle_cs</b>：您好，我最近也在研究国密这块，您上面的加密中用到了SM2CryptoServiceProvider，您能把这个实现发给我邮箱吗？ 1607418266@qq.com</a></li>
 
 <li><a href="/jonllen/work/164.aspx#comment"><b>oracle_cs</b>：您好，我最近也在研究国密这块，您上面的加密中用到了SM2CryptoServiceProvider，您能把这个实现发给我邮箱吗？ 1607418266@qq.com</a></li>
@@ -368,8 +407,6 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 <li><a href="/jonllen/js/175.aspx#comment"><b>cstomcat</b>：您好，请问用js可以实现sm3算法吗？改造的难度大吗？</a></li>
 
 <li><a href="/jonllen/js/175.aspx#comment"><b>cstomcat</b>：您好，请问用js可以实现sm3算法吗？改造的难度大吗？</a></li>
-
-<li><a href="/jonllen/work/174.aspx#comment"><b>王誉晓</b>：博主，膜拜您已经很久了，能加个qq号吗，有很多问题想请教您啊，qq：1261634218</a></li>
 
 	    </ul>
     </div>
@@ -381,6 +418,8 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	    <ul>
 
                     
+		    <li><a href="/jonllen/work/800.aspx">2015年度工作总结</a>(2015-12-31)</li>
+                    
 		    <li><a href="/jonllen/js/179.aspx">使用ECharts报表统计公司考勤加班，大家加班多吗？</a>(2015-06-05)</li>
                     
 		    <li><a href="/jonllen/js/178.aspx">JavaScript实现SM2算法加解密</a>(2014-10-28)</li>
@@ -388,8 +427,6 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 		    <li><a href="/jonllen/breast/177.aspx">2014年国庆</a>(2014-10-04)</li>
                     
 		    <li><a href="/jonllen/breast/176.aspx">面对&逃避</a>(2014-08-04)</li>
-                    
-		    <li><a href="/jonllen/js/175.aspx">JS版SM2国密算法的签名验证</a>(2014-06-17)</li>
                     
 	    </ul>
     </div>
@@ -410,15 +447,15 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
     <div class="cont">
 	    <ul>
                     
-		    <li><a href="/jonllen/aspnet/tinymce.aspx">TinyMce在线编辑器完美打造成Asp.Net服务器自定义控件</a>(31679)</li>
+		    <li><a href="/jonllen/aspnet/tinymce.aspx">TinyMce在线编辑器完美打造成Asp.Net服务器自定义控件</a>(31834)</li>
                     
-		    <li><a href="/jonllen/js/js-popup.aspx">摆脱JQuery—之自定义模拟弹窗层功能。</a>(25861)</li>
+		    <li><a href="/jonllen/js/js-popup.aspx">摆脱JQuery—之自定义模拟弹窗层功能。</a>(25950)</li>
                     
-		    <li><a href="/jonllen/aspnet/pd.aspx">使用PowerDesigner的物理模型创建升级管理数据库</a>(23039)</li>
+		    <li><a href="/jonllen/aspnet/pd.aspx">使用PowerDesigner的物理模型创建升级管理数据库</a>(23160)</li>
                     
-		    <li><a href="/jonllen/aspnet/24.aspx">二次开发WinWebMail邮件系统接口 - 企业邮件服务器解决方案</a>(20062)</li>
+		    <li><a href="/jonllen/aspnet/24.aspx">二次开发WinWebMail邮件系统接口 - 企业邮件服务器解决方案</a>(20332)</li>
                     
-		    <li><a href="/jonllen/java/struts.aspx">Struts增删改查实例及源代码下载</a>(19711)</li>
+		    <li><a href="/jonllen/java/struts.aspx">Struts增删改查实例及源代码下载</a>(19872)</li>
                     
 	    </ul>
     </div>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	Flex - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -142,12 +143,13 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +169,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -199,15 +201,85 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -243,7 +315,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	
 		<div class="position title">
 		    
-		    <strong>友情链接</strong>
+		    <strong>Flex</strong>
             
 		</div>
 		<div class="articlelist">
@@ -253,19 +325,20 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/jonllen/flex/97.aspx">Flex播放器同步显示歌词</a></h2>
+			            <!--<div class="date"><a href="">2010-01-03</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.applezqp.com
+			                在听完S.H.E的你最近还吗不下一百遍，终于搞好了播放器同步显示歌词这一功能。这是继上一篇Flex播放器(实现播放、缓冲进度条和音频曲线显示)后的一扩展功能，本例是实现对lrc文本格式的歌词进行解析显示，并把当前播放歌词一行文本进行高亮显示。
+播放歌曲时要同步显示歌词，首先必须要能解析出lrc格式的歌词文本，之前我还准备直接在网上匹配下载对应歌词，打开我机器的千千静音在线匹配歌词，然后用HTTPAnalyzerStdV监视所有的http请求，发现它是请求这个ttlrcct.qianqian.com网站下载歌词，本来还是直接套用千千静音服务器下载歌词，但是它的url参数全部加密了。后来又看了下酷狗音乐，它里面下载歌词我都监视不请求，考虑到就算我能在线找到下载歌词的url地址，flash里发送远程请求也会有安全杀箱问题，所以最终放弃直接在网络上下载歌词的办法，还是全部上传到我网站上去。lrc歌词其实就是一个文本格式的文件，在Flex里面我们可以使用URLLoader去加载，代码如下...
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：Flex 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2010-01-03 23:17:31.0</li>
+				            <li>阅读(12191)</li>
+				            <li><a class="comment" title="共8条评论" href="/jonllen/flex/97.aspx#comment">评论(8)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -273,19 +346,24 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/jonllen/flex/sound.aspx">Flex播放器(实现播放、缓冲进度条和音频曲线显示)</a></h2>
+			            <!--<div class="date"><a href="">2009-12-29</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.thjy.org
+			                <object height='200' width='450' data='/upload/jonllen/media/Index.swf' type='application/x-shockwave-flash'>
+<param name='quality' value='high' />
+<param name='wmode' value='transparent' />
+<param name='src' value='/upload/jonllen/media/Index.swf' />
+</object>
+<br />
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：Flex 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-12-29 00:33:49.0</li>
+				            <li>阅读(16384)</li>
+				            <li><a class="comment" title="共3条评论" href="/jonllen/flex/sound.aspx#comment">评论(3)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -293,19 +371,22 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
+			            <h2><a href="/jonllen/flex/flex-js.aspx">Flex和js互调</a></h2>
+			            <!--<div class="date"><a href="">2009-12-22</a></div>-->
 			            
 			            <div class="summary">
-			                http://weibo.com/zjj
+			                一、在JavaScript中调用Flex方法
+在Flex中可以用ExternalInterface来调用Flex的方法，途径是通过在Flex应用可调用方法列表中添加指定的公用方法。在Flex 应用中通过调用addCallback()可以把一个方法添加到此列表中。addCallback将一个ActionScript的方法注册为一个 JavaScript和VBScript可以调用的方法。addCallback()函数的定义为：addCallback(function_name:String, closure:Function):void，function_name参数就是在Html页面中脚本调用的方法名。closure参数是要调用的本地方法，这个参数可以是一个方法也可以是对象实例。
+举个例子： import flash.external.*;    public function myFunc():Number {        return 42;    }    public function initApp():void {        ExternalInterface.addCallback("myFlexFunction",myFunc);    }
+那么在Html页面中，先获得SWF对象的引用，也就是用object .../声明的Swf的Id属性，比如说是MyFlexApp。然后就可以用以下方式调用Flex中的方法。
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：Flex 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-12-22 19:58:54.0</li>
+				            <li>阅读(11170)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/flex/flex-js.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -313,19 +394,21 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
+			            <h2><a href="/jonllen/flex/contextMenu.aspx">Flex屏蔽默认右键菜单。</a></h2>
+			            <!--<div class="date"><a href="">2009-12-20</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.fortuneage.com
+			                首先需要修改index.template.html生成的静态模板页面,使用js监听document.onmousedown事件，并调用Flex里暴露的方法，代码如下：(Index为生成的flash对象id)
+function onNsRightClick(e){     if(e.which == 3){          Index.openRightClick();          e.stopPropagation();      }     return false;}function onIeRightClick(e){     if(event.button  1){          Index.openRightClick();          parent.frames.location.replace('javascript: parent.falseframe');     }     return false;}if(navigator.appName == "Netscape"){     document.captureEvents(Event.MOUSEDOWN);      document.addEventListener("mousedown", onNsRightClick, true); }else{     document.onmousedown=onIeRightClick; }第二步，还需要修改index.template.html默认生成flash的脚本，在AC_FL_RunContent方法调用里添加一行"wmode", "opaque",参数设置，这是关键。
+最后，在Flex端注册暴露能被js调用的函数，E
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：Flex 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-12-20 16:36:57.0</li>
+				            <li>阅读(11980)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/flex/contextMenu.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -337,7 +420,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 		</div>
 		<div class="pagination" id="ctl00_cphContent_Pager1">
 
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/jonllen/flex/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
 	</div>
 	
 </div>

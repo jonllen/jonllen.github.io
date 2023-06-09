@@ -1,0 +1,808 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>移动硬盘Linux内搭建MyEcilipse8.6开发环境 - Java - 金龙博客</title>
+<meta name="description" content="还是在去年的时候，买了一个西数WD 3200BEV的320GB移动硬盘，闲来没事瞎折腾，在移动硬盘上安装了个Linux系统，在我的台式机和朋友的笔记本上运行成功，现在已经安装好了MyEcilipse8.6、MySQL5.0、Apache-Tomcat-6.0、PHP5.2的运行环境，下面就来说说的我安装过程中的一些心得体会。
+一、Liunx安装
+二、软件安装
+1）NTFS-3G
+2）OpenOffice
+3）MySQL、Apache2、PHP5、phpMyAdmin、FreeTds、Tomcat
+4）myeclipse-8.6" />
+<link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
+<link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
+</head>
+<body>
+<div id="toolbar">
+	<div class="auto fixft" >
+	    <a href="/" class="home"><span>首页</span><img alt="logo" src="/styles/index/css/default/images/logo_small.gif" /></a>
+		
+		<!--<form id="loginFrom" name="loginFrom" onsubmit="return loginEncrypt();" action="/User/Login.aspx"  method="post" target="loginIfr">
+		    <input type="hidden" id="hdEncrypted" name="hdEncrypted" value="" />
+		    <div class="login">
+			    <span class="ico">用户名：</span>
+			    <input id="username" name="username" onfocus="loadEncryptScript()" class="text" type="text" />
+			    密码：<input id="password" name="password" onfocus="loadEncryptScript()" class="text" type="password" />
+			    <input id="btnLogin" class="btn" type="submit" value="登录" />
+			    
+			    <a href="#" onclick="location='https://localhost/Passport';" >安全登录</a>
+			    
+		    </div>
+		</form>
+		<iframe id="loginIfr" name="loginIfr" scrolling="no" frameborder="0" width="0" height="0"></iframe>
+        <script type="text/javascript">
+            function loadEncryptScript(){
+                if( typeof(encryptScript) == 'undefined') {
+                    
+                    document.getElementById('btnLogin').disabled = true;
+                    
+                    encryptScript = document.createElement('script');
+                    encryptScript.type = 'text/javascript';
+                    encryptScript.src = '/Ajax/RSAEncrypt.aspx?callback=loadEncryptScriptCallback';
+                    var currScriptElem = document.getElementsByTagName('script')[0];
+                    currScriptElem.parentNode.insertBefore(encryptScript, currScriptElem);
+                }
+            }
+            function loadEncryptScriptCallback(){
+                document.getElementById('btnLogin').disabled = false;
+            }
+            function loginEncrypt(){
+                
+                var pwdElem = document.getElementById('password');
+                var encryptedPassword = RSAEncrypt(pwdElem.value);
+                pwdElem.value = encryptedPassword;
+                document.getElementById('hdEncrypted').value = 'RSA';
+                return true;
+            }
+        </script>-->
+		
+		<div class="skin">
+			<ul id="skinlist">
+			    <li class="first">　切换风格：</li>
+			    <li id="temp2" class="on"><a class="green" href="javascript:toggleTemplate(2, '/styles/index/css/default/index.css', false);"  title="切换风格：大自然绿">大自然绿</a></li><li id="temp3" class=""><a class="blue" href="javascript:toggleTemplate(3, '/styles/index/css/blue/index.css', false);"  title="切换风格：深蓝海">深蓝海</a></li><li id="temp4" class=""><a class="red" href="javascript:toggleTemplate(4, '/styles/index/css/guoqing/index.css', false);"  title="切换风格：国庆专题">国庆专题</a></li><li id="temp6" class=""><a class="christmas" href="javascript:toggleTemplate(6, '/styles/index/css/christmas/index.css', false);"  title="切换风格：圣诞节">圣诞节</a></li><li id="temp7" class=""><a class="simple" href="javascript:toggleTemplate(7, '/styles/index/css/simple/index.css', false);"  title="切换风格：简单线条">简单线条</a></li>
+			</ul>
+		</div>
+		<div class="display">
+		    <ul>
+		        <li>　<!--版面：--></li>
+		        <!--<li><a href="#" onclick="location='?display=1';" class="">左-中</a> | </li>
+		        <li><a href="#" onclick="location='?display=2';" class="on">左-中-右</a> | </li>
+		        <li><a href="#" onclick="location='?display=3';" class="">中-右</a> | </li>
+		        <li><a href="#" onclick="location='?display=4';" class="">中</a></li>-->
+		    </ul>
+		</div>
+	</div>
+</div>
+<div class="auto" id="top" style="" >
+	<div class="title">
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
+	</div>
+</div>
+<div class="auto" id="nav" >
+	<ul id="navigation">
+		<li><a href="/">首页</a></li>
+        <li><a href="/jonllen/aspnet/" class="up" >Asp.Net</a></li>
+<li><a href="/jonllen/work/"  >工作</a></li>
+		<li><a class="up" href="/album/">相册</a></li>
+		<li><a href="/leave/">留言</a></li>
+		<li class="preview"></li>
+	</ul>
+</div>
+<script type="text/javascript"> 
+(function (){
+    var select, navlist = document.getElementById('navigation').getElementsByTagName('li');
+    for(var i=0;i<navlist.length;i++)
+    {
+        if ( navlist[i].className=='preview') continue;
+        var link = navlist[i].getElementsByTagName('a')[0];
+        if ( link && window.location.href.toLowerCase().indexOf(link.href.toLowerCase())>-1 )
+        {
+            select = link;
+        }
+    }
+    if( select!=undefined )
+    {
+        select.parentNode.className = "on";
+    }
+})();
+function toggleTemplate(tempId, skinSrc, additionalHtml){
+    if( additionalHtml) {
+        location='?tempid='+tempId;
+        return true;
+    }
+    
+    var linkIndexElem = document.getElementById('linkIndex');
+    var linkIndexHref = '' + skinSrc;
+    linkIndexElem.href = '';
+    linkIndexElem.href = linkIndexHref;
+    
+    var linkTemplateElem = document.getElementById('linkTemplate');
+    var linkTemplateHref = linkIndexHref.substr(0, linkIndexHref.lastIndexOf('/') ) + linkTemplateElem.href.substr(linkTemplateElem.href.lastIndexOf('/'));
+    linkTemplateElem.href = '';
+    linkTemplateElem.href = linkTemplateHref;
+    
+    var skinName = 'Skin';
+    var skinValue = '0='+tempId;
+    var skinDate = new Date();
+    skinDate.setTime(skinDate.getTime() + 1000 * 60 * 120 );
+    document.cookie = skinName + '=' + skinValue + '; path=/; expires=' + skinDate.toGMTString();
+    
+    var templatelist = document.getElementById('skinlist').getElementsByTagName('li');
+    for(var i=0;i<templatelist.length;i++){
+        var templateli = templatelist[i];
+        if (templateli.className == 'on')
+            templateli.className = '';
+        if( templateli.id == 'temp' + tempId)
+            templateli.className = 'on';
+    }
+}
+</script>
+
+<div id="main" class="auto container">
+    <div id="ctl00_panLeft" class="siderLeft column column1">
+	
+<div id="mod25" class="mod info">
+	<div class="head"><strong class="ico">个人档案</strong></div>
+	<div class="cont">
+		<dl>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
+			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
+			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
+		</dl>
+	</div>
+</div>
+<div id="mod26" class="mod calendar">
+	<div class="head"><strong class="ico">博客日历</strong></div>
+	<div id="calendar" class="cont"></div>
+	<script type="text/javascript" language="javascript" src="/styles/index/scripts/DatePicker/WdatePicker.js" ></script>
+    <script type="text/javascript" language="javascript">
+        function ePicked(dp)
+        {
+            for(var i=0;i<archive.length;i++)
+            {
+                //if(archive[i]==dp.cal.getDateStr())
+                    //window.location = '/archive/' + dp.cal.getDateStr() + '.aspx';
+            }
+        }
+        
+            function getArticleArchive()
+		    {
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
+		        Ajax.send({
+		            type : "GET",
+		            url : url,
+		            fn : function (data){
+	                    var rs;
+	                    try{rs=eval("rs="+data);}catch(e){alert(e);return;}
+                        
+	                    if (rs.success)
+	                    {
+	                        var archive = [];
+	                        if(rs.data) archive = rs.data.split(',');
+	                        window.archive = archive;
+	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'2011-02-26' } );
+ 	                    }else
+	                    {
+	                        alert(rs.error);
+	                    }
+                            }
+		        });
+		    }
+        setTimeout(getArticleArchive,0);
+    </script>
+</div>
+<div id="mod27" class="mod category">
+	<div class="head"><strong class="ico">分类文档</strong></div>
+	<div class="cont">
+		<ul>
+
+			
+			        <li>
+			            
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
+			            </a>
+			        </li>
+			
+		</ul>
+	</div>
+</div>
+ 
+<!--<div id="mod28" class="mod links">
+	<div class="head"><strong class="ico">友情链接</strong></div>
+	<div class="cont">
+		<ul>
+                    
+		    <li><a href="http://www.applezqp.com" title="老平同志，高妹。" target="_blank">applezqp</a></li>
+                    
+		    <li><a href="http://www.thjy.org" title="天河部落教育博客" target="_blank">天河部落</a></li>
+                    
+		    <li><a href="http://weibo.com/zjj" title="时代财富张静君的微博" target="_blank">张静君</a></li>
+                    
+		    <li><a href="http://www.fortuneage.com" title="广州网站建设" target="_blank">时代财富</a></li>
+                    
+		</ul>
+	</div>
+</div>-->
+ 
+</div>
+
+	<div class="siderMiddle">
+	    <div class="content column column2">
+            
+
+    <div class="articlecont">
+        <div class="position">
+		    <strong>当前位置：</strong>
+		    <a href="http://www.jonllen.com">首页</a>
+		     > <a href="/jonllen/java/">Java</a>
+		     > <a href="/jonllen/java/140.aspx">移动硬盘Linux内搭建MyEcilipse8.6开发环境</a>
+		</div>
+        <div class="article">
+			<div class="title"><h2>移动硬盘Linux内搭建MyEcilipse8.6开发环境</h2></div>
+			<div class="category">分类：<a href="/jonllen/java/">Java</a></div>
+			<div class="fontZoom"><a href="javascript:zoom(20);" style="font-size:large; font-weight:700">大</a><a href="javascript:zoom(14);" style="font-size:14px; font-weight:500;">中</a><a href="javascript:zoom(10);">小</a></div>
+			<div class="cont" id="content">
+				<p>还是在去年的时候，买了一个西数WD 3200BEV的320GB移动硬盘，闲来没事瞎折腾，在移动硬盘上安装了个Linux系统，在我的台式机和朋友的笔记本上运行成功，现在已经安装好了MyEcilipse8.6、MySQL5.0、Apache-Tomcat-6.0、PHP5.2的运行环境，下面就来说说的我安装过程中的一些心得体会。</p>
+<p><strong>一、Liunx安装</strong></p>
+<p>第一次是拿RedHat Linux AS 5的光碟是准备安装在我台式机硬盘上的，结果根据&ldquo;向导&rdquo;一步步安装后发现进不了Windows操作系统了，用PE内存操作系统进入后，发现Linux把我之前的分区表的结构完全搞乱了，原来的几个分区不见了，还好后面用分区表医生找回了丢失的分区，再用FinalData恢复了分区里数据，最后只丢失了一个系统分区的数据，避免了资料的灭顶之灾。</p>
+<p>第二次安装Linux时汲取了第一次的深刻教训，先是在网上找了很多的相关资料，然后决定在移动硬盘内先安装。先是备份了分区表结构，然后在单独为Linxu划出ext3、swap两个主分区，最后安装时选择自定义安装，设置Linux安装的根目录/为ext3对应分区。</p>
+<p>下面为我的双系统硬盘分区方案：</p>
+<table border="1" cellspacing="0" cellpadding="2" class="collapse">
+<tr>
+<th>分区</th><th>卷标</th><th>类型</th><th>格式</th><th>大小</th><th>引导</th>
+</tr>
+<tr>
+<td>sda1</td>
+<td>Win(活动)</td>
+<td>主分区</td>
+<td>NTFS</td>
+<td>30GB</td>
+<td>ntldr(boot.ini) grldr(menu.lst)</td>
+</tr>
+<tr>
+<td>sda5</td>
+<td>Tool</td>
+<td rowspan="3">逻辑分区</td>
+<td>NTFS</td>
+<td>80GB</td>
+<td></td>
+</tr>
+<tr>
+<td>sda6</td>
+<td>Data</td>
+<td>NTFS</td>
+<td>120GB</td>
+<td></td>
+</tr>
+<tr>
+<td>sda7</td>
+<td>Picture</td>
+<td>NTFS</td>
+<td>50GB</td>
+<td></td>
+</tr>
+<tr>
+<td>sda8</td>
+<td>/</td>
+<td>主分区</td>
+<td>ext3</td>
+<td>16GB</td>
+<td></td>
+</tr>
+<tr>
+<td>sda9</td>
+<td>Linux Swap</td>
+<td>主分区</td>
+<td>swap</td>
+<td>2.06GB</td>
+<td></td>
+</tr>
+</table>
+<p>由于我的移动硬盘第1个分区上安装好了Windows，已能正常引导只是进入后会蓝屏，所以再安装Linux时就没有写入引导，只是下载了grldr引导，再在boot.ini后面添加一条记录C:\grldr="Grldr (移动硬盘)"，grldr引导再通过读取menu.lst菜单进入Linux，这样引导能够使Windows和Linux多操作系统并存。</p>
+<p>我的menu.lst内容为：</p>
+<div class="code">
+<pre>default 0
+timeout 10
+
+title RedHat Linux 5.5 (hd0,7)
+root (hd0,7)
+kernel /boot/vmlinuz-2.6.18-194.el5 ro root=LABEL=/
+initrd /boot/initrd-2.6.18-194.el5.img
+
+title WINDOWS NT/2003/XP
+map (hd0) (hd0)
+map (hd0) (hd1)
+root (hd0,0)
+chainloader (hd0,0)+1
+boot
+rootnoverify (hd0,0)
+chainloader +1
+clear
+
+title setup otehr IDE
+fallback 6
+root (hd0,1)
+chainloader +1
+
+title setup cdrom
+cdrom --init
+map --hook
+chainloader (cd0)
+boot
+
+title reoot
+reboot
+clear
+
+title halt
+halt</pre>
+</div>
+<p><strong>二、软件安装</strong></p>
+<p>1）ntfs-3g</p>
+<p>NTFS-3g是一个开源软件，它支持在Linux下面读写NTFS格式的分区。安装完成后再是用mount命令挂接到Linux内，可轻松实现Windows分区的文件访问。</p>
+<div style="text-align: center;"><a href="/upload/jonllen/article/Linux_FileSystems.png" target="_blank"><img title="Linux FileSystems PNG" src="/upload/jonllen/article/Linux_FileSystems.png" width="480" /><br />Linux挂接分区FileSystems</a></div>
+<p>2）OpenOffice</p>
+<p>OpenOffice是一套跨平台的办公室软件套件，且支持Microsoft Office的文件格式，而且免费开源。</p>
+<p>3）MySQL、Apache2、PHP5、phpMyAdmin、FreeTds、Tomcat</p>
+<p>这些都是开发的常用软件工具，RedHat Linux中可以使用yum安装和更新RPM软件包，资源库强大，并会自动解决包的依赖问题，所以用yum来管理Linux中的RPM软件包都很便捷。</p>
+<p>4）myeclipse-8.6</p>
+<p>第一次是下载了<a href="http://downloads.myeclipseide.com/downloads/products/eworkbench/galileo/myeclipse-8.5.0-linux-gtk-x86.tgz" target="_blank">myeclipse-8.5.0-linux-gtk-x86.TGZ</a>，解压时提示错误。第二次使用迅雷配置代理服务器去官网下载<a href="http://downloads.myeclipseide.com/downloads/products/eworkbench/galileo/myeclipse-8.6.0-linux-gtk-x86.tgz" target="_blank">myeclipse-8.6.0-linux-gtk-x86.tgz</a>，下载成功。</p>
+<p>下载完了从Windows拷贝到Linux分区，解压安装，提示的一个错误困扰了我好几天，错误信息大概的内容为：</p>
+<div class="code">
+<pre>eclipse.buildId=unknown
+java.fullversion=GNU libgcj 4.1.2 20080704 (Red Hat 4.1.2-48)
+
+!MESSAGE Product com.genuitec.pulse2.client.installer.ui.product could not be found.
+
+# !MESSAGE Application error  
+# !STACK 1  
+# java.lang.RuntimeException: No application id has been found.</pre>
+</div>
+<p>在网上找了很久资料，有的说是安装目录中包含中文，而我的目录是没有中文和空格的。有的说是config.ini问题，我试了几次也不行。还有的说是环境变量问题，而我的/etc/profile环境变量里也设置jdk路径，Tomcat可以正常运行。后面看到有人说到Linux系统下多个Java版本的问题，gij导致安装新版本的JDK1.6无效，才想到了可能是优先级的问题，后面一看真的是因为这样原因导致myeclipse安装提示错误，解决的办法是设置JDK1.6为Linux系统默认的Java版本，命令行如下：</p>
+<div class="code">
+<pre>--查看所有java版本
+alternatives --display java
+--设置 java的优先级别
+update-alternatives --install /usr/bin/java java /usr/java/jdk1.6.0_23/bin/java 1640
+--设置默认的java版本
+alternatives --config java</pre>
+</div>
+<p>原来我本机有2个Java版本，默认为GNU libgcj 4.1.2，这个可能是RedHat自带的Java。设置默认的java为JDK1.6后，myeclipse8.6就可以安装了，安装时它可能还会提示如下信息：</p>
+<p>Pulse has detected you are using an Open Source Java Virtual Machine. Some features may not work correctly under an Open VM. For example, connection to the pulse servers will be through a non-secure connection (http) in this case your login information and credentials will still be encrypted.\n\nDo you still want to continue?</p>
+<p>不过这个不会影响myeclipse8.6的正常安装，意思是系统装的JDK与Myeclipse自带不同，直接Continue使用myeclipse8.6自带的就行了。</p>
+<div style="text-align: center;"><a href="/upload/jonllen/article/Linux_MyEclipse_Install.png" target="_blank"><img src="/upload/jonllen/article/Linux_MyEclipse_Install.png" alt="Linux下MyEclipse8.6的安装" width="480" /><br />Linux下MyEclipse8.6的安装</a></div>
+<div style="text-align: center;"><a href="/upload/jonllen/article/Linux_MyEclipse_IDE.png" target="_blank"><img src="/upload/jonllen/article/Linux_MyEclipse_IDE.png" alt="Linux下MyEclipse8.6的IDE环境" width="480" /><br />Linux下MyEclipse8.6的IDE环境</a></div>
+<p>至此，MyEclipse8.6顺利安装完成。</p>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
+	        <script type="text/javascript">new ImgLazy( { selector : 'content', maxWidth : document.getElementById('content').offsetWidth, 'loadSrc' : '/styles/index/css/default/images/lazyloading.gif' });</script>
+
+			<div class="tags">标签：<a href="/jonllen/java/">Java</a> 
+			    
+			    
+			</div>
+
+			<div class="desc">
+			  <ul>
+				<li>posted@ 2011-02-26 11:32</li>
+				<li>update@ 2011-02-26 18:29:39</li>
+				<li>阅读(<span id="articleClick">10032</span>)</li>
+				<li>评论(6)</li>
+				
+			  </ul>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ad.js"></script>
+
+		</div>
+<div class="context">
+			<ul>
+				<li>上一篇：<a href="/jonllen/java/102.aspx">Java和.Net三层架构和MVC</a></li>
+<li>下一篇：<a href=""></a></li></ul>
+		</div>
+		
+
+<div class="correlative">
+	
+		    <h4>相关文章</h4>
+			<ul>
+
+
+
+			</ul>
+		
+</div>
+
+		
+		<div class="comment">
+			<div class="title">评论</div>
+			<div class="commentlist" id="commentContent">
+				
+
+
+
+				        <div class="item">
+					        <div class="desc">
+						        <ul class="options">
+							        <li><a href="javascript:;" onclick="quote(this,'power cord')">引用</a></li>
+
+						        </ul>
+						        <a>1楼</a> power cord 2011-03-11 16:16:05
+					        </div><div class="cont"><em>评论内容需要审核才能显示。</em></div>
+					        
+				        </div>
+
+
+
+
+				        <div class="item">
+					        <div class="desc">
+						        <ul class="options">
+							        <li><a href="javascript:;" onclick="quote(this,'power cord')">引用</a></li>
+
+						        </ul>
+						        <a>2楼</a> power cord 2011-03-11 16:16:09
+					        </div><div class="cont">额，安装个虚拟机，在虚拟机上赚个linux就可以了。</div>
+					        <div class="reply" ><span>回复：</span>虚拟机毕竟是虚拟的，我还是比较喜欢自己折腾,呵~（2011-03-11 16:26:09）</div>
+				        </div>
+
+
+
+
+				        <div class="item">
+					        <div class="desc">
+						        <ul class="options">
+							        <li><a href="javascript:;" onclick="quote(this,'air nailer')">引用</a></li>
+
+						        </ul>
+						        <a>3楼</a> air nailer 2011-03-12 11:19:50
+					        </div><div class="cont">LINUX，最近貌似又蛮多人都在讨论这个，真的有那么强大，难道我也去用用看啊</div>
+					        <div class="reply" ><span>回复：</span>如果你也是做开发，建议还是可以去了解的。（2011-03-12 12:32:00）</div>
+				        </div>
+
+
+
+
+				        <div class="item">
+					        <div class="desc">
+						        <ul class="options">
+							        <li><a href="javascript:;" onclick="quote(this,'Hex Bolts')">引用</a></li>
+
+						        </ul>
+						        <a>4楼</a> Hex Bolts 2011-03-21 10:22:02
+					        </div><div class="cont">博主真强啊，我连linux都不会装，更何况是在linux上搭建开发环境。</div>
+					        <div class="reply" ><span>回复：</span>额，这都是靠Linux的强大，我曾试图在移动硬盘装个Windows系统每次启动都是蓝屏。（2011-03-21 10:28:02）</div>
+				        </div>
+
+
+
+
+				        <div class="item">
+					        <div class="desc">
+						        <ul class="options">
+							        <li><a href="javascript:;" onclick="quote(this,'剑锋博客')">引用</a></li>
+
+						        </ul>
+						        <a>5楼</a> 剑锋博客 2011-03-21 23:23:02
+					        </div><div class="cont">博客的程序你自己开发的吗？用了3年dotnet，再回头用asp和php，感觉很自由！用dotnet就是在调用条条框框。</div>
+					        <div class="reply" ><span>回复：</span>是我自己开发的，感觉DotNet也还行吧，看你怎么用。（2011-03-22 09:50:23）</div>
+				        </div>
+
+
+
+
+				        <div class="item">
+					        <div class="desc">
+						        <ul class="options">
+							        <li><a href="javascript:;" onclick="quote(this,'宁波LED')">引用</a></li>
+
+						        </ul>
+						        <a>6楼</a> 宁波LED 2011-03-25 08:45:50
+					        </div><div class="cont">我装过虚拟机，还在虚拟机上装了个红帽子。</div>
+					        <div class="reply" ><span>回复：</span>我这个也是红帽子的虚拟机.（2011-03-25 08:54:45）</div>
+				        </div>
+
+
+				
+			</div>
+		</div>
+		<div class="postcomment">
+	        <div class="title">发表评论<a id="comment"></a></div>
+	        <div class="box">
+		        <div class="fi"><label>用户名</label><input id="txtUserName" type="text" value="" class="text" title="请输入显示用户名称" /><span class="note">*必填</span></div>
+		        
+		        
+		        <div class="fi"><label>网站链接</label><input id="txtWebsite" type="text" class="text" title="请输入您的网站链接地址以便回访（非必填）" /></div>
+		        
+		        <div class="fi"><label>邮箱地址</label><input id="txtEmail" type="text" class="text" title="请输入您的邮箱地址以便回复（非必填）" /><input id="chkEmailNotify" type="checkbox" title="当博主回复时以邮件通知我" />回复通知我</div>
+		        <div class="fi"><label>内容</label><textarea id="txtContent" class="textarea"></textarea><span class="note">*必填</span></div>
+		        <div class="btn"><input type="button" class="submit" onclick="postComment()" value="提交" /></div>
+	        </div>
+        </div>
+        <script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
+        <script type="text/javascript">
+            function postComment()
+		    {
+		        var url = "/plugin/web/doSaveComment.do?sourcetype=1&sourceid=140&siteId=1";
+		        var data = "username="+encodeURIComponent(document.getElementById("txtUserName").value);
+		        data += '&sourceurl=/jonllen/java/140.aspx';
+		        data += "&content="+ encodeURIComponent(document.getElementById("txtContent").value);
+		        var pwd = document.getElementById("txtPassword");
+		        if (pwd!=null)
+		        {
+		            data += "&pwd="+ pwd.value;
+		        }
+		        var website = document.getElementById("txtWebsite");
+		        if (website!=null)
+		        {
+		            data += "&website="+ website.value;
+		        }
+		        data += "&email="+ encodeURIComponent(document.getElementById("txtEmail").value);
+		        data += "&emailNotify="+ encodeURIComponent(document.getElementById("chkEmailNotify").checked);
+		        Ajax.send({
+		            type : "POST",
+		            url : url,
+		            data : data,
+		            fn : function (data){
+	                    var rs;
+	                    try{rs=eval("rs="+data);}catch(e){alert(e);return;}
+                        
+	                    if (rs.success)
+	                    {
+	                        appendComment();
+	                        if(document.getElementById('commentNothing')!=null){ 
+	                          document.getElementById('commentNothing').style.display = 'none';
+	                        }
+	                        document.getElementById("txtContent").value = "";
+	                        alert("提交评论成功！");
+	                    }else
+	                    {
+	                        alert(rs.error);
+	                    }
+                            }
+		        });
+		    }
+
+function appendComment()
+		    {
+var itemComment = document.createElement('div');
+itemComment.className = 'item';
+var username = document.getElementById("txtUserName").value;
+var index = document.getElementById('commentContent').getElementsByTagName('ul').length + 1;
+var content =  document.getElementById("txtContent").value;
+itemComment.innerHTML = '<div class="desc"><ul class="options"><li><a href="javascript:;" onclick="quote(this,\''+username+'\')">引用</a></li></ul><a>'+index+'楼</a> '+username+'</div><div class="cont">'+content+'</div>';
+document.getElementById('commentContent').appendChild(itemComment);
+}
+
+            function addClick()
+		    {
+		        var url = "/plugin/web/doAddClick.do?columnType=1&documentId=140";
+		        Ajax.send({
+		            type : "GET",
+		            url : url,
+		            fn : function (data){
+		                 var clickElem = document.getElementById('articleClick');
+		                 if(clickElem !=null) clickElem.innerHTML = data; 
+		            }
+		        });
+
+		    }
+            addClick();
+        </script>
+		
+	</div>
+	<script type="text/javascript">
+	    function zoom(size)
+	    {
+	        var content = document.getElementById("content");
+	        content.style.fontSize = size+"px";
+	        for(var i=0;i<content.childNodes.length;i++)
+	        {
+	            if(content.childNodes[i].nodeType==1)
+	                content.childNodes[i].style.fontSize = size+"px";
+	        }
+	    }
+	    
+	    function quote(target,name)
+	    {
+	        var content = name+"："+target.parentNode.parentNode.parentNode.nextSibling.innerHTML;
+	        var reply = document.getElementById("txtContent");
+	        if (reply==null) return;
+	        reply.value += "[quote]"+content.replace(/<br>/ig,'\n\r')+"[/quote]\n";
+	        reply.focus();
+	        
+            var r = reply.createTextRange();
+            r.moveStart('character',reply.innerHTML.length);
+            r.collapse(true);
+            r.select();
+            
+            //replace <fieldset(\S|\s)+?legend>(\S|\s)+</fieldset> to [quote]$2[/quote]
+	    }
+	</script>
+ 
+
+
+        </div>
+	</div>
+	<div id="ctl00_panRight" class="siderRight column column3">
+	
+<div id="mod29" class="mod recommend">
+    <h4 class="head">博文推荐</h4>
+    <div class="cont">
+	    <ul>
+                    
+
+	    </ul>
+    </div>
+</div>
+<div id="mod30" class="mod comment">
+    <h4 class="head">最新评论</h4>
+    <div class="cont">
+	    <ul>
+		    
+
+<li><a href="/jonllen/work/164.aspx#comment"><b>oracle_cs</b>：您好，我最近也在研究国密这块，您上面的加密中用到了SM2CryptoServiceProvider，您能把这个实现发给我邮箱吗？ 1607418266@qq.com</a></li>
+
+<li><a href="/jonllen/work/164.aspx#comment"><b>oracle_cs</b>：您好，我最近也在研究国密这块，您上面的加密中用到了SM2CryptoServiceProvider，您能把这个实现发给我邮箱吗？ 1607418266@qq.com</a></li>
+
+<li><a href="/jonllen/js/175.aspx#comment"><b>cstomcat</b>：您好，请问用js可以实现sm3算法吗？改造的难度大吗？</a></li>
+
+<li><a href="/jonllen/js/175.aspx#comment"><b>cstomcat</b>：您好，请问用js可以实现sm3算法吗？改造的难度大吗？</a></li>
+
+<li><a href="/jonllen/work/174.aspx#comment"><b>王誉晓</b>：博主，膜拜您已经很久了，能加个qq号吗，有很多问题想请教您啊，qq：1261634218</a></li>
+
+	    </ul>
+    </div>
+</div>
+ 
+<div id="mod31" class="mod recent">
+    <h4 class="head">最近发表</h4>
+    <div class="cont">
+	    <ul>
+
+                    
+		    <li><a href="/jonllen/js/179.aspx">使用ECharts报表统计公司考勤加班，大家加班多吗？</a>(2015-06-05)</li>
+                    
+		    <li><a href="/jonllen/js/178.aspx">JavaScript实现SM2算法加解密</a>(2014-10-28)</li>
+                    
+		    <li><a href="/jonllen/breast/177.aspx">2014年国庆</a>(2014-10-04)</li>
+                    
+		    <li><a href="/jonllen/breast/176.aspx">面对&逃避</a>(2014-08-04)</li>
+                    
+		    <li><a href="/jonllen/js/175.aspx">JS版SM2国密算法的签名验证</a>(2014-06-17)</li>
+                    
+	    </ul>
+    </div>
+</div>
+ 
+<div id="mod36" class="mod search">
+	<h4 class="head">搜索</h4>
+	<div class="cont">
+		<form action="/" method="get">
+	        <input type="text" name="key" class="text" value="" />
+	        <input type="submit" class="btn" value="搜索" />
+	    </form>
+	</div>
+</div>
+ 
+<div id="mod32" class="mod click">
+    <h4 class="head">关注最多</h4>
+    <div class="cont">
+	    <ul>
+                    
+		    <li><a href="/jonllen/aspnet/tinymce.aspx">TinyMce在线编辑器完美打造成Asp.Net服务器自定义控件</a>(31679)</li>
+                    
+		    <li><a href="/jonllen/js/js-popup.aspx">摆脱JQuery—之自定义模拟弹窗层功能。</a>(25861)</li>
+                    
+		    <li><a href="/jonllen/aspnet/pd.aspx">使用PowerDesigner的物理模型创建升级管理数据库</a>(23039)</li>
+                    
+		    <li><a href="/jonllen/aspnet/24.aspx">二次开发WinWebMail邮件系统接口 - 企业邮件服务器解决方案</a>(20062)</li>
+                    
+		    <li><a href="/jonllen/java/struts.aspx">Struts增删改查实例及源代码下载</a>(19711)</li>
+                    
+	    </ul>
+    </div>
+</div>
+ 
+</div>
+</div>
+
+<div class="auto" id="foot">
+    <div class="wrapper">
+	Powered By ：Jonllen  <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备10049366号</a>
+	</div>
+</div>
+ 
+<script type="text/javascript" src="/styles/index/scripts/Drag.js"></script>
+<script type="text/javascript" src="/styles/index/scripts/Tooltip.js" ></script>
+<div style="display:none"> 
+    <script type="text/javascript" src="/styles/index/scripts/statistics.js"></script>
+</div>
+</body>
+</html>

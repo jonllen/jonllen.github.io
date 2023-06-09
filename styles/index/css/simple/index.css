@@ -1,0 +1,41 @@
+﻿@charset "utf-8";
+@import url(../default/index.css);
+
+body{background-color:#fdfef6;}
+
+#toolbar{background-color:#F5F5F5;border-bottom:solid 1px #E3E3E3;}
+
+/* --母板页 顶部banner内容-- */
+#top{margin-top:0px; margin-bottom:1px; position:relative; overflow:hidden; font-size:0; background:url(images/banner.jpg) top center; height:250px;}
+#top .title{ position:absolute; top:100px;left:77px; color:#5E615A;font-size:14px}
+
+/* --母板页 顶部导航条-- */
+#nav ul{ background:url(images/bg_nav.png) repeat-x; height:33px; line-height:33px;padding-left:5px;}
+#nav ul li{width:120px;float:left; font-weight:700;}
+#nav ul li a{text-align:center; color:#FFFFFF; text-decoration:none;background:url(images/bg_nav_interval.png) no-repeat right center;}
+#nav ul li.on a,
+#nav ul li a:hover{display:block;background:url(images/bg_nav_on.png) no-repeat center;text-align:center; color:#d2e5fb;}
+#nav ul li.preview{ float:right;padding-top:10px; padding-right:10px; padding-bottom:5px; padding-left:20px; color:#d5dce0;width:auto;line-height:normal;}
+#nav ul li.preview a{display:inline;padding:2px; background:none;}
+#nav ul li.preview a.on,
+#nav ul li.preview a:hover{ border:dashed 1px #ccc;background:none; display:inline;}
+
+/* --通用mod模块-- */
+.mod{border:solid 1px #bac9b3;}
+.mod .head{height:28px; line-height:28px; background:url(images/bg_title.jpg) repeat-x; border-bottom:none;}
+.mod .cont{ padding:8px;}
+.mod .cont ul{ margin:0; padding:0;}
+.mod .cont ul li{ margin:8px 0; list-style:square inside;}
+.mod .cont ul li a:hover{ text-decoration:none;border-bottom:dashed 1px #8a8675;}
+
+/* --首页 文章列表页 --*/
+.article,.album,.photo,.profile
+,.leavecont .leave{ border:solid 1px #bac9b3; }
+.article .title,.album .title,.photo .title,.profile .crossband
+,.leavecont .leave .title{ height:28px; line-height:28px;background:url(images/bg_title.jpg) repeat-x; border-bottom:none;}
+
+.twitter .item{ background:none; border:none;}
+
+.listmode .item,
+.article .pagination span,
+.article .pagination a{border:solid 1px #bac9b3;}

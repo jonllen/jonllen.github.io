@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	Java - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -142,12 +143,13 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +169,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -199,15 +201,85 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -243,7 +315,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	
 		<div class="position title">
 		    
-		    <strong>友情链接</strong>
+		    <strong>Java</strong>
             
 		</div>
 		<div class="articlelist">
@@ -253,19 +325,25 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/jonllen/java/140.aspx">移动硬盘Linux内搭建MyEcilipse8.6开发环境</a></h2>
+			            <!--<div class="date"><a href="">2011-02-26</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.applezqp.com
+			                还是在去年的时候，买了一个西数WD 3200BEV的320GB移动硬盘，闲来没事瞎折腾，在移动硬盘上安装了个Linux系统，在我的台式机和朋友的笔记本上运行成功，现在已经安装好了MyEcilipse8.6、MySQL5.0、Apache-Tomcat-6.0、PHP5.2的运行环境，下面就来说说的我安装过程中的一些心得体会。
+一、Liunx安装
+二、软件安装
+1）NTFS-3G
+2）OpenOffice
+3）MySQL、Apache2、PHP5、phpMyAdmin、FreeTds、Tomcat
+4）myeclipse-8.6
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：Java 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2011-02-26 11:32:38.0</li>
+				            <li>阅读(10032)</li>
+				            <li><a class="comment" title="共6条评论" href="/jonllen/java/140.aspx#comment">评论(6)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -273,19 +351,23 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
+			            <h2><a href="/jonllen/java/102.aspx">Java和.Net三层架构和MVC</a></h2>
+			            <!--<div class="date"><a href="">2010-01-30</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.thjy.org
+			                这几天好象发生了很多事情，好象有些憋气，感觉很多事都不顺心，竟然连跑路的想法都有了，也许这就是生活，大大小小总会有那么些的磨砺吧。不管怎么样，都归结自己不够强大。通过最近一段时间的学习，深刻的认识到以前所学知识的局限性。在使用Java的Spring框架的时候，认知到了一些新的编程思想，同时也对它强大的功能为之折服。对比之前编程方式，总结如下：
+1.深入的了解面向对象编程;
+2.面向接口编程，依赖注入接口的实例;
+3.三层架构表现层(MVC)、业务逻辑层、持久层;
+4.使用观察着模式、面向切面(AOP)编程。
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：Java MVC
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
+				            <li title="">posted@ 2010-01-30 16:55:29.0</li>
+				            <li>阅读(13115)</li>
+				            <li><a class="comment" title="共4条评论" href="/jonllen/java/102.aspx#comment">评论(4)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -293,19 +375,24 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
+			            <h2><a href="/jonllen/java/100.aspx">Struts+Hibernate学习笔记</a></h2>
+			            <!--<div class="date"><a href="">2010-01-06</a></div>-->
 			            
 			            <div class="summary">
-			                http://weibo.com/zjj
+			                目录
+1.配置好Hibernate数据库连接
+2.使用Hibernate映射数据库到实体类
+3.创建struts应用程序
+一、配置好Hibernate数据库连接
+创建一个名为Hibernate的新工程，要使用Hibernate需要先创建一个数据库连接，选择Window工具栏Show View菜单中选择Other，在MyEclipse Enterprise Workbench目录下找到DB Browser数据库浏览器，先新建一个数据库连接驱动，输入正确的Connection URL数据库连接字符串和用户名密码，Add JARs选择本地的数据驱动文件，系统会自动选择驱动文件里的驱动类，完成之后在DB Browse里就多了一个数据库连接项，选择一个配置好的数据库连接项右击Open Connection连接，如果我们可以看到数据库和下面的表则证明配置数据库连接成功。右击工程项目选择MyEclipse菜单中的Add Hibernate Capabilities项，添加对Hibernate标签库的引用，选择Hibernate 3.1版，Next下一步使用hibernate.cfg.xml默认配置文件名，在连接数据库的步骤里我们选择JDBC驱动连接方式，在DB Driver下拉列表项中我们可以看到刚开始在DB Browser里配置好的数据库连接，选择一个下面的Connection URL数据库连接字符串和用户名密码自动填充，如果MyEclipse还未使用DB Browser数据库连接浏览器.
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：Java 
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
+				            <li title="">posted@ 2010-01-06 19:59:48.0</li>
+				            <li>阅读(12093)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/java/100.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -313,19 +400,86 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 
 <div class="item">
 			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
+			            <h2><a href="/jonllen/java/78.aspx">Java工厂模式切换数据库</a></h2>
+			            <!--<div class="date"><a href="">2009-10-23</a></div>-->
 			            
 			            <div class="summary">
-			                http://www.fortuneage.com
+			                前二天，在struts介绍的实例中就提到数据库的访问使用了工厂模式，可以实现在线切换数据库的功能，同样是那个NetBeans工程，今天就来具体介绍我实现的思路。
+网上有很多工厂模式的介绍，我最先接触是在.Net的PetShop项目里看到的，最近公司要搞Java，所以就搬到Java里来运用下，看了一些资料好象我这种实现的方法叫做简单工厂，是通过定义接口来实现的，在面向对象编程的世界里面，接口用来定义的一组规范，它强制规范实现类要一定要实现完成它的所有成员，至于接口的调用到底使用那个实现类则是在工厂类里面产生的。接口一般多定义对象的行为动作即方法，而抽象类则多用来定义对象的公共属性，比如男人和女人可以抽象出人做为抽象基类，因为都有人的一些公共特征，至于什么时候用接口什么时候用抽象类，这个就需要看实际项目中对象的关系了。
+还是用户的增删改查功能的实现为例子，我们先需要定义用户的接口IUser，然后使用不同数据库来分别实现它，程序使用那种数据库则放在properties资源文件里配置，工厂在根据配置产生实例类，以接口形式返回到业务逻辑层，然后在页面里调用业务逻辑层方法。这里我用PowerDesiger简单画了一个类图如下...
 			            </div>
-			            <div class="tags">标签：友情链接 
+			            <div class="tags">标签：Java 工厂模式
 			            </div>
 			            <div class="desc">
 			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
+				            <li title="">posted@ 2009-10-23 09:33:58.0</li>
+				            <li>阅读(12163)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/java/78.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/java/struts.aspx">Struts增删改查实例及源代码下载</a></h2>
+			            <!--<div class="date"><a href="">2009-10-19</a></div>-->
+			            
+			            <div class="summary">
+			                今天，我又做了一个培训，这次讲的是Java的Struts，康师傅很重视这次Struts的培训，他说我这次做的准备比较充分，可能他是觉得我对Struts已经比较了解了吧，但其实这一次是我最没有做准备的一次，我以前二次培训都会预先写一篇博文或内容大纲，而我这次什么都没有做，虽然这次我能从头到尾不停的讲下去，但这些都是我自己明白大家却没能听懂，没能教会大家，这证明我的表达问题的方法方式还有待改进，没有从大家的角度了看问题，才导致这次培训大家都没有听懂，我之过也。
+虽然，康师傅下令叫我下个星期分二次重新讲Struts，但我还是来回顾一下我今天讲的Struts内容。
+今天我们主要讲的是Struts，我简单的用pd画了一个时序图，以便了解它的整个流程，这里我们可以看出，其实struts也是java里面MVC模式的一种，jsp或do页面为表现层(View)，StrutsForm充当映射模型(Model)，而StrutsAction则是控制中心(Control)，其中还有FormValidate和ActionValidate的Struts验证。图不是很正规，如下：
+
+这里我会分为增、删、改、查四个功能来分别在Struts里的实现，然后讲述它每一个功能走的流程。这里先来讲增加功能的实现，在项目里面增加Struts的引用，然后新建useradd.jsp页面，
+			            </div>
+			            <div class="tags">标签：Java struts
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2009-10-19 09:45:27.0</li>
+				            <li>阅读(19711)</li>
+				            <li><a class="comment" title="共2条评论" href="/jonllen/java/struts.aspx#comment">评论(2)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/java/18.aspx">Java方法强制传递引用参数(做为返回值)，改变被传递参数值。</a></h2>
+			            <!--<div class="date"><a href="">2009-06-28</a></div>-->
+			            
+			            <div class="summary">
+			                 今天在Jsp页面内调用方法的时候碰到了一个问题，是一个服务器端分页的方法，本身是返回List集合的，但是还需要返回总记录数和总页面，没办法返回，想到Java内方法的传值传引用类型，在网上找了Java传递参数分为2种：值类型，Java里面也叫简单类型，这种参数类型的传递的是它的副本拷贝； 
+引用类型，传递的是对象引用地址，如果在方法内改变该参数对象属性即是对原引用对象的改变；如果不想这样传递可传递 对象.clone() 即传递的是该对象的副本拷贝； 那么，如果我想传递简单参数类型，但是我又想在方法内能改变原参数的值那如果传递呢？比如说一个方法是返回List集合但是我还需要传递一个总记录条数和总页面的参数，在该方法内进行赋值。Java内传递值还是引用类型还有一条规定，所有数组参数都是引用传递，即传递的是原地址，一旦改变数组参数值原引用数组值也回相应的改变，这样便能在一个有返回值的方法里还返回总记录条数和页数。这个问题存在与jsp页面，就算你把int改为integer类型还不性，不知道在action里面是否有这个问题。
+			            </div>
+			            <div class="tags">标签：Java 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2009-06-28 14:28:06.0</li>
+				            <li>阅读(14556)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/java/18.aspx#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/java/17.aspx">java.lang.NoSuchMethodError错误</a></h2>
+			            <!--<div class="date"><a href="">2009-06-28</a></div>-->
+			            
+			            <div class="summary">
+			                一个错误异常java.lang.NoSuchMethodError，没有这样的方法错误，不过你可别被它的这个名字给忽悠了，因为我明明是有这个方法的，按ALT+S里还有这个方法的智能提示。我觉得这个是TOMCAT的本身的问题，按CTRL+S保存会即时的编译一些代码，但是有时候会出现一些小BUG，想这样的错误关掉TOMCAT重新部署项目后再启动就OK了.
+			            </div>
+			            <div class="tags">标签：Java 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2009-06-28 14:16:11.0</li>
+				            <li>阅读(11198)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/java/17.aspx#comment">评论(0)</a></li>
 			              </ul>
 			            </div>
 		            </div>
@@ -337,7 +491,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 		</div>
 		<div class="pagination" id="ctl00_cphContent_Pager1">
 
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/jonllen/java/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
 	</div>
 	
 </div>

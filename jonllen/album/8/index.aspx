@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	友情链接 - 金龙博客
+	网络收藏 - 金龙博客
 </title>
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
 <link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
@@ -72,8 +72,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>友情链接</h3>
-	    <h4></h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -136,18 +137,19 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 }
 </script>
 <div id="main" class="auto container">
-    <div id="ctl00_panLeft" class="siderLeft column column1">
+	<div id="ctl00_panLeft" class="siderLeft column column1">
 	
 <div id="mod25" class="mod info">
 	<div class="head"><strong class="ico">个人档案</strong></div>
 	<div class="cont">
 		<dl>
-			<dt><a href="/links/"><img src="" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />友情链接</a></dt>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
 			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
 			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
-			<dd>妮称：友情链接</dd>
-			<dd>来自：</dd>
-			<dd>简述：</dd>
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
 		</dl>
 	</div>
 </div>
@@ -167,7 +169,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=580&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -199,15 +201,43 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/album/4/" >
+			                天河公园<!-- (7)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/album/8/" >
+			                网络收藏<!-- (12)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/10/" >
+			                科韵路<!-- (7)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/3/" >
+			                游戏照片<!-- (16)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/11/" >
+			                海派甜心<!-- (10)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/7/" >
+			                喜洋洋与灰太狼<!-- (19)-->
 			            </a>
 			        </li>
 			
@@ -237,112 +267,183 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="siderMiddle">
 	    <div class="content column column2">
             
+    <script type="text/javascript">
+        function imgZoom(target) {
             
-    
-    <div id="ctl00_cphContent_palArticle" class="article">
-	
-		<div class="position title">
-		    
-		    <strong>友情链接</strong>
+            var maxWidth = target.width, maxHeight = target.height;
             
-		</div>
-		<div class="articlelist">
-		    <div id="articleitem" class="articleitem">
-                
+            var img = new Image();
+            img.src = target.src;
+            
+            var originalWidth = img.width, originalHeight = img.height;
+            var width = originalWidth, height = originalHeight;
+            
+            if( height > maxHeight) {
+                height = maxHeight;
+                width = originalWidth * height / originalHeight;
+            }
+            if( width > maxWidth){
+                width = maxWidth;
+                height = originalHeight * width / originalWidth;
+            }
+
+            target.style.width = width + 'px';
+            target.style.height = height + 'px';
+        }
+    </script>
+    <div class="album">
+		<div class="title">
+		    <strong>当前位置：</strong>
+		    <a href="/">首页</a>
+		    > <a href="../">我的相册</a>
+		    > <a href=".">网络收藏</a>
+		 </div>
+		<div class="cont">
+			<div class="guide"></div>
+			<div class="list">
+	            <ul class="fixft" id="albumlist">
                     
-
-<div class="item">
-			            
-			            <h2><a href="http://www.applezqp.com">applezqp</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.applezqp.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:19:26.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.applezqp.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.thjy.org">天河部落</a></h2>
-			            <!--<div class="date"><a href="">2015-09-07</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.thjy.org
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-07 22:18:33.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.thjy.org#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://weibo.com/zjj">张静君</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://weibo.com/zjj
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:21:24.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://weibo.com/zjj#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-
-<div class="item">
-			            
-			            <h2><a href="http://www.fortuneage.com">时代财富</a></h2>
-			            <!--<div class="date"><a href="">2015-09-06</a></div>-->
-			            
-			            <div class="summary">
-			                http://www.fortuneage.com
-			            </div>
-			            <div class="tags">标签：友情链接 
-			            </div>
-			            <div class="desc">
-			              <ul>
-				            <li title="">posted@ 2015-09-06 21:20:17.0</li>
-				            <li>阅读(0)</li>
-				            <li><a class="comment" title="共0条评论" href="http://www.fortuneage.com#comment">评论(0)</a></li>
-			              </ul>
-			            </div>
-		            </div>
-
-                
-            </div>
-            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
-	        <script type="text/javascript">new ImgLazy( { selector : 'articleitem', maxWidth : document.getElementById('articleitem').offsetWidth });</script>
+                            <li>
+                                <a href="/jonllen/album/8/69.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883905826718750_花剑.jpg?width=140&height=108" width="140" height="108" title="花剑" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    花剑
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/8/70.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883905827187500_举重.jpg?width=140&height=108" width="140" height="108" title="举重" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    举重
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/8/71.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883905827656250_拳击.jpg?width=140&height=108" width="140" height="108" title="拳击" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    拳击
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/8/72.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883905828125000_射击.jpg?width=140&height=108" width="140" height="108" title="射击" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    射击
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/8/73.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883905828437500_盛装舞步(骑术).jpg?width=140&height=108" width="140" height="108" title="盛装舞步(骑术)" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    盛装舞步(骑术)
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/8/74.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883905828906250_跆拳道.jpg?width=140&height=108" width="140" height="108" title="跆拳道" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    跆拳道
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/8/75.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883906611250000_体操.jpg?width=140&height=108" width="140" height="108" title="体操" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    体操
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/8/76.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883906611406250_跳水.jpg?width=140&height=108" width="140" height="108" title="跳水" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    跳水
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/8/77.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883906611406250_游泳.jpg?width=140&height=108" width="140" height="108" title="游泳" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    游泳
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/8/78.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883912931875000_小猪.jpg?width=140&height=108" width="140" height="108" title="小猪" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    小猪
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/8/79.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883913667500000_最爱JAY.jpg?width=140&height=108" width="140" height="108" title="最爱JAY" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    最爱JAY
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+                            <li>
+                                <a href="/jonllen/album/8/80.aspx" >
+                                    <img src="/upload/jonllen/album/网络收藏/633883913667656250_叶 惠 美.jpg?width=140&height=108" width="140" height="108" title="叶 惠 美" />
+                                </a>
+	                            <p>
+	                                <strong>
+	                                    叶 惠 美
+	                                </strong>
+	                            </p>
+	                        </li>    
+                    
+	            </ul>
+	            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
+	            <script type="text/javascript">new ImgLazy();</script>
+	        </div>
 		</div>
-		<div class="pagination" id="ctl00_cphContent_Pager1">
-
-<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/links/index__pid.aspx";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
-	</div>
-	
-</div>
- 
-        </div>
+	</div>            
+    
+     
+	    </div>
 	</div>
 	<div id="ctl00_panRight" class="siderRight column column3">
 	
