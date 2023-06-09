@@ -1,16 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-	搜索 - 金龙博客
+	CSS - 金龙博客
 </title>
-
 <link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
-<link href="/styles/index/css/default/template1.css" id="linkTemplate" rel="stylesheet" type="text/css" />
-
+<link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
-
 </head>
 <body>
 <div id="toolbar">
@@ -75,8 +72,9 @@
 </div>
 <div class="auto" id="top" style="" >
 	<div class="title">
-	    <h3>搜索</h3>
-	    <h4>文档检索</h4>
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
 	</div>
 </div>
 <div class="auto" id="nav" >
@@ -171,7 +169,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         
             function getArticleArchive()
 		    {
-		        var url = "/plugin/web/getArticleArchive.do?coluidpath=715&colutype=6";		        		        
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
 		        Ajax.send({
 		            type : "GET",
 		            url : url,
@@ -203,15 +201,92 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 			
 			        <li>
 			            
-			            <a href="/jonllen/" >
-			                jonllen<!-- (0)-->
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
 			            </a>
 			        </li>
 			
 			        <li>
 			            
-			            <a href="/pengfenjun/" >
-			                pengfenjun<!-- (0)-->
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/travel/" >
+			                旅游<!-- (0)-->
 			            </a>
 			        </li>
 			
@@ -219,7 +294,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	</div>
 </div>
  
-<div id="mod28" class="mod links">
+<!--<div id="mod28" class="mod links">
 	<div class="head"><strong class="ico">友情链接</strong></div>
 	<div class="cont">
 		<ul>
@@ -234,14 +309,134 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
                     
 		</ul>
 	</div>
-</div>
+</div>-->
  
 </div>
 
 	<div class="siderMiddle">
 	    <div class="content column column2">
             
-            <div class="mod search">
+            
+    
+    <div id="ctl00_cphContent_palArticle" class="article">
+	
+		<div class="position title">
+		    
+		    <strong>CSS</strong>
+            
+		</div>
+		<div class="articlelist">
+		    <div id="articleitem" class="articleitem">
+                
+                    
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/css/65.html">FF内text-align:right无法对齐的问题</a></h2>
+			            <!--<div class="date"><a href="">2009-09-07</a></div>-->
+			            
+			            <div class="summary">
+			                在做我博客文章保存的时候当按下Ctrl+S使用Ajax请求服务器无刷新来保存，并在输入框的左下放提示返回信息，用的是一个相对定位，但是没有想到ff内却没有有问题，那个div好象不是display=block了，text-align:right;竟然右对齐不了，ie,谷歌浏览器里面都没有问题的，具体html代码如下：保存文章成功。为什么绿色边框的div里面的X不能右对齐呢？
+			            </div>
+			            <div class="tags">标签：CSS 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2009-09-07 21:54:26.0</li>
+				            <li>阅读(10723)</li>
+				            <li><a class="comment" title="共1条评论" href="/jonllen/css/65.html#comment">评论(1)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+
+<div class="item">
+			            
+			            <h2><a href="/jonllen/css/37.html">CSS兼容笔记</a></h2>
+			            <!--<div class="date"><a href="">2009-07-06</a></div>-->
+			            
+			            <div class="summary">
+			                从今天开始记录用的过的所有CSS样式兼容的问题，IE双倍浮动边界：在IE里面，一个外面的DIV容器里面套有多个有float属性的元素，并且指定了margin和pading属性，外面的DIV容器将产生双倍margin的内间距，把里面有float的元素指定display:inline属性解决这个问题。IE7内button按纽忽隐忽显：在IE7内,拉动滚动条导致button按钮内的文字忽隐忽显有时候就显示一半,或这个里面文字全部不可见,造成个问题的原因是改button样式继续了base样式里面的overflow:visible,重写overflow为hidden即可解决。注：不推荐使用button标签，曾测试过在支持html4的ie8里button支持新的属性type(button|submit)，以前我们使用button主要是用来关联一个js客户端的click函数事件，而在ie8里面button的默认type=submit的，所以你一点button不但不会触发click函数事件，而且还会刷新页面提交表单，非得一定设置type=button且onclick=return function (){//函数;return false;}才行。清除浮动：把浮动子元素的父容器元素加上overflow:auto;zoom:1;即可，对于标准浏览器而言，父容器的 overflow 设为除 visible 之外的值将闭合浮动元素，而对于IE系列浏览器而言，zoom:1触发了 layout 而会自动...
+			            </div>
+			            <div class="tags">标签：CSS 
+			            </div>
+			            <div class="desc">
+			              <ul>
+				            <li title="">posted@ 2009-07-06 23:13:07.0</li>
+				            <li>阅读(9843)</li>
+				            <li><a class="comment" title="共0条评论" href="/jonllen/css/37.html#comment">评论(0)</a></li>
+			              </ul>
+			            </div>
+		            </div>
+
+                
+            </div>
+            <script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
+	        <script type="text/javascript">new ImgLazy( { selector : 'articleitem', maxWidth : document.getElementById('articleitem').offsetWidth });</script>
+		</div>
+		<div class="pagination" id="ctl00_cphContent_Pager1">
+
+<script type='text/javascript'>function goToPage0(pid, urlformat){var url = "/jonllen/css/index__pid.html";if(urlformat)url=urlformat;document.location.replace(url.replace("_pid",pid).replace("_1.","."));}</script>
+	</div>
+	
+</div>
+ 
+        </div>
+	</div>
+	<div id="ctl00_panRight" class="siderRight column column3">
+	
+<div id="mod29" class="mod recommend">
+    <h4 class="head">博文推荐</h4>
+    <div class="cont">
+	    <ul>
+                    
+
+	    </ul>
+    </div>
+</div>
+<div id="mod30" class="mod comment">
+    <h4 class="head">最新评论</h4>
+    <div class="cont">
+	    <ul>
+		    
+
+<li><a href="/jonllen/js/178.html#comment"><b>zlc</b>：你好，你https://github.com/lifesreason/SM2 这个库中除了一个test.html和test.aes-sm.html 的示例其他的 都没有 ，你方便挂上去吗？签名验签的这个我用https://www.npmjs.com/package/sm-crypto  这个库 后端无法签签，老的项目是用的你现在的这个库 可我并没有在你的例子中看到签名的方法，如果方便能提供一下嘛？</a></li>
+
+<li><a href="/jonllen/js/178.html#comment"><b>5</b>：[quote]ywq：你好，能提供下js实现国密sm2加解密的下载链接吗?您提供的html里加载的js都是必须的吗[/quote]
+</a></li>
+
+<li><a href="/jonllen/js/178.html#comment"><b>5</b>：[quote]ywq：你好，能提供下js实现国密sm2加解密的下载链接吗?您提供的html里加载的js都是必须的吗[/quote]
+</a></li>
+
+<li><a href="/jonllen/work/162.html#comment"><b>hjc</b>：楼主能否发一份源码参考一下 感谢！邮箱地址18234105447@163.com</a></li>
+
+<li><a href="/jonllen/work/162.html#comment"><b>hjc</b>：楼主能否发一份源码参考一下 感谢！</a></li>
+
+	    </ul>
+    </div>
+</div>
+ 
+<div id="mod31" class="mod recent">
+    <h4 class="head">最近发表</h4>
+    <div class="cont">
+	    <ul>
+
+                    
+		    <li><a href="/jonllen/work/800.html">2015年度工作总结</a>(2015-12-31)</li>
+                    
+		    <li><a href="/jonllen/travel/801.html">靖港古镇游</a>(2015-11-29)</li>
+                    
+		    <li><a href="/jonllen/js/179.html">使用ECharts报表统计公司考勤加班，大家加班多吗？</a>(2015-06-05)</li>
+                    
+		    <li><a href="/jonllen/js/178.html">JavaScript实现SM2算法加解密</a>(2014-10-28)</li>
+                    
+		    <li><a href="/jonllen/breast/177.html">2014年国庆</a>(2014-10-04)</li>
+                    
+	    </ul>
+    </div>
+</div>
+ 
+<div id="mod36" class="mod search">
 	<h4 class="head">搜索</h4>
 	<div class="cont">
 		<form action="/search/" method="get">
@@ -249,125 +444,28 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	        <input type="submit" class="btn" value="搜索" />
 	    </form>
 	</div>
-            </div>
-
-    
-    <div id="ctl00_cphContent_palArticle" class="article">
-	
-		<div class="position title">
-		    
-		    <strong>搜索 <span id="keyword"></span> </strong>
-            
-		</div>
-		<div class="articlelist">
-		    <script id="article_tpl" type="text/template">
-		            <div class="item">
-			            
-			            <h2><a href="{url}">{fdartititle}</a></h2>
-			            
-			            <div class="summary">
-			                {fdartidescription}
-			            </div>
-			            <!--<div class="tags">标签：{faColumn.fdColuName} {fdArtiKeyword}
-			            </div>-->
-			            <div class="desc">
-			              <ul>
-				            <li title="">{fdarticreateat}</li>
-				            <li>阅读({fdarticlickcount})</li>
-				            <li><a class="comment" title="共{fdarticommentcount}条评论" href="{url}#comment">评论({fdarticommentcount})</a></li>
-			              </ul>
-			            </div>
-		            </div>
-		    </script>
-		    <div id="articleitem" class="articleitem">
-                
-                    loading...
-                
-		    </div>
-		    <script type="text/javascript">
-function dataTemplate(template,data){   
-    var outPrint="";   
-    for(var i = 0 ; i < data.length ; i++){   
-        var matchs = template.match(/\{[a-zA-Z]+\}/gi);   
-        var temp="";   
-        for(var j = 0 ; j < matchs.length ;j++){   
-            if(temp == "")   
-                temp = template;   
-            var re_match = matchs[j].replace(/[\{\}]/gi,"");   
-            temp = temp.replace(matchs[j],data[i][re_match]);   
-        }   
-        outPrint += temp;   
-    }   
-    return outPrint;   
-}
-function createPage(totalPageCount, totalCount, pageIndex){
-var article_pager_id = "article_pager";
-var article_pager = document.getElementById(article_pager_id);
-if(article_pager.getAttribute('bindchange')==null){
-article_pager.onchange=function (){
-	        search(this.value);
-	        location = "#";
-
-};
-article_pager.setAttribute('bindchange','1');
-}
-article_pager.options.length = totalPageCount;
-for(var i=1;i<=totalPageCount;i++){
-article_pager.options[i-1].value = i;;
-article_pager.options[i-1].innerHTML = i;
-if(i===pageIndex) article_pager.options[i-1].selected = true;
-}
-document.getElementById('ctl00_cphContent_Pager1').style.display = totalPageCount > 1 ? '' : 'none';
-var resultCount = document.getElementById('resultCount');
-if(resultCount ==null){
- resultCount = document.createElement('span');
- resultCount.id='resultCount';
- document.getElementById('keyword').parentNode.appendChild(resultCount);
-}
-resultCount.innerHTML = ' 共'+totalCount+'结果';
-}
-function search(page){
-	        var key = "";
-	        var s = window.location.search;
-	        if (s.length > 0) s = s.substring(1);
-	        var kv = s.split('&');
-	        for(var i=0;i<kv.length;i++){
-	        var item = kv[i];
-	        var k = item.split('=')[0] + '=';
-	        if(k.indexOf('key') == 0){
-	        key = decodeURI(item.substring(k.length));
-	        }else if(k.indexOf('page') == 0 && !page){
-	        page = item.substring(k.length); 
-	        }
-	        }
-	        document.getElementById('keyword').innerHTML = (key);
-	        var url = "/plugin/web/doSearchArticle.do?key="+encodeURIComponent(key);
-	        if(page) url+="&page="+page;
-	        Ajax.loadScript(url);
-
-}  
-
-	        function callback(ret){
-	        var totalPageCount = ret.totalPageCount;
-	        var data = ret.data;
-	        var pageIndex = ret.pageIndex;
-var tpl = document.getElementById("article_tpl").innerHTML;
-var retHTML = dataTemplate(tpl ,data);
-document.getElementById("articleitem").innerHTML = retHTML;
-createPage(totalPageCount, ret.totalCount, ret.pageIndex);
-	        }
-	        search();
-		    </script>
-		</div>
-		<div class="pagination" id="ctl00_cphContent_Pager1" style="display:none;">
-		第<select id="article_pager"></select>页
-		</div>
-	
-        </div>
+</div>
  
-        </div>
-	</div>
-	
+<div id="mod32" class="mod click">
+    <h4 class="head">关注最多</h4>
+    <div class="cont">
+	    <ul>
+                    
+		    <li><a href="/jonllen/work/164.html">SM2非对称算法加解密</a>(35707)</li>
+                    
+		    <li><a href="/jonllen/aspnet/tinymce.html">TinyMce在线编辑器完美打造成Asp.Net服务器自定义控件</a>(32864)</li>
+                    
+		    <li><a href="/jonllen/work/162.html">国密算法SM2证书制作</a>(32559)</li>
+                    
+		    <li><a href="/jonllen/js/js-popup.html">摆脱JQuery—之自定义模拟弹窗层功能。</a>(26829)</li>
+                    
+		    <li><a href="/jonllen/aspnet/pd.html">使用PowerDesigner的物理模型创建升级管理数据库</a>(24306)</li>
+                    
+	    </ul>
+    </div>
+</div>
+ 
+</div>
 </div>
  
 <div class="auto" id="foot">

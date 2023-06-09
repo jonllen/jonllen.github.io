@@ -1,0 +1,691 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>tiny_mce在线编辑器内JavaScript实现Ctrl+S无刷新保存。 - JavaScript - 金龙博客</title>
+<meta name="description" content="以前也用过几个编辑器拉，如FCK，CUTEDTOR等，它们大都实现了很不错了的功能，也有丰富的插件使用。不过我还是觉得TinyMCE在线编辑器好用，它是采用纯JS客户端脚本技术构建，是一个轻量级加载速度非常快的WEB的文本编辑控件，并且TinyMCE是一个根据LGPL license发布的自由软件，你可以把它用于商业应用。
+由于最进在做一个博客系统需要有在线编辑器，于是便找了TinyMCE在线编辑器，以前用过Google的GMail，里面就有一个按Ctrl+S的快捷键保存邮件的功能，因为当时还不太清楚那些编辑器的一些功能实现，对编辑器结构不清楚，也不知道用IE Developer Toolbar和Firebug等调试工具来看，所以那时候感觉Google特别牛B，而且Ctrl+S保存那个功能在FF里面运行，而FF浏览器按下Ctrl+S默认是弹出修改网页的对话框的，这让我更好奇了，难道JavaScript还能阻止浏览器里面Ctrl+S保存网页的快捷键，真的太神气了！下面我们就使用TinyMCE编辑器来实现一个按Ctrl+S使用Ajax异步保存文章的功能吧，这也是我的博客系统的需要..." />
+<link href="/styles/index/css/default/index.css" id="linkIndex" rel="stylesheet" type="text/css" />
+<link href="/styles/index/css/default/template2.css" id="linkTemplate" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
+</head>
+<body>
+<div id="toolbar">
+	<div class="auto fixft" >
+	    <a href="/" class="home"><span>首页</span><img alt="logo" src="/styles/index/css/default/images/logo_small.gif" /></a>
+		
+		<!--<form id="loginFrom" name="loginFrom" onsubmit="return loginEncrypt();" action="/User/Login.aspx"  method="post" target="loginIfr">
+		    <input type="hidden" id="hdEncrypted" name="hdEncrypted" value="" />
+		    <div class="login">
+			    <span class="ico">用户名：</span>
+			    <input id="username" name="username" onfocus="loadEncryptScript()" class="text" type="text" />
+			    密码：<input id="password" name="password" onfocus="loadEncryptScript()" class="text" type="password" />
+			    <input id="btnLogin" class="btn" type="submit" value="登录" />
+			    
+			    <a href="#" onclick="location='https://localhost/Passport';" >安全登录</a>
+			    
+		    </div>
+		</form>
+		<iframe id="loginIfr" name="loginIfr" scrolling="no" frameborder="0" width="0" height="0"></iframe>
+        <script type="text/javascript">
+            function loadEncryptScript(){
+                if( typeof(encryptScript) == 'undefined') {
+                    
+                    document.getElementById('btnLogin').disabled = true;
+                    
+                    encryptScript = document.createElement('script');
+                    encryptScript.type = 'text/javascript';
+                    encryptScript.src = '/Ajax/RSAEncrypt.aspx?callback=loadEncryptScriptCallback';
+                    var currScriptElem = document.getElementsByTagName('script')[0];
+                    currScriptElem.parentNode.insertBefore(encryptScript, currScriptElem);
+                }
+            }
+            function loadEncryptScriptCallback(){
+                document.getElementById('btnLogin').disabled = false;
+            }
+            function loginEncrypt(){
+                
+                var pwdElem = document.getElementById('password');
+                var encryptedPassword = RSAEncrypt(pwdElem.value);
+                pwdElem.value = encryptedPassword;
+                document.getElementById('hdEncrypted').value = 'RSA';
+                return true;
+            }
+        </script>-->
+		
+		<div class="skin">
+			<ul id="skinlist">
+			    <li class="first">　切换风格：</li>
+			    <li id="temp2" class="on"><a class="green" href="javascript:toggleTemplate(2, '/styles/index/css/default/index.css', false);"  title="切换风格：大自然绿">大自然绿</a></li><li id="temp3" class=""><a class="blue" href="javascript:toggleTemplate(3, '/styles/index/css/blue/index.css', false);"  title="切换风格：深蓝海">深蓝海</a></li><li id="temp4" class=""><a class="red" href="javascript:toggleTemplate(4, '/styles/index/css/guoqing/index.css', false);"  title="切换风格：国庆专题">国庆专题</a></li><li id="temp6" class=""><a class="christmas" href="javascript:toggleTemplate(6, '/styles/index/css/christmas/index.css', false);"  title="切换风格：圣诞节">圣诞节</a></li><li id="temp7" class=""><a class="simple" href="javascript:toggleTemplate(7, '/styles/index/css/simple/index.css', false);"  title="切换风格：简单线条">简单线条</a></li>
+			</ul>
+		</div>
+		<div class="display">
+		    <ul>
+		        <li>　<!--版面：--></li>
+		        <!--<li><a href="#" onclick="location='?display=1';" class="">左-中</a> | </li>
+		        <li><a href="#" onclick="location='?display=2';" class="on">左-中-右</a> | </li>
+		        <li><a href="#" onclick="location='?display=3';" class="">中-右</a> | </li>
+		        <li><a href="#" onclick="location='?display=4';" class="">中</a></li>-->
+		    </ul>
+		</div>
+	</div>
+</div>
+<div class="auto" id="top" style="" >
+	<div class="title">
+	    <h3>jonllen</h3>
+	    <h4>金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</h4>
+	</div>
+</div>
+<div class="auto" id="nav" >
+	<ul id="navigation">
+		<li><a href="/">首页</a></li>
+        <li><a href="/jonllen/aspnet/" class="up" >Asp.Net</a></li>
+<li><a href="/jonllen/work/"  >工作</a></li>
+		<li><a class="up" href="/album/">相册</a></li>
+		<li><a href="/leave/"><!--留言--></a></li>
+		<li class="preview"></li>
+	</ul>
+</div>
+<script type="text/javascript"> 
+(function (){
+    var select, navlist = document.getElementById('navigation').getElementsByTagName('li');
+    for(var i=0;i<navlist.length;i++)
+    {
+        if ( navlist[i].className=='preview') continue;
+        var link = navlist[i].getElementsByTagName('a')[0];
+        if ( link && window.location.href.toLowerCase().indexOf(link.href.toLowerCase())>-1 )
+        {
+            select = link;
+        }
+    }
+    if( select!=undefined )
+    {
+        select.parentNode.className = "on";
+    }
+})();
+function toggleTemplate(tempId, skinSrc, additionalHtml){
+    if( additionalHtml) {
+        location='?tempid='+tempId;
+        return true;
+    }
+    
+    var linkIndexElem = document.getElementById('linkIndex');
+    var linkIndexHref = '' + skinSrc;
+    linkIndexElem.href = '';
+    linkIndexElem.href = linkIndexHref;
+    
+    var linkTemplateElem = document.getElementById('linkTemplate');
+    var linkTemplateHref = linkIndexHref.substr(0, linkIndexHref.lastIndexOf('/') ) + linkTemplateElem.href.substr(linkTemplateElem.href.lastIndexOf('/'));
+    linkTemplateElem.href = '';
+    linkTemplateElem.href = linkTemplateHref;
+    
+    var skinName = 'Skin';
+    var skinValue = '0='+tempId;
+    var skinDate = new Date();
+    skinDate.setTime(skinDate.getTime() + 1000 * 60 * 120 );
+    document.cookie = skinName + '=' + skinValue + '; path=/; expires=' + skinDate.toGMTString();
+    
+    var templatelist = document.getElementById('skinlist').getElementsByTagName('li');
+    for(var i=0;i<templatelist.length;i++){
+        var templateli = templatelist[i];
+        if (templateli.className == 'on')
+            templateli.className = '';
+        if( templateli.id == 'temp' + tempId)
+            templateli.className = 'on';
+    }
+}
+</script>
+
+<div id="main" class="auto container">
+    <div id="ctl00_panLeft" class="siderLeft column column1">
+	
+<div id="mod25" class="mod info">
+	<div class="head"><strong class="ico">个人档案</strong></div>
+	<div class="cont">
+		<dl>
+			<dt><a href="/jonllen/"><img src="/upload/jonllen/upload/wolf.gif" defaultsrc="/styles/index/css/default/images/ico_default.gif" onerror="if(this.src.indexOf(this.getAttribute('defaultsrc'))==-1) this.src=this.getAttribute('defaultsrc');" /><br />jonllen</a></dt>
+			<dd><a href="/breast/" class="profile">心情闪存</a> | <a href="/leave/" class="article">给他留言</a></dd>
+			<!--<dd><a href="/rss.aspx" target="_blank" class="rss">RSS网志</a> | <a href="/profile.aspx" class="">个人档案</a></dd>-->
+			<dd>妮称：jonllen</dd>
+			<dd>来自：中国. 湖南. 湘潭</dd>
+			<dd>简述：金龙，目前就职于一家软件公司，从事Java和.Net信息安全开发设计。
+</dd>
+		</dl>
+	</div>
+</div>
+<div id="mod26" class="mod calendar">
+	<div class="head"><strong class="ico">博客日历</strong></div>
+	<div id="calendar" class="cont"></div>
+	<script type="text/javascript" language="javascript" src="/styles/index/scripts/DatePicker/WdatePicker.js" ></script>
+    <script type="text/javascript" language="javascript">
+        function ePicked(dp)
+        {
+            for(var i=0;i<archive.length;i++)
+            {
+                //if(archive[i]==dp.cal.getDateStr())
+                    //window.location = '/archive/' + dp.cal.getDateStr() + '.aspx';
+            }
+        }
+        
+            function getArticleArchive()
+		    {
+		        var url = "/plugin/web/getArticleArchive.do?coluidpath=500&colutype=1";		        		        
+		        Ajax.send({
+		            type : "GET",
+		            url : url,
+		            fn : function (data){
+	                    var rs;
+	                    try{rs=eval("rs="+data);}catch(e){alert(e);return;}
+                        
+	                    if (rs.success)
+	                    {
+	                        var archive = [];
+	                        if(rs.data) archive = rs.data.split(',');
+	                        window.archive = archive;
+	                        WdatePicker( { eCont :'calendar', firstDayOfWeek :1, specialDates :archive.length > 0 ? archive : null, onpicked :ePicked, startDate:'2009-06-26' } );
+ 	                    }else
+	                    {
+	                        alert(rs.error);
+	                    }
+                            }
+		        });
+		    }
+        setTimeout(getArticleArchive,0);
+    </script>
+</div>
+<div id="mod27" class="mod category">
+	<div class="head"><strong class="ico">分类文档</strong></div>
+	<div class="cont">
+		<ul>
+
+			
+			        <li>
+			            
+			            <a href="/jonllen/reflection/" >
+			                三日必省吾身<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/remark/" >
+			                备忘录<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/it/" >
+			                业界<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/css/" >
+			                CSS<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/flex/" >
+			                Flex<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/db/" >
+			                数据库<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/java/" >
+			                Java<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/work/" >
+			                工作<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/breast/" >
+			                心情笔记<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/aspnet/" >
+			                Asp.Net<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/js/" >
+			                JavaScript<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/album/" >
+			                我的相册<!-- (0)-->
+			            </a>
+			        </li>
+			
+			        <li>
+			            
+			            <a href="/jonllen/travel/" >
+			                旅游<!-- (0)-->
+			            </a>
+			        </li>
+			
+		</ul>
+	</div>
+</div>
+ 
+<!--<div id="mod28" class="mod links">
+	<div class="head"><strong class="ico">友情链接</strong></div>
+	<div class="cont">
+		<ul>
+                    
+		    <li><a href="http://www.applezqp.com" title="老平同志，高妹。" target="_blank">applezqp</a></li>
+                    
+		    <li><a href="http://www.thjy.org" title="天河部落教育博客" target="_blank">天河部落</a></li>
+                    
+		    <li><a href="http://weibo.com/zjj" title="时代财富张静君的微博" target="_blank">张静君</a></li>
+                    
+		    <li><a href="http://www.fortuneage.com" title="广州网站建设" target="_blank">时代财富</a></li>
+                    
+		</ul>
+	</div>
+</div>-->
+ 
+</div>
+
+	<div class="siderMiddle">
+	    <div class="content column column2">
+            
+
+    <div class="articlecont">
+        <div class="position">
+		    <strong>当前位置：</strong>
+		    <a href="http://localhost:8080">首页</a>
+		     > <a href="/jonllen/js/">JavaScript</a>
+		     > <a href="/jonllen/js/16.html">tiny_mce在线编辑器内JavaScript实现Ctrl+S无刷新保存。</a>
+		</div>
+        <div class="article">
+			<div class="title"><h2>tiny_mce在线编辑器内JavaScript实现Ctrl+S无刷新保存。</h2></div>
+			<div class="category">分类：<a href="/jonllen/js/">JavaScript</a></div>
+			<div class="fontZoom"><a href="javascript:zoom(20);" style="font-size:large; font-weight:700">大</a><a href="javascript:zoom(14);" style="font-size:14px; font-weight:500;">中</a><a href="javascript:zoom(10);">小</a></div>
+			<div class="cont" id="content">
+				<div style="font-size: 14px; line-height: 30px;">
+<p style="text-indent: 2em;">以前也用过几个编辑器拉，如FCK，CUTEDTOR等，它们大都实现了很不错了的功能，也有丰富的插件使用。不过我还是觉得TinyMCE在线编辑器好用，它是采用纯JS客户端脚本技术构建，是一个轻量级加载速度非常快的WEB的文本编辑控件，并且TinyMCE是一个根据LGPL license发布的自由软件，你可以把它用于商业应用。</p>
+<p style="text-indent: 2em;">由于最进在做一个博客系统需要有在线编辑器，于是便找了TinyMCE在线编辑器，以前用过Google的GMail，里面就有一个按Ctrl+S的快捷键保存邮件的功能，因为当时还不太清楚那些编辑器的一些功能实现，对编辑器结构不清楚，也不知道用IE Developer Toolbar和Firebug等调试工具来看，所以那时候感觉Google特别牛B，而且Ctrl+S保存那个功能在FF里面运行，而FF浏览器按下Ctrl+S默认是弹出修改网页的对话框的，这让我更好奇了，难道JavaScript还能阻止浏览器里面Ctrl+S保存网页的快捷键，真的太神气了！下面我们就使用TinyMCE编辑器来实现一个按Ctrl+S使用Ajax异步保存文章的功能吧，这也是我的博客系统的需要。</p>
+<p style="text-indent: 2em;">在线编辑器的原理一般是创建一个ifrmae，这样便可相当于一个页面来进行单独控制，并且设置这个ifrmae的designMode="On"处于设置模式。TinyMCE是通过初使化配置一些参数，主要是传递一个textarea对象，并且在初始化的时候隐藏掉这些textarea，获取原来textarea的宽高在原来的新创建一个ifrmae对象。我们先用IE Developer Toolbar来看一下这个编辑器它创建的一些结构。</p>
+<p style="text-indent: 2em;"><img src="/upload/jonllen/article/a_IEDeveloperToolbar.gif" alt="IEDeveloperToolbar" width="499" height="304" /></p>
+<p style="text-indent: 2em;">红色框标记的就是我们页面里面放置的textare文本输入控制了，这里是放的Asp.Net服务器控件，而绿色框里面标记的内容就是TinyMCE自动生成的东西了，可以看到这里面就是一个IFRAME，里面的BODY就是我们编辑器的内容了，它会自动初始话指定的textare的内容。这个IFRAsME的编号为我们指定的textare控件ID加上'_ifr'，而且designMode="On"。所以我们要在线编辑器内按Ctrl+S实现保存就是要监听这个IFAME里面的事件了，关联到我们自定义的一个方法，可以是AJax请求服务器保存s，也可以执s行其他操作，那下面我就给出一个完成的DEMO。</p>
+<div class="edit"><textarea id="txtContentEditor" style="width: 708px; height: 77px;" rows="4" cols="77">在这里面按下Ctrl+S试试？</textarea></div>
+<p>
+<script type="text/javascript" src="/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript">// <![CDATA[
+	var editorId = "txtContentEditor"
+	tinyMCE.init({
+		mode : "exact",
+		elements : editorId,
+		theme : "advanced",
+		language : "zh",
+	content_css : "/tiny_mce/css/content.css",	plugins : "safari,pagebreak,style,layer,table,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,insertCode,uploadImage",
+		theme_advanced_buttons1:"formatselect,fontselect,fontsizeselect,separator,forecolor,backcolor,separator,bold,italic,underline,strikethrough,separator,bullist,numlist,separator, justifyleft, justifycenter, justifyright",
+		theme_advanced_buttons2:"undo,redo,cut,copy,paste,separator,justifyleft,justifycenter,justifyright,separator,outdent,indent,removeformat,separator,link,unlink,image,uploadImage,media,separator,insertCode,separator,code,fullscreen",
+		convert_fonts_to_spans:true
+	});
+	
+	addEvent(window,"load",function (){
+		setTimeout(function (){
+			var content = tinyMCE.getInstanceById(editorId).getBody();
+			var editorDocument = document.all ? content : document.getElementById(editorId+"_ifr").contentDocument;
+			addEvent( editorDocument ,"keydown",function (e){editorKeyDown(e)});
+		},1000);
+	});
+	
+	function editorKeyDown(e)
+	{
+		
+		var num = e.which?e.which:e.keyCode;
+		if( e.ctrlKey && num == 83 )
+		{
+			//postArticle();这里模拟Ajax保存文章
+			InsertToEditor("<br />正在保存中。。。");
+			setTimeout(function (){
+				InsertToEditor("<br />保存成功！！！");
+			},1000);
+			if (document.all)
+			{
+				return false;
+			}else e.preventDefault();
+		}
+	}
+	
+	function InsertToEditor(content)
+	{
+	    tinyMCE.execCommand('mceInsertContent',false,content);  
+	}
+	
+	function addEvent(target,eventType,func){
+		if(target.attachEvent)
+		{
+			target.attachEvent("on"+eventType,func);
+			
+		}else if(target.addEventListener)
+		{
+			target.addEventListener(eventType,func,false);
+		}
+		return this;
+	}
+// ]]></script>
+</p>
+<p style="text-indent: 2em;"><a href="/Demo/Tinymce.aspx" target="_blank">更多TinyMce在线测试例子</a></p>
+<p style="text-indent: 2em;">上面所示就是一个完成的例子了，由于TinyMCE可以支持JavaScript，所以我就在编辑器里面用脚本再初始化一个编辑器，这个也是我博客里面所有的编辑器了，还有一些功能插件没能用上。我们先来看它的脚本是要如何来写的吧，先贴出它的代码：</p>
+<div style="border: solid 1px #ccc; back-groundcolor: #eee; margin: 4px; word-break: break-all; overflow: hidden;"><span style="color: #000000;">&lt;</span><span style="color: #000000;">script&nbsp;type</span><span style="color: #000000;">=</span><span style="color: #000000;">"</span><span style="color: #000000;">text/javascript</span><span style="color: #000000;">"</span><span style="color: #000000;">&nbsp;src</span><span style="color: #000000;">=</span><span style="color: #000000;">"</span><span style="color: #000000;">/tiny_mce/tiny_mce.js</span><span style="color: #000000;">"</span><span style="color: #000000;">&gt;&lt;</span><span style="color: #000000;">/</span><span style="color: #000000;">script&gt;</span><span style="color: #000000;"><br /></span><span style="color: #000000;">&lt;</span><span style="color: #000000;">script&nbsp;type</span><span style="color: #000000;">=</span><span style="color: #000000;">"</span><span style="color: #000000;">text/javascript</span><span style="color: #000000;">"</span><span style="color: #000000;">&gt;</span><span style="color: #000000;"><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">var</span><span style="color: #000000;">&nbsp;editorId&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">txtContentEditor</span><span style="color: #000000;">"</span><span style="color: #000000;"><br />&nbsp;&nbsp;&nbsp;&nbsp;tinyMCE.init({<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode&nbsp;:&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">exact</span><span style="color: #000000;">"</span><span style="color: #000000;">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elements&nbsp;:&nbsp;editorId,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;theme&nbsp;:&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">advanced</span><span style="color: #000000;">"</span><span style="color: #000000;">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;language&nbsp;:&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">zh</span><span style="color: #000000;">"</span><span style="color: #000000;">,<br />&nbsp;&nbsp;&nbsp;&nbsp;content_css&nbsp;:&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">/tiny_mce/css/content.css</span><span style="color: #000000;">"</span><span style="color: #000000;">,&nbsp;&nbsp;&nbsp;&nbsp;plugins&nbsp;:&nbsp;</span><span style="color: #000000;">"</span><span style="color: #000000;">safari,pagebreak,style,layer,table,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,insertCode,uploadImage</span><span style="color: #000000;">"</span><span style="color: #000000;">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;theme_advanced_buttons1:</span><span style="color: #000000;">"</span><span style="color: #000000;">formatselect,fontselect,fontsizeselect,separator,forecolor,backcolor,separator,bold,italic,underline,strikethrough,separator,bullist,numlist,separator,&nbsp;justifyleft,&nbsp;justifycenter,&nbsp;justifyright</span><span style="color: #000000;">"</span><span style="color: #000000;">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;theme_advanced_buttons2:</span><span style="color: #000000;">"</span><span style="color: #000000;">undo,redo,cut,copy,paste,separator,justifyleft,justifycenter,justifyright,separator,outdent,indent,removeformat,separator,link,unlink,image,uploadImage,media,separator,insertCode,separator,code,fullscreen</span><span style="color: #000000;">"</span><span style="color: #000000;">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;convert_fonts_to_spans:</span><span style="color: #0000ff;">true</span><span style="color: #000000;"><br />&nbsp;&nbsp;&nbsp;&nbsp;});<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;addEvent(window,</span><span style="color: #000000;">"</span><span style="color: #000000;">load</span><span style="color: #000000;">"</span><span style="color: #000000;">,</span><span style="color: #0000ff;">function</span><span style="color: #000000;">&nbsp;(){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(</span><span style="color: #0000ff;">function</span><span style="color: #000000;">&nbsp;(){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">var</span><span style="color: #000000;">&nbsp;content&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;tinyMCE.getInstanceById(editorId).getBody();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">var</span><span style="color: #000000;">&nbsp;editorDocument&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;document.all&nbsp;</span><span style="color: #000000;">?</span><span style="color: #000000;">&nbsp;content&nbsp;:&nbsp;document.getElementById(editorId</span><span style="color: #000000;">+</span><span style="color: #000000;">"</span><span style="color: #000000;">_ifr</span><span style="color: #000000;">"</span><span style="color: #000000;">).contentDocument;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;addEvent(&nbsp;editorDocument&nbsp;,</span><span style="color: #000000;">"</span><span style="color: #000000;">keydown</span><span style="color: #000000;">"</span><span style="color: #000000;">,</span><span style="color: #0000ff;">function</span><span style="color: #000000;">&nbsp;(e){editorKeyDown(e)});<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</span><span style="color: #000000;">1000</span><span style="color: #000000;">);<br />&nbsp;&nbsp;&nbsp;&nbsp;});<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">function</span><span style="color: #000000;">&nbsp;editorKeyDown(e)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">var</span><span style="color: #000000;">&nbsp;num&nbsp;</span><span style="color: #000000;">=</span><span style="color: #000000;">&nbsp;e.which</span><span style="color: #000000;">?</span><span style="color: #000000;">e.which:e.keyCode;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">if</span><span style="color: #000000;">(&nbsp;e.ctrlKey&nbsp;</span><span style="color: #000000;">&amp;&amp;</span><span style="color: #000000;">&nbsp;num&nbsp;</span><span style="color: #000000;">==</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">83</span><span style="color: #000000;">&nbsp;)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #008000;">//</span><span style="color: #008000;">postArticle();这里模拟Ajax保存文章</span><span style="color: #008000;"><br /></span><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InsertToEditor(</span><span style="color: #000000;">"</span><span style="color: #000000;">&lt;br&nbsp;/&gt;正在保存中。。。</span><span style="color: #000000;">"</span><span style="color: #000000;">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(</span><span style="color: #0000ff;">function</span><span style="color: #000000;">&nbsp;(){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InsertToEditor(</span><span style="color: #000000;">"</span><span style="color: #000000;">&lt;br&nbsp;/&gt;保存成功！！！</span><span style="color: #000000;">"</span><span style="color: #000000;">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</span><span style="color: #000000;">1000</span><span style="color: #000000;">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">if</span><span style="color: #000000;">&nbsp;(document.all)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">return</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">false</span><span style="color: #000000;">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span style="color: #0000ff;">else</span><span style="color: #000000;">&nbsp;e.preventDefault();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">function</span><span style="color: #000000;">&nbsp;InsertToEditor(content)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tinyMCE.execCommand(</span><span style="color: #000000;">'</span><span style="color: #000000;">mceInsertContent</span><span style="color: #000000;">'</span><span style="color: #000000;">,</span><span style="color: #0000ff;">false</span><span style="color: #000000;">,content);&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">function</span><span style="color: #000000;">&nbsp;addEvent(target,eventType,func){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">if</span><span style="color: #000000;">(target.attachEvent)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target.attachEvent(</span><span style="color: #000000;">"</span><span style="color: #000000;">on</span><span style="color: #000000;">"</span><span style="color: #000000;">+</span><span style="color: #000000;">eventType,func);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><span style="color: #0000ff;">else</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">if</span><span style="color: #000000;">(target.addEventListener)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target.addEventListener(eventType,func,</span><span style="color: #0000ff;">false</span><span style="color: #000000;">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000ff;">return</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">this</span><span style="color: #000000;">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /></span><span style="color: #000000;">&lt;</span><span style="color: #000000;">/</span><span style="color: #000000;">script&gt;</span></div>
+<p style="text-indent: 2em;">TinyMCE.init这个方法不用说了，初始话textare编辑器，然后接着是addEvent方法，这个是后面定义的，之所单独出来是为了重用并兼容所有浏览器，这里需要注意的是FF内关联事件需要传递一个事件对象，而IE不需要传也可以直接获得，为兼容全部增加传递事件的参数，然后在再里面判断获取键盘按下的键，如果按下了Ctrl并同时按下了S(keyCode=83)则执行保存，这里是用setTimeout模拟Ajax请保存，这里说一下之所以监听keydown事件，那是因为在keydown、keypress 、keyup这三个事件里面keydown是最先触发的，而且也只能再这个事件里面阻止事件冒泡和默认行为(FF内)，这个事件里面也是最能获取键盘按下键的最详细的信息，其他时间就不一定能获取得到(FF内)，有时间再写一下JS事件的一些文章。接下来看下面keydown里面最关键的代码了，if(document.all) return false;这里是判断是否为IE内核的浏览器，不过正规的判断应该不是这样，这里为了简化就直接这样写了。return false是在IE里面阻止事件最的通用方法了，这里就不在撰述，后面一句是对非IE内核浏览器的处理。使用e.preventDefault()方法来阻止事件的默认行为，这个方法其实并是陌生，早在JQuery里面就有过介绍：</p>
+<p class="indent">通过使用 preventDefault() 方法只取消默认的行为。在一些支持标准的DOM浏览器里，如果动态添加关联表单的submit的事件，只写return false是不行的，FF内仍然会submit，加上preventDefault()方法即可阻止表单提交。</p>
+<p class="indent"><strong>jQuery 代码:</strong></p>
+<div class="code">$("form").bind("submit", function(event){<br />&nbsp; event.preventDefault();<br />});</div>
+<hr />
+<p style="text-indent: 2em;">通过使用preventDefault()方法取消事件默认行为，这个应该在所有支持WSC的DOM浏览器都可以，不过我还没有在safari 、opera 浏览器内做过测试，但至少在FF2.0和谷歌浏览器下执行没有问题。FF和谷歌浏览器在页面里面按Ctrl+S默认是弹出保存网页对话框，使用preventDefault()就能够阻止取消弹出对话框，是不是很神奇，呵呵^_^。因为这里浏览器里面事件的处理机智是先传递给网页再传递给浏览器，所以在网页里面就能通过JavaScript来阻止浏览器默认的事件了。不过需要注意的是FF好象关联body的事件无效，关联非text或textare可输入文本对象也无效，按Ctrl+S仍然是会谈出保存的网页的对话框，有点奇怪，好象Ctrl+S只是特别为text或textare预留的快捷键一样，最后还是通过关联框架的document对象<span style="color: #000000;">contentDocument来搞定的</span>。只要能关联到事件，又能取消按Ctrl+S默认行为，编辑器内按Ctrl+S就执行自定义的方法，我这里是使用AJax请求服务器保存编辑器内的内容，而且可以很友好的无刷新按Ctrl+S及时保存，这样不需要等到PostBack回服务器去，避免写文章到一般而没有即时保存而丢失的一些问题。</p>
+<p><a href="/upload/jonllen/article/a_AjaxSaveArtcle.gif" target="_blank"><img src="/upload/jonllen/article/a_AjaxSaveArtcle.gif" alt="AjaxSaveArtcle Powered by: Jonllen" width="500" height="157" /></a></p>
+<p style="text-indent: 2em; word-break: break-all; word-wrap: break-word;">其他只要是IFRAME编辑器应该使用这种方法都可以实现按Ctrl+S自定义保存，不过写到最后面我告诉大家其实要显示Ctrl+S保存没必要这么复杂，因为TinyMCE在线编辑器里面提供了一个现成的save插件，我们博客园里面就有用到。plugins :"safari,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,insertCode,uploadImage",其中的save就是保存了，只要写指定有save在编辑器内按Ctrl+S就会自动Post回去，不过就是刷新了页面-_-。TinyMCE编辑器果然好用够人性化，连这种功能都预先想好提供了。不过我还是自己来实现了一次，下次碰到其他编辑器说不定也能用上，希望对大家有用。</p>
+<strong>推荐阅读：<a href="/jonllen/article/66.aspx">TinyMce在线编辑器完美打造成Asp.Net服务器自定义控件</a></strong></div>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ImgLazy.js"></script>
+	        <script type="text/javascript">new ImgLazy( { selector : 'content', maxWidth : document.getElementById('content').offsetWidth, loadSrc : '/styles/index/css/default/images/lazyloading.gif' });</script>
+
+			<div class="tags">标签：<a href="/jonllen/js/">JavaScript</a> TinyMCE编辑器,JavaScript实现Ctrl+S保存
+			    
+			    
+			</div>
+
+			<div class="desc">
+			  <ul>
+				<li>posted@ 2009-06-26 21:51</li>
+				<li>update@ 2009-11-29 16:54:37</li>
+				<li>阅读(<span id="articleClick">14081</span>)</li>
+				<li>评论(1)</li>
+				
+			  </ul>
+			</div>
+			<script type="text/javascript" src="/styles/index/scripts/ad.js"></script>
+
+		</div>
+<div class="context">
+			<ul>
+				<li>上一篇：<a href="/jonllen/js/19.html">JavaScript无限级Select下拉列表联动</a></li>
+<li>下一篇：<a href="/jonllen/js/32.html">不间断向左滚动代码</a></li></ul>
+		</div>
+		
+
+<div class="correlative">
+	
+		    <h4>相关文章</h4>
+			<ul>
+
+
+
+			</ul>
+		
+</div>
+
+		
+		<div class="comment">
+			<div class="title">评论</div>
+			<div class="commentlist" id="commentContent">
+				
+
+
+
+				        <div class="item">
+					        <div class="desc">
+						        <ul class="options">
+							        <li><a href="javascript:;" onclick="quote(this,'samanta')">引用</a></li>
+
+						        </ul>
+						        <a>1楼</a> samanta 2009-09-20 13:56:14
+					        </div><div class="cont"><em>评论内容需要审核才能显示。</em></div>
+					        
+				        </div>
+
+
+				
+			</div>
+		</div>
+		<div class="postcomment">
+	        <div class="title">发表评论<a id="comment"></a></div>
+	        <div class="box">
+		        <div class="fi"><label>用户名</label><input id="txtUserName" type="text" value="" class="text" title="请输入显示用户名称" /><span class="note">*必填</span></div>
+		        
+		        
+		        <div class="fi"><label>网站链接</label><input id="txtWebsite" type="text" class="text" title="请输入您的网站链接地址以便回访（非必填）" /></div>
+		        
+		        <div class="fi"><label>邮箱地址</label><input id="txtEmail" type="text" class="text" title="请输入您的邮箱地址以便回复（非必填）" /><input id="chkEmailNotify" type="checkbox" title="当博主回复时以邮件通知我" />回复通知我</div>
+		        <div class="fi"><label>内容</label><textarea id="txtContent" class="textarea"></textarea><span class="note">*必填</span></div>
+		        <div class="btn"><input type="button" class="submit" onclick="postComment()" value="提交" /></div>
+	        </div>
+        </div>
+        <script type="text/javascript" src="/styles/index/scripts/ajax.js"></script>
+        <script type="text/javascript">
+            function postComment()
+		    {
+		        var url = "/plugin/web/doSaveComment.do?sourcetype=1&sourceid=16&siteId=1";
+		        var data = "username="+encodeURIComponent(document.getElementById("txtUserName").value);
+		        data += '&sourceurl=/jonllen/js/16.html';
+		        data += "&content="+ encodeURIComponent(document.getElementById("txtContent").value);
+		        var pwd = document.getElementById("txtPassword");
+		        if (pwd!=null)
+		        {
+		            data += "&pwd="+ pwd.value;
+		        }
+		        var website = document.getElementById("txtWebsite");
+		        if (website!=null)
+		        {
+		            data += "&website="+ website.value;
+		        }
+		        data += "&email="+ encodeURIComponent(document.getElementById("txtEmail").value);
+		        data += "&emailNotify="+ encodeURIComponent(document.getElementById("chkEmailNotify").checked);
+		        Ajax.send({
+		            type : "POST",
+		            url : url,
+		            data : data,
+		            fn : function (data){
+	                    var rs;
+	                    try{rs=eval("rs="+data);}catch(e){alert(e);return;}
+                        
+	                    if (rs.success)
+	                    {
+	                        appendComment();
+	                        if(document.getElementById('commentNothing')!=null){ 
+	                          document.getElementById('commentNothing').style.display = 'none';
+	                        }
+	                        document.getElementById("txtContent").value = "";
+	                        alert("提交评论成功！");
+	                    }else
+	                    {
+	                        alert(rs.error);
+	                    }
+                            }
+		        });
+		    }
+
+function appendComment()
+		    {
+var itemComment = document.createElement('div');
+itemComment.className = 'item';
+var username = document.getElementById("txtUserName").value;
+var index = document.getElementById('commentContent').getElementsByTagName('ul').length + 1;
+var content =  document.getElementById("txtContent").value;
+itemComment.innerHTML = '<div class="desc"><ul class="options"><li><a href="javascript:;" onclick="quote(this,\''+username+'\')">引用</a></li></ul><a>'+index+'楼</a> '+username+'</div><div class="cont">'+content+'</div>';
+document.getElementById('commentContent').appendChild(itemComment);
+}
+
+            function addClick()
+		    {
+		        var url = "/plugin/web/doAddClick.do?columnType=1&documentId=16";
+		        Ajax.send({
+		            type : "GET",
+		            url : url,
+		            fn : function (data){
+		                 var clickElem = document.getElementById('articleClick');
+		                 if(clickElem !=null) clickElem.innerHTML = data; 
+		            }
+		        });
+
+		    }
+            addClick();
+        </script>
+		
+	</div>
+	<script type="text/javascript">
+	    function zoom(size)
+	    {
+	        var content = document.getElementById("content");
+	        content.style.fontSize = size+"px";
+	        for(var i=0;i<content.childNodes.length;i++)
+	        {
+	            if(content.childNodes[i].nodeType==1)
+	                content.childNodes[i].style.fontSize = size+"px";
+	        }
+	    }
+	    
+	    function quote(target,name)
+	    {
+	        var content = name+"："+target.parentNode.parentNode.parentNode.nextSibling.innerHTML;
+	        var reply = document.getElementById("txtContent");
+	        if (reply==null) return;
+	        reply.value += "[quote]"+content.replace(/<br>/ig,'\n\r')+"[/quote]\n";
+	        reply.focus();
+	        
+            var r = reply.createTextRange();
+            r.moveStart('character',reply.innerHTML.length);
+            r.collapse(true);
+            r.select();
+            
+            //replace <fieldset(\S|\s)+?legend>(\S|\s)+</fieldset> to [quote]$2[/quote]
+	    }
+	</script>
+ 
+
+
+        </div>
+	</div>
+	<div id="ctl00_panRight" class="siderRight column column3">
+	
+<div id="mod29" class="mod recommend">
+    <h4 class="head">博文推荐</h4>
+    <div class="cont">
+	    <ul>
+                    
+		    <li><a href="/jonllen/js/107.html">博客个性化定制(2)-实现类似iGoogle首页功能</a>(2010-03-21)</li>
+                    
+
+	    </ul>
+    </div>
+</div>
+<div id="mod30" class="mod comment">
+    <h4 class="head">最新评论</h4>
+    <div class="cont">
+	    <ul>
+		    
+
+<li><a href="/jonllen/js/178.html#comment"><b>zlc</b>：你好，你https://github.com/lifesreason/SM2 这个库中除了一个test.html和test.aes-sm.html 的示例其他的 都没有 ，你方便挂上去吗？签名验签的这个我用https://www.npmjs.com/package/sm-crypto  这个库 后端无法签签，老的项目是用的你现在的这个库 可我并没有在你的例子中看到签名的方法，如果方便能提供一下嘛？</a></li>
+
+<li><a href="/jonllen/js/178.html#comment"><b>5</b>：[quote]ywq：你好，能提供下js实现国密sm2加解密的下载链接吗?您提供的html里加载的js都是必须的吗[/quote]
+</a></li>
+
+<li><a href="/jonllen/js/178.html#comment"><b>5</b>：[quote]ywq：你好，能提供下js实现国密sm2加解密的下载链接吗?您提供的html里加载的js都是必须的吗[/quote]
+</a></li>
+
+<li><a href="/jonllen/work/162.html#comment"><b>hjc</b>：楼主能否发一份源码参考一下 感谢！邮箱地址18234105447@163.com</a></li>
+
+<li><a href="/jonllen/work/162.html#comment"><b>hjc</b>：楼主能否发一份源码参考一下 感谢！</a></li>
+
+	    </ul>
+    </div>
+</div>
+ 
+<div id="mod31" class="mod recent">
+    <h4 class="head">最近发表</h4>
+    <div class="cont">
+	    <ul>
+
+                    
+		    <li><a href="/jonllen/work/800.html">2015年度工作总结</a>(2015-12-31)</li>
+                    
+		    <li><a href="/jonllen/travel/801.html">靖港古镇游</a>(2015-11-29)</li>
+                    
+		    <li><a href="/jonllen/js/179.html">使用ECharts报表统计公司考勤加班，大家加班多吗？</a>(2015-06-05)</li>
+                    
+		    <li><a href="/jonllen/js/178.html">JavaScript实现SM2算法加解密</a>(2014-10-28)</li>
+                    
+		    <li><a href="/jonllen/breast/177.html">2014年国庆</a>(2014-10-04)</li>
+                    
+	    </ul>
+    </div>
+</div>
+ 
+<div id="mod36" class="mod search">
+	<h4 class="head">搜索</h4>
+	<div class="cont">
+		<form action="/search/" method="get">
+	        <input type="text" name="key" class="text" value="" placeholder="输入搜索内容" />
+	        <input type="submit" class="btn" value="搜索" />
+	    </form>
+	</div>
+</div>
+ 
+<div id="mod32" class="mod click">
+    <h4 class="head">关注最多</h4>
+    <div class="cont">
+	    <ul>
+                    
+		    <li><a href="/jonllen/work/164.html">SM2非对称算法加解密</a>(35707)</li>
+                    
+		    <li><a href="/jonllen/aspnet/tinymce.html">TinyMce在线编辑器完美打造成Asp.Net服务器自定义控件</a>(32864)</li>
+                    
+		    <li><a href="/jonllen/work/162.html">国密算法SM2证书制作</a>(32559)</li>
+                    
+		    <li><a href="/jonllen/js/js-popup.html">摆脱JQuery—之自定义模拟弹窗层功能。</a>(26829)</li>
+                    
+		    <li><a href="/jonllen/aspnet/pd.html">使用PowerDesigner的物理模型创建升级管理数据库</a>(24306)</li>
+                    
+	    </ul>
+    </div>
+</div>
+ 
+</div>
+</div>
+
+<div class="auto" id="foot">
+    <div class="wrapper">
+	Powered By ：Jonllen  <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备10049366号</a>
+	</div>
+</div>
+ 
+<script type="text/javascript" src="/styles/index/scripts/Drag.js"></script>
+<script type="text/javascript" src="/styles/index/scripts/Tooltip.js" ></script>
+<div style="display:none"> 
+    <script type="text/javascript" src="/styles/index/scripts/statistics.js"></script>
+</div>
+</body>
+</html>
