@@ -1,0 +1,1 @@
+alter table bl_user alter column [settings] memo;

@@ -1,0 +1,53 @@
+#==============================================================
+# 修改文章摘要字段长度为不限制
+#==============================================================
+
+alter table bl_article alter column [summary] memo;
+
+
+#==============================================================
+# Create Table: bl_control(控件表)
+#==============================================================
+
+create table bl_control
+(
+    controlId             AUTOINCREMENT   not null,
+    controlname           VARCHAR(50)    not null,
+    description           VARCHAR(255) not null,
+    controlSrc            VARCHAR(255) not null,
+    sort                  int    not null,
+    display               int    not null,
+    controlStatus         int    not null,
+constraint PK_BL_Control primary key (controlId)
+);
+
+
+#==============================================================
+# Create Table: bl_usercontrol(用户控件表)
+#==============================================================
+
+create table bl_usercontrol
+(
+    usercontrolId         AUTOINCREMENT   not null,
+    userId                int    not null,
+    controlId             int    not null,
+    controlname           VARCHAR(50) not null,
+    sort                  int         not null,
+    display               int         not null,
+    controlStatus         int         not null,
+    addDate               DATETIME    not null,
+constraint PK_BL_UserControl primary key (usercontrolId)
+);
+
+
+//建立主外键关系
+
+ALTER   TABLE   bl_usercontrol   ADD   CONSTRAINT   FK_UserControl_Reference_User   FOREIGN   KEY   ([userId])   REFERENCES   bl_user   ([userId]);
+
+ALTER   TABLE   bl_usercontrol   ADD   CONSTRAINT   FK_UserControl_Reference_Control   FOREIGN   KEY   ([controlId])   REFERENCES   bl_control   ([controlId]);
+
+
+//添加bl_user摸板显示版式
+alter table bl_user add column [templateDisplay] int default 1 not null;
+//修改默认为1，左-中栏
+update bl_user set [templateDisplay] = 1;

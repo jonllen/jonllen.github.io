@@ -1,0 +1,2 @@
+alter table bl_user alter column [banner] memo;
+alter table bl_user alter column [settings] memo;

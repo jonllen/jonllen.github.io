@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>JavaScript拖动Drag事例 - 金龙博客</title>
+    <style type="text/css">
+        .container{width:850px; margin:0 auto;zomm:1; overflow:hidden;}
+        .container .column{ float:left;width:200px;margin-right:10px;border:dashed 1px #ccc;}
+        .container .column .mod{ border:solid 1px #cdcdcd;margin:10px}
+        .container .column .mod .head{background-color:#999999;height:30px; line-height:30px;border-bottom:solid 1px #cdcdcd;padding-left:5px;margin:0;}
+        .container .column .mod .cont{ text-align:center;height:120px;}
+    </style>
+</head>
+<body>
+    <h2 style="text-align:center">JavaScript拖动Drag事例</h2>
+    <div id="main" class="container">
+        <div class="column column1" >
+            <div class="mod" id="mod1" >
+                <h4 class="head">个人档案</h4>
+                <div class="cont">mod1</div>
+            </div>
+            <div class="mod" id="mod2" >
+                <h4 class="head">分类文档</h4>
+                <div class="cont">mod2</div>
+            </div>
+            <div class="mod" id="mod3" >
+                <h4 class="head">友情链接</h4>
+                <div class="cont">mod3</div>
+            </div>
+        </div>
+        <div class="column column2" id="column2"  style="width:400px">
+            <div class="mod" id="mod4" >
+                <h4 class="head">博文推荐</h4>
+                <div class="cont" style="height:auto">
+                    <p>JavaScript拖动Drag类说明</p>
+                    <p>构造函数参数settings属性：</p>
+                    <ol style="text-align:left">
+                        <li>container：拖拽的区域大容器，*必须</li>
+                        <li>column：允许拖放的区域的元素（css类名）</li>
+                        <li>mod：拖放的元素（css类名）</li>
+                        <li>handle：允许拖拽的句柄元素（css类名）</li>
+                        <li>shadow：是否产生阴影层元素，默认true</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="mod" id="mod5" >
+                <h4 class="head">我的文章</h4>
+                <div class="cont" style="height:auto">
+                    <p>拖拽后保存位置的方式：Cookie</p>
+                    <p>Cookie存放的格式：</p>
+                     <ol style="text-align:left">
+                        <li>Drag=1=1-1&2=1-2&3=1-3&4=2-4&5=2-5&6=3-6&7=3-7&8=3-8;</li>
+                        <li>Cookie名=模块ID=区域ID-排序号ID&模块ID=区域ID-排序号ID;</li>
+                    </ol>
+                    <p>初始化方式：</p>
+                    <p>服务器端获取Cookie里保存模块位置值（或数据库内记录），使用动态加载区域内模块的控件，不提倡在客户端使用JavaScript来初始化保存的位置。</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="head">这里是不可拖拽模块</h4>
+                <div class="cont" style="height:auto">
+                    <p>重要修复：</p>
+                    <div>当拖动过程如果滚动鼠标滑轮，会导致隔空拖拽的问题，故添加mousewheel鼠标滑轮事件监停，并计算出滑轮滚动距离，已修复此问题，兼容FireFox。</div>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+        <div class="column column3" id="column3" >
+            <div class="mod" id="mod6" >
+                <h4 class="head">关注最多</h4>
+                <div class="cont">mod6</div>
+            </div>
+            <div class="mod" id="mod7" >
+                <h4 class="head">最新评论</h4>
+                <div class="cont">mod7</div>
+            </div>
+            <div class="mod" id="mod8" >
+                <h4 class="head">最进发表</h4>
+                <div class="cont">mod8</div>
+            </div>
+        </div>
+    </div>
+    <div class="auto" id="foot">
+        <div class="wrapper" style="text-align:center; margin-top:200px; border-top:solid 2px #ccc;">
+	        Powered By: <a href="http://www.jonllen.com/" title="金龙博客">Jonllen</a>
+	    </div>
+    </div>
+    <script type="text/javascript" src="/scripts/Drag.js"></script>
+    <script type="text/javascript">
+        //在Drag.js内初始化
+//        new Drag({
+//            container : document.getElementById('main'),
+//            column : 'column',
+//            mod : 'mod',
+//            handle : 'head'
+//        });
+    </script>
+</body>
+</html>

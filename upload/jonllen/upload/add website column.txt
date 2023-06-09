@@ -1,0 +1,2 @@
+alter table bl_articlecomment add column [website] varchar(255);
+alter table bl_photocomment add column [website] varchar(255);
