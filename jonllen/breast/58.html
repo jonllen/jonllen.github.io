@@ -192,7 +192,8 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
                             }
 		        });
 		    }
-        setTimeout(getArticleArchive,0);
+
+        WdatePicker( { eCont :'calendar', firstDayOfWeek :1});//setTimeout(getArticleArchive,0);
     </script>
 </div>
 <div id="mod27" class="mod category">
@@ -301,13 +302,9 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
 	<div class="cont">
 		<ul>
                     
-		    <li><a href="http://www.applezqp.com" title="老平同志，高妹。" target="_blank">applezqp</a></li>
-                    
-		    <li><a href="http://www.thjy.org" title="天河部落教育博客" target="_blank">天河部落</a></li>
-                    
 		    <li><a href="http://weibo.com/zjj" title="时代财富张静君的微博" target="_blank">张静君</a></li>
                     
-		    <li><a href="http://www.fortuneage.com" title="广州网站建设" target="_blank">时代财富</a></li>
+		    <li><a href="http://www.cnblogs.com" title="广州网站建设" target="_blank">博客园</a></li>
                     
 		</ul>
 	</div>
@@ -440,6 +437,7 @@ function toggleTemplate(tempId, skinSrc, additionalHtml){
         <script type="text/javascript">
             function postComment()
 		    {
+		        alert('网站由于运营成本原因无法支持评论了~');return;
 		        var url = "/plugin/web/doSaveComment.do?sourcetype=1&sourceid=58&siteId=1";
 		        var data = "username="+encodeURIComponent(document.getElementById("txtUserName").value);
 		        data += '&sourceurl=/jonllen/breast/58.html';
@@ -504,7 +502,7 @@ document.getElementById('commentContent').appendChild(itemComment);
 		        });
 
 		    }
-            addClick();
+            //addClick();
         </script>
 		
 	</div>
